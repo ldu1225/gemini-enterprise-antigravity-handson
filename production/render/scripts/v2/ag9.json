@@ -1,0 +1,1244 @@
+{
+ "id": "ag9",
+ "track": "ag",
+ "lab": "lab9",
+ "title": "AG LAB 09 · 배포 + Gemini Enterprise 게시",
+ "brand": "Antigravity 핸즈온 랩",
+ "bgm": true,
+ "captions": true,
+ "encode": {
+  "crf": 26,
+  "preset": "slow",
+  "audio_kbps": 160,
+  "max_mb": 45
+ },
+ "chapters": [
+  {
+   "step": 1,
+   "seg": 3
+  },
+  {
+   "step": 2,
+   "seg": 8
+  },
+  {
+   "step": 3,
+   "seg": 12
+  },
+  {
+   "step": 4,
+   "seg": 16
+  },
+  {
+   "step": 5,
+   "seg": 19
+  }
+ ],
+ "segments": [
+  {
+   "type": "title",
+   "kicker": "ANTIGRAVITY · LAB 09",
+   "title": "배포 + Gemini Enterprise 게시",
+   "subtitle": "Agent Runtime 배포 · 권한 · GE 게시 · GE에서 질문",
+   "duration": 4.2,
+   "narration": [
+    {
+     "text": "Antigravity 아홉 번째 실습, 배포와 Gemini Enterprise 게시입니다."
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag9v_ge_use",
+   "from": 51.0,
+   "to": 61.1,
+   "speed": "auto",
+   "intro": "none",
+   "narration": [
+    {
+     "text": "이번 Lab의 결과물입니다."
+    },
+    {
+     "text": "CX팀원이 Gemini Enterprise에서 한국어로 물으면, 우리가 만든 VOC 에이전트가 BigQuery를 조회해 답합니다.",
+     "say": "씨엑스팀원이 제미나이 엔터프라이즈에서 한국어로 물으면, 우리가 만든 브이오씨 에이전트가 빅쿼리를 조회해 답합니다."
+    },
+    {
+     "text": "지난주 아직 처리되지 않은 안전 이슈 6건이, 이름과 연락처를 가린 표로 나옵니다.",
+     "say": "지난주 아직 처리되지 않은 안전 이슈 여섯 건이, 이름과 연락처를 가린 표로 나옵니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 51.0,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      470,
+      225,
+      725,
+      380
+     ],
+     "scale": 1.75
+    }
+   ],
+   "callouts": [
+    {
+     "text": "🚨 [긴급/안전 이슈] 미처리 문의 현황 (총 6건)",
+     "lead": 0.4,
+     "dur": 3.4,
+     "spotlight": 0.15,
+     "box_css": [
+      475,
+      237,
+      296,
+      22
+     ],
+     "pad": 2,
+     "say": 1
+    },
+    {
+     "text": "이*은 010-****-8470 · 김*원 010-****-3634",
+     "lead": 0.6,
+     "dur": 3.0,
+     "spotlight": 0.15,
+     "box_css": [
+      630,
+      433,
+      120,
+      161
+     ],
+     "pad": 2,
+     "say": 2
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "kicker": "이번 실습에서 할 일",
+   "title": "내 컴퓨터의 에이전트를, 회사의 Gemini Enterprise로",
+   "bullets": [
+    "agents-cli deploy — Agent Runtime에 배포",
+    "IAM — 배포된 에이전트가 BigQuery를 읽도록",
+    "agents-cli publish gemini-enterprise — 앱에 게시",
+    "Gemini Enterprise에서 CX팀이 질문"
+   ],
+   "narration": [
+    {
+     "text": "Lab 8에서 만든 VOC 에이전트를, 먼저 agents-cli deploy로 Agent Runtime에 배포합니다.",
+     "say": "랩 에잇에서 만든 브이오씨 에이전트를, 먼저 에이전츠 씨엘아이 디플로이로 에이전트 런타임에 배포합니다."
+    },
+    {
+     "text": "배포된 에이전트가 BigQuery를 읽을 수 있도록, IAM 권한을 줍니다.",
+     "say": "배포된 에이전트가 빅쿼리를 읽을 수 있도록, 아이에이엠 권한을 줍니다."
+    },
+    {
+     "text": "그리고 agents-cli publish로, 회사의 Gemini Enterprise 앱에 게시합니다.",
+     "say": "그리고 에이전츠 씨엘아이 퍼블리시로, 회사의 제미나이 엔터프라이즈 앱에 게시합니다."
+    },
+    {
+     "text": "마지막으로 CX팀원이 되어, Gemini Enterprise에서 직접 물어봅니다.",
+     "say": "마지막으로 씨엑스팀원이 되어, 제미나이 엔터프라이즈에서 직접 물어봅니다."
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag9v_deploy",
+   "from": 11.5,
+   "to": 19.44,
+   "speed": "auto",
+   "intro": "none",
+   "labels": [
+    {
+     "kicker": "STEP 1",
+     "text": "Agent Runtime에 배포하기",
+     "at": 0.5,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "Lab 8의 cymbal-voc 폴더에서 새 대화를 열고,",
+     "say": "랩 에잇의 심벌 브이오씨 폴더에서 새 대화를 열고,",
+     "at": 12.0,
+     "align": 0.0
+    },
+    {
+     "text": "lab.env의 프로젝트와 리전으로, cymbal-voc-agent를 Agent Runtime에 배포해 달라고 합니다.",
+     "say": "랩 점 엔브의 프로젝트와 리전으로, 심벌 브이오씨 에이전트를 에이전트 런타임에 배포해 달라고 합니다."
+    },
+    {
+     "text": "배포가 끝나면 BigQuery를 읽을 IAM 권한도 부여해 달라고 덧붙였습니다.",
+     "say": "배포가 끝나면 빅쿼리를 읽을 아이에이엠 권한도 부여해 달라고 덧붙였습니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 11.5,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      928,
+      296,
+      500,
+      180
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "text": "agents-cli deploy … Agent Runtime에 배포",
+     "lead": 0.3,
+     "dur": 3.0,
+     "spotlight": 0.15,
+     "box_css": [
+      936,
+      345,
+      482,
+      112
+     ],
+     "pad": 4,
+     "say": 2
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag9v_deploy",
+   "from": 113.5,
+   "to": 128.4,
+   "speed": "auto",
+   "max_speed": 6,
+   "narration": [
+    {
+     "text": "에이전트는 먼저 deploy 도움말과, 지금 배포 상태, 기존 배포 목록부터 확인합니다.",
+     "say": "에이전트는 먼저 디플로이 도움말과, 지금 배포 상태, 기존 배포 목록부터 확인합니다.",
+     "at": 119.6,
+     "align": 0.3
+    }
+   ],
+   "zoom": [
+    {
+     "from": 113.5,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      928,
+      150,
+      500,
+      330
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "text": "agents-cli deploy --status && agents-cli deploy --list",
+     "lead": 0.0,
+     "dur": 2.8,
+     "spotlight": 0.15,
+     "box_css": [
+      935,
+      342,
+      480,
+      80
+     ],
+     "pad": 2,
+     "at": 124.0
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag9v_deploy",
+   "from": 137.0,
+   "to": 146.5,
+   "speed": "auto",
+   "max_speed": 6,
+   "narration": [
+    {
+     "text": "오래 걸리는 명령은 터미널에 맡겨 두고, 이렇게 진행 상황을 알린 뒤,",
+     "at": 137.6,
+     "align": 0.1
+    },
+    {
+     "text": "명령이 끝났다는 알림이 오면, 결과를 받아 다음 일을 이어 갑니다.",
+     "at": 142.7,
+     "align": 0.25
+    }
+   ],
+   "zoom": [
+    {
+     "from": 137.0,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      928,
+      150,
+      500,
+      330
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "text": "현재 배포 상태를 확인하고 있습니다. 잠시만 기다려 주세요.",
+     "lead": 0.4,
+     "dur": 2.6,
+     "spotlight": 0.15,
+     "box_css": [
+      935,
+      233,
+      311,
+      23
+     ],
+     "pad": 2,
+     "say": 0
+    },
+    {
+     "text": "Check existing deployment status and list finished",
+     "lead": 0.5,
+     "dur": 2.6,
+     "spotlight": 0.15,
+     "box_css": [
+      936,
+      266,
+      323,
+      21
+     ],
+     "pad": 2,
+     "say": 1
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag9v_deploy",
+   "from": 251.4,
+   "to": 256.0,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "녹화에서는 상태 확인, 목록 조회, dry-run 점검까지, 이런 흐름이 세 번 이어졌습니다.",
+     "say": "녹화에서는 상태 확인, 목록 조회, 드라이 런 점검까지, 이런 흐름이 세 번 이어졌습니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 251.4,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      928,
+      200,
+      500,
+      330
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "text": "Check deploy dry-run and reasoningEngine resource finished",
+     "lead": 1.2,
+     "dur": 2.8,
+     "spotlight": 0.15,
+     "box_css": [
+      936,
+      460,
+      392,
+      21
+     ],
+     "pad": 2,
+     "say": 0
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag9v_deploy",
+   "from": 261.5,
+   "to": 290.0,
+   "speed": "auto",
+   "max_speed": 6,
+   "keep": [
+    [
+     263.3,
+     269.4
+    ]
+   ],
+   "narration": [
+    {
+     "text": "그리고 실제 배포 명령, agents-cli deploy를 실행합니다.",
+     "say": "그리고 실제 배포 명령, 에이전츠 씨엘아이 디플로이를 실행합니다.",
+     "at": 263.3,
+     "align": 0.35
+    },
+    {
+     "text": "요청부터 약 4분 20초 뒤, 에이전트는 배포가 진행 중이며, 끝나면 IAM 권한을 부여하겠다고 알렸습니다.",
+     "say": "요청부터 약 사 분 이십 초 뒤, 에이전트는 배포가 진행 중이며, 끝나면 아이에이엠 권한을 부여하겠다고 알렸습니다.",
+     "at": 281.3,
+     "align": 0.1
+    },
+    {
+     "text": "배포 명령은 터미널에서 계속 진행됩니다."
+    },
+    {
+     "text": "이 녹화에서는 권한 부여를, 배포가 끝난 뒤 새 대화에서 따로 요청했습니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 261.5,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      928,
+      322,
+      500,
+      260
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "text": "agents-cli deploy --project \"$PROJECT_ID\" --region \"$REGION\"",
+     "lead": 0.0,
+     "dur": 2.2,
+     "spotlight": 0.15,
+     "box_css": [
+      935,
+      476,
+      474,
+      98
+     ],
+     "pad": 2,
+     "at": 264.0
+    },
+    {
+     "text": "agents-cli deploy 명령을 실행 … 배포하고 있습니다",
+     "lead": 0.6,
+     "dur": 3.4,
+     "spotlight": 0.15,
+     "box_css": [
+      934,
+      483,
+      470,
+      86
+     ],
+     "pad": 2,
+     "say": 1
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag9v_iam",
+   "from": 16.1,
+   "to": 29.5,
+   "speed": "auto",
+   "intro": "none",
+   "labels": [
+    {
+     "kicker": "STEP 2",
+     "text": "배포된 에이전트에 BigQuery 권한 주기",
+     "at": 0.5,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "배포가 끝난 뒤, 새 대화에서 권한을 요청합니다."
+    },
+    {
+     "text": "배포된 에이전트가 BigQuery의 cymbal_cx 데이터를 읽을 수 있도록, 데이터 보기와 작업 실행, 두 역할을 적었습니다.",
+     "say": "배포된 에이전트가 빅쿼리의 심벌 씨엑스 데이터를 읽을 수 있도록, 데이터 보기와 작업 실행, 두 역할을 적었습니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 16.1,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      928,
+      70,
+      500,
+      200
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "text": "roles/bigquery.dataViewer, roles/bigquery.jobUser",
+     "lead": 0.6,
+     "dur": 3.2,
+     "spotlight": 0.15,
+     "box_css": [
+      934,
+      94,
+      484,
+      80
+     ],
+     "pad": 1,
+     "say": 1
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag9v_iam",
+   "from": 156.0,
+   "to": 174.3,
+   "speed": "auto",
+   "max_speed": 6,
+   "narration": [
+    {
+     "text": "에이전트는 배포 정보와 Terraform 파일을 읽어, 배포된 에이전트가 어떤 계정으로 실행되는지 찾은 뒤,",
+     "say": "에이전트는 배포 정보와 테라폼 파일을 읽어, 배포된 에이전트가 어떤 계정으로 실행되는지 찾은 뒤,",
+     "at": 156.3,
+     "align": 0.0
+    },
+    {
+     "text": "명령 다섯 개로 권한을 부여하고 확인했습니다."
+    },
+    {
+     "text": "같은 역할을 Terraform의 variables.tf에도 추가합니다.",
+     "say": "같은 역할을 테라폼의 베리어블즈 점 티에프에도 추가합니다.",
+     "at": 170.9,
+     "align": 0.2
+    }
+   ],
+   "zoom": [
+    {
+     "from": 156.0,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      928,
+      150,
+      500,
+      280
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "text": "Ran 5 commands",
+     "lead": 0.2,
+     "dur": 2.4,
+     "spotlight": 0.15,
+     "box_css": [
+      936,
+      237,
+      125,
+      21
+     ],
+     "pad": 2,
+     "say": 1
+    },
+    {
+     "text": "Edited variables.tf +2 −0",
+     "lead": 0.5,
+     "dur": 2.6,
+     "spotlight": 0.15,
+     "box_css": [
+      934,
+      338,
+      178,
+      22
+     ],
+     "pad": 2,
+     "say": 2
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag9v_iam",
+   "from": 175.1,
+   "to": 175.85,
+   "speed": "auto",
+   "transition": 0.3,
+   "narration": [
+    {
+     "text": "약 2분 40초 뒤, 권한 부여와 확인을 마쳤다는 답이 나옵니다.",
+     "say": "약 이 분 사십 초 뒤, 권한 부여와 확인을 마쳤다는 답이 나옵니다."
+    },
+    {
+     "text": "배포된 Agent Runtime의 실행 주체, 즉 서비스 에이전트를 찾아서 권한을 준 것입니다.",
+     "say": "배포된 에이전트 런타임의 실행 주체, 즉 서비스 에이전트를 찾아서 권한을 준 것입니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 175.1,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      928,
+      312,
+      500,
+      280
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "text": "IAM 권한 부여 및 확인을 완료했습니다",
+     "lead": 0.4,
+     "dur": 3.0,
+     "spotlight": 0.15,
+     "box_css": [
+      933,
+      363,
+      478,
+      46
+     ],
+     "pad": 1,
+     "say": 0
+    },
+    {
+     "text": "실행 주체(effectiveIdentity)를 확인했습니다",
+     "lead": 0.4,
+     "dur": 3.2,
+     "spotlight": 0.15,
+     "box_css": [
+      933,
+      447,
+      455,
+      47
+     ],
+     "pad": 1,
+     "say": 1
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "kicker": "STEP 2 · 정리",
+   "title": "배포된 에이전트는 서비스 에이전트로 실행됩니다",
+   "bullets": [
+    "내 컴퓨터: 내 로그인 정보로 BigQuery 조회",
+    "배포 후: Agent Runtime 서비스 에이전트로 실행",
+    "roles/bigquery.dataViewer · roles/bigquery.jobUser 부여 → 결과 표로 확인"
+   ],
+   "narration": [
+    {
+     "text": "내 컴퓨터에서는 내 로그인 정보로 BigQuery를 읽었지만,",
+     "say": "내 컴퓨터에서는 내 로그인 정보로 빅쿼리를 읽었지만,"
+    },
+    {
+     "text": "배포된 에이전트는 Agent Runtime의 서비스 에이전트로 실행됩니다.",
+     "say": "배포된 에이전트는 에이전트 런타임의 서비스 에이전트로 실행됩니다."
+    },
+    {
+     "text": "그래서 이 계정에 데이터 보기와 쿼리 실행 역할을 주고, get-iam-policy 결과 표로 확인했습니다.",
+     "say": "그래서 이 계정에 데이터 보기와 쿼리 실행 역할을 주고, 겟 아이에이엠 폴리시 결과 표로 확인했습니다."
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag9v_publish",
+   "from": 12.0,
+   "to": 23.88,
+   "speed": "auto",
+   "intro": "none",
+   "labels": [
+    {
+     "kicker": "STEP 3",
+     "text": "Gemini Enterprise에 게시하기",
+     "at": 0.5,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "새 대화에서, 배포한 에이전트를 agents-cli publish로 Gemini Enterprise 앱에 등록해 달라고 합니다.",
+     "say": "새 대화에서, 배포한 에이전트를 에이전츠 씨엘아이 퍼블리시로 제미나이 엔터프라이즈 앱에 등록해 달라고 합니다.",
+     "at": 12.3,
+     "align": 0.0
+    },
+    {
+     "text": "앱 ID와 위치, 표시 이름은 lab.env의 값을 그대로 쓰게 했습니다.",
+     "say": "앱 아이디와 위치, 표시 이름은 랩 점 엔브의 값을 그대로 쓰게 했습니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 12.0,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      928,
+      296,
+      500,
+      180
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "text": "agents-cli publish gemini-enterprise로 Gemini Enterprise 앱에 등록",
+     "lead": 0.4,
+     "dur": 3.0,
+     "spotlight": 0.15,
+     "box_css": [
+      936,
+      345,
+      482,
+      112
+     ],
+     "pad": 4,
+     "say": 1
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag9v_publish",
+   "from": 48.0,
+   "to": 66.0,
+   "speed": "auto",
+   "max_speed": 6,
+   "narration": [
+    {
+     "text": "에이전트가 publish 옵션을 확인하고,",
+     "say": "에이전트가 퍼블리시 옵션을 확인하고,",
+     "at": 48.3,
+     "align": 0.0
+    },
+    {
+     "text": "배포 정보가 담긴 deployment_metadata.json과 agent.py를 읽습니다.",
+     "say": "배포 정보가 담긴 디플로이먼트 메타데이터 제이슨과 에이전트 점 파이를 읽습니다.",
+     "at": 60.0,
+     "align": 0.25
+    }
+   ],
+   "zoom": [
+    {
+     "from": 48.0,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      928,
+      150,
+      500,
+      330
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "text": "Ran agents-cli publish gemini-enterprise --help",
+     "lead": 0.3,
+     "dur": 2.4,
+     "spotlight": 0.15,
+     "box_css": [
+      936,
+      237,
+      385,
+      21
+     ],
+     "pad": 2,
+     "say": 0
+    },
+    {
+     "text": "Analyzed deployment_metadata.json #L1-14",
+     "lead": 0.6,
+     "dur": 2.8,
+     "spotlight": 0.15,
+     "box_css": [
+      947,
+      395,
+      300,
+      23
+     ],
+     "pad": 2,
+     "say": 1
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag9v_publish",
+   "from": 164.8,
+   "to": 188.0,
+   "speed": "auto",
+   "max_speed": 6,
+   "keep": [
+    [
+     166.0,
+     175.5
+    ]
+   ],
+   "narration": [
+    {
+     "text": "그리고 앱 리소스 이름과 표시 이름, 설명을 넣어 등록 명령을 실행합니다.",
+     "at": 166.0,
+     "align": 0.3
+    },
+    {
+     "text": "여기 넣은 설명이, 나중에 Gemini Enterprise 에이전트 목록에 그대로 보입니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 164.8,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      928,
+      280,
+      500,
+      300
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "text": "--gemini-enterprise-app-id · --display-name · --description",
+     "lead": 0.0,
+     "dur": 2.4,
+     "spotlight": 0.15,
+     "box_css": [
+      935,
+      394,
+      480,
+      164
+     ],
+     "pad": 2,
+     "at": 167.0
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag9v_publish",
+   "from": 214.6,
+   "to": 226.0,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "약 3분 뒤 등록이 끝나고, 결과가 표로 나옵니다.",
+     "say": "약 삼 분 뒤 등록이 끝나고, 결과가 표로 나옵니다."
+    },
+    {
+     "text": "STEP 1에서 배포한 Agent Runtime이 연결되었고, 등록 방식은 ADK, 상태는 created입니다.",
+     "say": "스텝 원에서 배포한 에이전트 런타임이 연결되었고, 등록 방식은 에이디케이, 상태는 크리에이티드입니다."
+    },
+    {
+     "text": "Google Cloud 콘솔에서 확인할 수 있는 주소도 함께 나옵니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 214.6,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      928,
+      180,
+      500,
+      360
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "text": "연결된 Agent Runtime",
+     "lead": 0.3,
+     "dur": 2.4,
+     "spotlight": 0.15,
+     "box_css": [
+      948,
+      216,
+      443,
+      55
+     ],
+     "pad": 2,
+     "say": 1
+    },
+    {
+     "text": "등록 방식 (registration_type) adk (상태: created)",
+     "lead": 2.9,
+     "dur": 2.6,
+     "spotlight": 0.15,
+     "box_css": [
+      947,
+      376,
+      277,
+      57
+     ],
+     "pad": 2,
+     "say": 1
+    },
+    {
+     "text": "Google Cloud 콘솔 확인 URL",
+     "lead": 0.3,
+     "dur": 2.6,
+     "spotlight": 0.15,
+     "box_css": [
+      948,
+      449,
+      444,
+      72
+     ],
+     "pad": 2,
+     "say": 2
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag9v_ge_use",
+   "from": 0.3,
+   "to": 9.6,
+   "speed": "auto",
+   "labels": [
+    {
+     "kicker": "STEP 4",
+     "text": "Gemini Enterprise에서 써 보기",
+     "at": 0.5,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "이제 CX팀원이 되어, Gemini Enterprise 웹앱을 엽니다.",
+     "say": "이제 씨엑스팀원이 되어, 제미나이 엔터프라이즈 웹앱을 엽니다."
+    },
+    {
+     "text": "왼쪽 메뉴에서 에이전트를 누르면,",
+     "at": "click:에이전트",
+     "align": 0.75
+    },
+    {
+     "text": "조직의 에이전트에, 방금 게시한 Cymbal VOC 분석가가 보입니다.",
+     "say": "조직의 에이전트에, 방금 게시한 심벌 브이오씨 분석가가 보입니다.",
+     "at": "target:Cymbal VOC 분석가",
+     "align": 0.15
+    }
+   ],
+   "zoom": [
+    {
+     "from": "hover:에이전트 -0.8",
+     "box_css": [
+      0,
+      150,
+      620,
+      300
+     ],
+     "scale": 1.6
+    },
+    {
+     "from": 6.4,
+     "box_css": [
+      370,
+      540,
+      660,
+      260
+     ],
+     "scale": 1.6,
+     "overscan": true
+    }
+   ],
+   "callouts": [
+    {
+     "at": "click:에이전트",
+     "lead": -1.0,
+     "dur": 1.4,
+     "text": "에이전트",
+     "pad": 2,
+     "spotlight": 0.2
+    },
+    {
+     "text": "Cymbal VOC 분석가",
+     "lead": 0.2,
+     "dur": 2.4,
+     "spotlight": 0.15,
+     "box_css": [
+      398,
+      629,
+      196,
+      156
+     ],
+     "pad": 4,
+     "at": "target:Cymbal VOC 분석가"
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag9v_ge_use",
+   "from": 9.6,
+   "to": 18.2,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "카드를 누르면, 에이전트 첫 화면이 열립니다.",
+     "at": 10.4,
+     "align": 0.0
+    },
+    {
+     "text": "게시할 때 넣은 설명이 그대로 보이죠."
+    },
+    {
+     "text": "입력창에, 지난주 안전 이슈 긴급 문의 중 아직 처리되지 않은 건을 알려 달라고 물어봅니다.",
+     "at": "type_start",
+     "align": 0.1
+    }
+   ],
+   "zoom": [
+    {
+     "from": 10.2,
+     "box_css": [
+      560,
+      230,
+      600,
+      200
+     ],
+     "scale": 1.6
+    },
+    {
+     "from": "type_start -0.6",
+     "box_css": [
+      470,
+      600,
+      780,
+      160
+     ],
+     "scale": 1.6,
+     "overscan": true
+    }
+   ],
+   "callouts": [
+    {
+     "text": "Cymbal VOC 분석가",
+     "lead": 0.2,
+     "dur": 2.6,
+     "spotlight": 0.15,
+     "box_css": [
+      583,
+      302,
+      560,
+      112
+     ],
+     "pad": 3,
+     "say": 1
+    },
+    {
+     "at": "target:질문",
+     "lead": -1.4,
+     "dur": 1.6,
+     "text": "아직 처리되지 않은 건을 알려 줘",
+     "pad": 3,
+     "spotlight": 0.15
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag9v_ge_use",
+   "from": 18.25,
+   "to": 63.45,
+   "speed": "auto",
+   "max_speed": 6,
+   "narration": [
+    {
+     "text": "약 30초 동안, 에이전트가 BigQuery를 조회합니다.",
+     "say": "약 삼십 초 동안, 에이전트가 빅쿼리를 조회합니다.",
+     "at": 19.0,
+     "align": 0.0
+    },
+    {
+     "text": "생각 과정에 보이는 List Urgent Tickets가, Lab 8에서 붙인 도구입니다.",
+     "say": "생각 과정에 보이는 리스트 어전트 티켓츠가, 랩 에잇에서 붙인 도구입니다.",
+     "at": 39.6,
+     "align": 0.35
+    },
+    {
+     "text": "배포된 에이전트가, STEP 2에서 준 권한으로 데이터를 읽는 순간이죠.",
+     "say": "배포된 에이전트가, 스텝 투에서 준 권한으로 데이터를 읽는 순간이죠."
+    },
+    {
+     "text": "답이 왔습니다. 아직 처리되지 않은 긴급 안전 이슈는 모두 6건입니다.",
+     "say": "답이 왔습니다. 아직 처리되지 않은 긴급 안전 이슈는 모두 여섯 건입니다.",
+     "at": 50.6,
+     "align": 0.0
+    },
+    {
+     "text": "모두 공기청정기 전원 어댑터의 과열과 연기 문의라, 바로 조치가 필요하다고 요약했습니다."
+    },
+    {
+     "text": "처리중 3건, 접수 3건이고, 고객 이름과 연락처는 가려져 있습니다.",
+     "say": "처리중 세 건, 접수 세 건이고, 고객 이름과 연락처는 가려져 있습니다."
+    },
+    {
+     "text": "아래쪽에는 나머지 건과 함께, 데이터 출처와 기준일이 붙어 있습니다.",
+     "at": 62.1,
+     "align": 0.0
+    },
+    {
+     "text": "CX팀이 Gemini Enterprise에서 바로 묻고 답을 얻는, VOC 도우미가 완성되었습니다.",
+     "say": "씨엑스팀이 제미나이 엔터프라이즈에서 바로 묻고 답을 얻는, 브이오씨 도우미가 완성되었습니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 18.25,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      470,
+      85,
+      760,
+      260
+     ],
+     "scale": 1.75
+    },
+    {
+     "from": 50.4,
+     "box_css": [
+      470,
+      225,
+      725,
+      380
+     ],
+     "scale": 1.75
+    },
+    {
+     "from": 61.25,
+     "box_css": [
+      470,
+      300,
+      725,
+      290
+     ],
+     "scale": 1.75
+    }
+   ],
+   "callouts": [
+    {
+     "text": "List Urgent Tickets",
+     "lead": 0.5,
+     "dur": 3.0,
+     "spotlight": 0.15,
+     "box_css": [
+      502,
+      238,
+      171,
+      22
+     ],
+     "pad": 3,
+     "say": 1
+    },
+    {
+     "text": "🚨 [긴급/안전 이슈] 미처리 문의 현황 (총 6건)",
+     "lead": 0.5,
+     "dur": 3.2,
+     "spotlight": 0.15,
+     "box_css": [
+      475,
+      237,
+      296,
+      22
+     ],
+     "pad": 2,
+     "say": 3
+    },
+    {
+     "text": "이*은 010-****-8470 · 김*원 010-****-3634",
+     "lead": 0.6,
+     "dur": 3.2,
+     "spotlight": 0.15,
+     "box_css": [
+      630,
+      433,
+      120,
+      161
+     ],
+     "pad": 2,
+     "say": 5
+    },
+    {
+     "text": "데이터 출처: BigQuery cymbal_cx.voc_tickets | 기준일: 2026-10-25",
+     "lead": 0.2,
+     "dur": 3.0,
+     "spotlight": 0.15,
+     "box_css": [
+      475,
+      553,
+      471,
+      22
+     ],
+     "pad": 2,
+     "at": 62.3
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "kicker": "STEP 5 · 명령으로 직접 해 보기 · 정리",
+   "title": "명령 세 가지, 그리고 비용 정리",
+   "bullets": [
+    "agents-cli deploy --project … --region …",
+    "gcloud projects add-iam-policy-binding — 역할 2개",
+    "agents-cli publish gemini-enterprise --registration-type adk",
+    "다 쓴 뒤 Agent Runtime · GE 등록 삭제"
+   ],
+   "narration": [
+    {
+     "text": "배포는 agents-cli deploy에 프로젝트와 리전을 넣어 실행합니다.",
+     "say": "배포는 에이전츠 씨엘아이 디플로이에 프로젝트와 리전을 넣어 실행합니다."
+    },
+    {
+     "text": "권한은 gcloud로, 서비스 에이전트에게 두 역할을 줍니다.",
+     "say": "권한은 지클라우드로, 서비스 에이전트에게 두 역할을 줍니다."
+    },
+    {
+     "text": "게시는 agents-cli publish gemini-enterprise를 ADK 방식으로 실행합니다.",
+     "say": "게시는 에이전츠 씨엘아이 퍼블리시 제미나이 엔터프라이즈를 에이디케이 방식으로 실행합니다."
+    },
+    {
+     "text": "배포된 Agent Runtime은 계속 남아 비용이 생길 수 있으니, 다 쓴 뒤에는 꼭 정리하세요.",
+     "say": "배포된 에이전트 런타임은 계속 남아 비용이 생길 수 있으니, 다 쓴 뒤에는 꼭 정리하세요."
+    }
+   ]
+  },
+  {
+   "type": "outro",
+   "kicker": "AG LAB 09 완료",
+   "title": "오늘의 체크리스트",
+   "checklist": [
+    "agents-cli deploy — Agent Runtime 배포",
+    "서비스 에이전트에 BigQuery 역할 2개",
+    "publish gemini-enterprise — ADK 등록",
+    "GE에서 질문 → 미처리 안전 이슈 6건"
+   ],
+   "subtitle": "다음 · LAB 10 운영 자동화",
+   "narration": [
+    {
+     "text": "수고하셨습니다!"
+    },
+    {
+     "text": "체크리스트로 오늘 실습을 점검해 보세요."
+    },
+    {
+     "text": "다음 실습에서는 매주 월요일 보고를 자동으로 예약하고, 서브에이전트에게 일을 나눠 맡겨 봅니다."
+    }
+   ]
+  }
+ ]
+}

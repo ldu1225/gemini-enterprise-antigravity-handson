@@ -1,0 +1,92 @@
+{
+ "id": "ge6",
+ "track": "ge",
+ "lab": "lab6",
+ "title": "LAB 06 · 생산성 — 스킬 · 프로젝트 · 라이브러리",
+ "brand": "Gemini Enterprise 핸즈온 랩",
+ "bgm": true,
+ "captions": true,
+ "encode": {
+  "crf": 24,
+  "preset": "slow",
+  "audio_kbps": 160,
+  "max_mb": 40
+ },
+ "chapters": [
+  {"step": 1, "seg": 1},
+  {"step": 2, "seg": 2},
+  {"step": 3, "seg": 3}
+ ],
+ "segments": [
+  {
+   "type": "title",
+   "kicker": "LAB 06 · 공통 생산성",
+   "title": "스킬 · 프로젝트 · 라이브러리",
+   "subtitle": "보고서 스타일 스킬 ZIP 등록 · /cymbal-report-style 호출 · 통합 검색",
+   "duration": 4.2,
+   "narration": "여섯 번째 실습, 스킬과 프로젝트, 라이브러리로 업무 생산성을 높이는 방법입니다."
+  },
+  {
+   "type": "screen",
+   "rec": "ge6a_skill_upload",
+   "from": 0.5,
+   "to": 17.0,
+   "labels": [
+    {"kicker": "STEP 1", "text": "사이드바 [스킬] · 보고서 스타일 스킬 ZIP 등록", "at": 0.5, "dur": 3.5}
+   ],
+   "narration": [
+    {"text": "왼쪽 사이드바에서 스킬 메뉴를 열고, 오른쪽 위 스킬 업로드를 누릅니다.", "at": "click:스킬", "align": 0.4},
+    {"text": "파일 찾아보기에서 Cymbal 보고서 스타일 스킬 압축 파일을 고르고 가져오기를 클릭합니다.", "at": "click:파일 찾아보기", "align": 0.4},
+    {"text": "잠시 후 결론 먼저와 세 줄 요약, 핵심 지표 표 규칙이 담긴 보고서 스타일 스킬이 등록됩니다.", "at": "click:가져오기", "align": 0.4}
+   ],
+   "callouts": [
+    {"at": "click:스킬 업로드", "lead": -0.5, "dur": 1.8, "text": "스킬 업로드 클릭", "spotlight": 0.2}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ge6b_skill_use",
+   "from": 0.5,
+   "to": 57.0,
+   "labels": [
+    {"kicker": "STEP 2", "text": "대화창에서 `/cymbal-report-style` 불러 쓰기", "at": 0.5, "dur": 3.5}
+   ],
+   "narration": [
+    {"text": "새 채팅을 열고 입력창에 슬래시를 입력하면 방금 등록한 스킬이 바로 나타납니다.", "at": "click:입력창", "align": 0.4},
+    {"text": "cymbal-report-style을 선택하고, 에어폴 프로 출시 최종 점검 회의 메모를 붙여 넣어 전송합니다.", "at": "click:cymbal-report-style", "align": 0.4},
+    {"text": "양식을 매번 길게 설명하지 않아도, 한 줄 결론과 세 줄 요약, 핵심 지표 표, 부서별 후속 과제 순서로 깔끔한 보고서가 완성됩니다.", "at": "wait_end:skill_answer", "lead": -0.5}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ge6c_tips_tour",
+   "from": 0.5,
+   "to": 21.5,
+   "labels": [
+    {"kicker": "STEP 3", "text": "라이브러리 · 프로젝트 · 검색 · 에이전트 둘러보기", "at": 0.5, "dur": 3.5}
+   ],
+   "narration": [
+    {"text": "이어서 사이드바의 라이브러리를 열면 지금까지 만든 이미지와 영상, Canvas 문서를 한곳에서 모아 볼 수 있습니다.", "at": "click:라이브러리", "align": 0.4},
+    {"text": "프로젝트에서는 특정 업무별로 관련 파일과 지침, 대화 기록을 한 작업 공간에 묶어 관리합니다.", "at": "click:프로젝트", "align": 0.4},
+    {"text": "검색 메뉴에서 키워드를 입력해 이전 대화를 즉시 찾고, 에이전트 갤러리에서 사내 에이전트 목록도 확인할 수 있습니다.", "at": "click:검색", "align": 0.4}
+   ]
+  },
+  {
+   "type": "outro",
+   "kicker": "LAB 06 완료",
+   "title": "오늘의 체크리스트",
+   "checklist": [
+    "Cymbal_보고서스타일_스킬.zip 파일을 업로드해 스킬을 등록했다",
+    "입력창에 `/`를 눌러 cymbal-report-style로 회의록을 정리했다",
+    "라이브러리와 프로젝트 화면의 역할을 확인했다",
+    "검색으로 이전 대화를 빠르게 찾아봤다"
+   ],
+   "subtitle": "다음 · LAB 07 채팅 에이전트 만들기 (심화)",
+   "narration": [
+    "수고하셨습니다!",
+    "우리 부서의 보고서 양식을 스킬로 등록해 슬래시 한 번으로 불러 쓰고, 라이브러리와 프로젝트 기능까지 둘러봤습니다.",
+    "다음 실습에서는 사내 규정 문서를 기반으로 답하는 채팅 에이전트를 직접 만들어 봅니다."
+   ]
+  }
+ ]
+}

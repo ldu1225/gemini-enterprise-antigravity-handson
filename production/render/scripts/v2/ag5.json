@@ -1,0 +1,1469 @@
+{
+ "id": "ag5",
+ "track": "ag",
+ "lab": "lab5",
+ "title": "AG LAB 05 · 팀 규칙과 주간 보고 스킬",
+ "brand": "Antigravity 핸즈온 랩",
+ "bgm": true,
+ "captions": true,
+ "encode": {
+  "crf": 26,
+  "preset": "slow",
+  "audio_kbps": 160,
+  "max_mb": 45
+ },
+ "chapters": [
+  {
+   "step": 1,
+   "seg": 1
+  },
+  {
+   "step": 2,
+   "seg": 7
+  },
+  {
+   "step": 3,
+   "seg": 11
+  },
+  {
+   "step": 4,
+   "seg": 16
+  },
+  {
+   "step": 5,
+   "seg": 20
+  }
+ ],
+ "segments": [
+  {
+   "type": "title",
+   "kicker": "ANTIGRAVITY · LAB 05",
+   "title": "팀 규칙과 주간 보고 스킬",
+   "subtitle": "AGENTS.md · SKILL.md · 자동 선택 · 슬래시 호출",
+   "duration": 4.2,
+   "narration": [
+    {
+     "text": "Antigravity 다섯 번째 실습, 팀 규칙과 주간 보고 스킬입니다."
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "kicker": "이번 실습에서 할 일",
+   "title": "규칙은 항상, 스킬은 필요할 때",
+   "bullets": [
+    "AGENTS.md — 모든 대화에 항상 적용되는 팀 규칙",
+    "SKILL.md + 스크립트 — 필요할 때 꺼내 쓰는 작업 설명서",
+    "자동 선택 · /슬래시 호출 · Customizations"
+   ],
+   "narration": [
+    {
+     "text": "Lab 4의 대시보드에 이어서, 먼저 팀 규칙을 AGENTS.md에 적어 둡니다. 모든 대화에 항상 적용되는 약속입니다.",
+     "say": "랩 포의 대시보드에 이어서, 먼저 팀 규칙을 에이전츠 엠디에 적어 둡니다. 모든 대화에 항상 적용되는 약속입니다."
+    },
+    {
+     "text": "주간 VOC 보고는 SKILL.md와 계산 스크립트를 묶은 스킬로 만듭니다. 필요할 때만 꺼내 쓰는 작업 설명서입니다.",
+     "say": "주간 브이오씨 보고는 스킬 엠디와 계산 스크립트를 묶은 스킬로 만듭니다. 필요할 때만 꺼내 쓰는 작업 설명서입니다."
+    },
+    {
+     "text": "그리고 스킬이 저절로 골라지는지, 슬래시로 직접 부를 수 있는지 확인합니다."
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_rules",
+   "from": 1.9,
+   "to": 20.0,
+   "speed": "auto",
+   "intro": "none",
+   "labels": [
+    {
+     "kicker": "STEP 1",
+     "text": "팀 규칙 파일 AGENTS.md 만들기",
+     "at": 0.5,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "Lab 4의 cymbal-voc 폴더에서, Agent 패널의 +를 눌러 새 대화를 엽니다.",
+     "say": "랩 포의 심벌 브이오씨 폴더에서, 에이전트 패널의 플러스를 눌러 새 대화를 엽니다.",
+     "at": "click:새 대화",
+     "align": 0.75
+    },
+    {
+     "text": "팀 규칙 파일 AGENTS.md를 만들어 달라고 하면서, 규칙 여섯 가지를 적어 보냅니다.",
+     "say": "팀 규칙 파일 에이전츠 엠디를 만들어 달라고 하면서, 규칙 여섯 가지를 적어 보냅니다.",
+     "at": "submit",
+     "align": 0.85
+    },
+    {
+     "text": "한국어, 개인정보 마스킹, 외부 CDN 금지, 날짜 형식, 안전 이슈 강조, 데이터 출처 표시입니다.",
+     "say": "한국어, 개인정보 마스킹, 외부 씨디엔 금지, 날짜 형식, 안전 이슈 강조, 데이터 출처 표시입니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 1.9,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      720,
+      0,
+      720,
+      405
+     ],
+     "scale": 1.95
+    },
+    {
+     "from": 4.4,
+     "box_css": [
+      720,
+      190,
+      720,
+      330
+     ],
+     "scale": 1.95
+    },
+    {
+     "from": "submit",
+     "box_css": [
+      720,
+      0,
+      720,
+      405
+     ],
+     "scale": 1.95
+    }
+   ],
+   "callouts": [
+    {
+     "at": "click:새 대화",
+     "lead": -0.9,
+     "dur": 1.2,
+     "text": "새 대화 (+)",
+     "spotlight": 0.2
+    },
+    {
+     "at": "type_end",
+     "lead": -0.6,
+     "dur": 1.0,
+     "box_css": [
+      722,
+      345,
+      696,
+      88
+     ],
+     "text": "팀 규칙 파일 AGENTS.md",
+     "spotlight": 0.15
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_rules",
+   "from": 59.2,
+   "to": 65.3,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "에이전트는 README와 요청서를 먼저 읽은 뒤, 프로젝트 맨 위에 AGENTS.md를 직접 씁니다.",
+     "say": "에이전트는 리드미와 요청서를 먼저 읽은 뒤, 프로젝트 맨 위에 에이전츠 엠디를 직접 씁니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 59.2,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      345,
+      60,
+      740,
+      380
+     ]
+    }
+   ],
+   "callouts": [
+    {
+     "at": 63.0,
+     "lead": 0.0,
+     "dur": 2.4,
+     "box_css": [
+      720,
+      218,
+      192,
+      24
+     ],
+     "text": "Edited AGENTS.md +29 -0",
+     "spotlight": 0.18
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_rules",
+   "from": 66.4,
+   "to": 72.0,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "약 1분 뒤, AGENTS.md를 만들었다는 답과 함께 규칙 요약 여섯 가지가 정리되었습니다.",
+     "say": "약 일 분 뒤, 에이전츠 엠디를 만들었다는 답과 함께 규칙 요약 여섯 가지가 정리되었습니다.",
+     "at": 68.4,
+     "align": 0.15
+    }
+   ],
+   "zoom": [
+    {
+     "from": 66.4,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      705,
+      175,
+      730,
+      250
+     ]
+    }
+   ],
+   "callouts": [
+    {
+     "say": 0,
+     "lead": 0.8,
+     "dur": 3.4,
+     "box_css": [
+      720,
+      247,
+      538,
+      163
+     ],
+     "text": "포함된 규칙 요약",
+     "spotlight": 0.15
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_rules",
+   "from": 120.8,
+   "to": 124.7,
+   "speed": "auto",
+   "transition": 0,
+   "narration": [
+    {
+     "text": "편집기에는 새 파일 내용이 초록색으로 표시됩니다. 확인하고 Accept all을 누릅니다.",
+     "say": "편집기에는 새 파일 내용이 초록색으로 표시됩니다. 확인하고 억셉트 올을 누릅니다.",
+     "at": "click:Accept all",
+     "align": 0.92
+    }
+   ],
+   "zoom": [
+    {
+     "from": 120.8,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      705,
+      175,
+      730,
+      250
+     ]
+    },
+    {
+     "from": "click:Accept all -1.7",
+     "box_css": [
+      700,
+      340,
+      740,
+      400
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "at": "click:Accept all",
+     "lead": -1.0,
+     "dur": 1.3,
+     "text": "Accept all",
+     "spotlight": 0.2
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_rules_file",
+   "from": 0.3,
+   "to": 5.09,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "Explorer에서 AGENTS.md를 열어 봅니다.",
+     "say": "익스플로러에서 에이전츠 엠디를 열어 봅니다.",
+     "at": "click:AGENTS.md",
+     "align": 0.6
+    },
+    {
+     "text": "제목 아래에 언어, 개인정보 마스킹처럼 규칙이 번호별로 정리되어 있습니다."
+    },
+    {
+     "text": "이제 이 폴더에서 나누는 모든 대화에, 이 규칙이 자동으로 적용됩니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 0.3,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      42,
+      60,
+      600,
+      420
+     ]
+    }
+   ],
+   "callouts": [
+    {
+     "at": "click:AGENTS.md",
+     "lead": -0.8,
+     "dur": 1.1,
+     "text": "AGENTS.md",
+     "spotlight": 0.2,
+     "pad": 0
+    },
+    {
+     "say": 1,
+     "lead": 0.2,
+     "dur": 2.2,
+     "box_css": [
+      403,
+      86.9,
+      190,
+      37.1
+     ],
+     "text": "# Cymbal VOC 프로젝트 팀 규칙",
+     "spotlight": 0.15,
+     "pad": 0
+    },
+    {
+     "say": 1,
+     "lead": 2.5,
+     "dur": 2.4,
+     "box_css": [
+      403,
+      374,
+      203,
+      18.4
+     ],
+     "text": "## 2. 개인정보 마스킹 (PII 보호)",
+     "spotlight": 0.15,
+     "pad": 0
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_check",
+   "from": 3.3,
+   "to": 44.6,
+   "speed": "auto",
+   "max_speed": 6,
+   "labels": [
+    {
+     "kicker": "STEP 2",
+     "text": "규칙대로 점검·수정하기",
+     "at": 0.5,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "같은 대화에서, AGENTS.md 규칙에 맞는지 대시보드 코드를 점검하고 어긋난 곳은 고쳐 달라고 합니다.",
+     "say": "같은 대화에서, 에이전츠 엠디 규칙에 맞는지 대시보드 코드를 점검하고 어긋난 곳은 고쳐 달라고 합니다.",
+     "at": "submit",
+     "align": 0.3
+    },
+    {
+     "text": "에이전트가 대시보드 파일 세 개를 끝까지 읽으며, 규칙과 하나씩 비교합니다.",
+     "say": "에이전트가 대시보드 파일 세 개를 끝까지 읽으며, 규칙과 하나씩 비교합니다.",
+     "at": 30.0,
+     "align": 0.5
+    },
+    {
+     "text": "생각 기록을 보면, 주차 이름에 쓴 MM/DD처럼 규칙과 다른 날짜 형식을 찾아내고 있습니다.",
+     "say": "생각 기록을 보면, 주차 이름에 쓴 월 슬래시 일처럼 규칙과 다른 날짜 형식을 찾아내고 있습니다.",
+     "at": 44.5,
+     "align": 0.3
+    }
+   ],
+   "zoom": [
+    {
+     "from": 3.3,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      705,
+      90,
+      730,
+      470
+     ]
+    }
+   ],
+   "callouts": [
+    {
+     "say": 1,
+     "lead": 0.4,
+     "dur": 3.0,
+     "box_css": [
+      734,
+      180,
+      204,
+      126
+     ],
+     "text": "Analyzed index.html · styles.css · app.js",
+     "spotlight": 0.15
+    },
+    {
+     "lead": 0.0,
+     "dur": 3.0,
+     "box_css": [
+      744,
+      376.85,
+      637,
+      62.65
+     ],
+     "text": "WEEK_LABELS · MM/DD → YYYY-MM-DD",
+     "spotlight": 0.15,
+     "at": 44.55,
+     "pad": 0
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_check",
+   "from": 96.0,
+   "to": 130.0,
+   "speed": [
+    {
+     "from": 96.5,
+     "to": 129.0,
+     "x": 6
+    }
+   ],
+   "narration": [
+    {
+     "text": "그리고 날짜를 YYYY-MM-DD로 통일하도록, index.html과 app.js를 차례로 고칩니다.",
+     "say": "그리고 날짜를 연월일 형식으로 통일하도록, 인덱스 에이치티엠엘과 앱 제이에스를 차례로 고칩니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 96.0,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      705,
+      140,
+      730,
+      330
+     ]
+    }
+   ],
+   "callouts": [
+    {
+     "at": 129.0,
+     "lead": 0.0,
+     "dur": 2.2,
+     "box_css": [
+      720,
+      376,
+      147,
+      25
+     ],
+     "text": "Edited app.js +8 -8",
+     "spotlight": 0.18
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_check",
+   "from": 188.5,
+   "to": 196.0,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "약 3분 뒤 점검 결과가 표로 나왔습니다. 마스킹, 외부 CDN 금지, 안전 이슈 강조는 이미 지키고 있었고,",
+     "say": "약 삼 분 뒤 점검 결과가 표로 나왔습니다. 마스킹, 외부 씨디엔 금지, 안전 이슈 강조는 이미 지키고 있었고,"
+    },
+    {
+     "text": "섞여 있던 날짜 표기는 모두 YYYY-MM-DD로 바꿨습니다.",
+     "say": "섞여 있던 날짜 표기는 모두 연월일 형식으로 바꿨습니다."
+    },
+    {
+     "text": "빠져 있던 데이터 출처와 기준일은 화면 맨 아래 푸터에 넣었습니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 188.5,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      705,
+      90,
+      730,
+      420
+     ]
+    }
+   ],
+   "callouts": [
+    {
+     "say": 1,
+     "lead": 0.2,
+     "dur": 3.0,
+     "box_css": [
+      728,
+      158,
+      676,
+      186
+     ],
+     "text": "4) 날짜 표기 (YYYY-MM-DD)",
+     "spotlight": 0.15
+    },
+    {
+     "say": 2,
+     "lead": 0.2,
+     "dur": 3.0,
+     "box_css": [
+      728,
+      398,
+      676,
+      55
+     ],
+     "text": "6) 하단 데이터 출처 및 기준일",
+     "spotlight": 0.15
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_check",
+   "from": 240.6,
+   "to": 244.2,
+   "speed": "auto",
+   "transition": 0,
+   "narration": [
+    {
+     "text": "바뀐 두 파일을 확인하고 Accept all을 누릅니다.",
+     "say": "바뀐 두 파일을 확인하고 억셉트 올을 누릅니다.",
+     "at": "click:Accept all",
+     "align": 0.92
+    }
+   ],
+   "zoom": [
+    {
+     "from": 240.6,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      705,
+      90,
+      730,
+      420
+     ]
+    },
+    {
+     "from": "click:Accept all -1.6",
+     "box_css": [
+      700,
+      340,
+      740,
+      400
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "at": "click:Accept all",
+     "lead": -1.0,
+     "dur": 1.3,
+     "text": "Accept all",
+     "spotlight": 0.2
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_skill",
+   "from": 2.6,
+   "to": 24.0,
+   "speed": "auto",
+   "labels": [
+    {
+     "kicker": "STEP 3",
+     "text": "주간 보고 스킬 만들기",
+     "at": 0.5,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "이번에는 새 대화에서, 주간 VOC 보고서를 만드는 스킬을 요청합니다.",
+     "say": "이번에는 새 대화에서, 주간 브이오씨 보고서를 만드는 스킬을 요청합니다.",
+     "at": "click:새 대화",
+     "align": 0.7
+    },
+    {
+     "text": "위치는 .agents/skills/voc-weekly-report 폴더입니다.",
+     "say": "위치는 점 에이전츠, 스킬즈, 브이오씨 위클리 리포트 폴더입니다."
+    },
+    {
+     "text": "SKILL.md에는 보고서 형식을, scripts/weekly_stats.py에는 건수를 계산하는 코드를 넣어 달라고 했습니다.",
+     "say": "스킬 엠디에는 보고서 형식을, 스크립츠 폴더의 위클리 스탯츠 파이에는 건수를 계산하는 코드를 넣어 달라고 했습니다.",
+     "at": "submit",
+     "align": 0.9
+    }
+   ],
+   "zoom": [
+    {
+     "from": 2.6,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      700,
+      0,
+      740,
+      460
+     ]
+    }
+   ],
+   "callouts": [
+    {
+     "at": "click:새 대화",
+     "lead": -0.8,
+     "dur": 1.1,
+     "text": "새 대화 (+)",
+     "spotlight": 0.2
+    },
+    {
+     "at": "type_end",
+     "lead": -0.6,
+     "dur": 1.0,
+     "box_css": [
+      722,
+      345,
+      696,
+      88
+     ],
+     "text": ".agents/skills/voc-weekly-report/",
+     "spotlight": 0.15
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_skill",
+   "from": 89.6,
+   "to": 150.9,
+   "speed": [
+    {
+     "from": 90.0,
+     "to": 149.0,
+     "x": 6
+    }
+   ],
+   "narration": [
+    {
+     "text": "에이전트는 스크립트를 먼저 만들고, 직접 실행해 결과를 확인한 뒤 SKILL.md를 씁니다.",
+     "say": "에이전트는 스크립트를 먼저 만들고, 직접 실행해 결과를 확인한 뒤 스킬 엠디를 씁니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 89.6,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      705,
+      150,
+      730,
+      230
+     ]
+    }
+   ],
+   "callouts": [
+    {
+     "at": 149.3,
+     "lead": 0.0,
+     "dur": 1.6,
+     "box_css": [
+      720,
+      218,
+      553,
+      100
+     ],
+     "text": "weekly_stats.py · Ran python3 · SKILL.md",
+     "spotlight": 0.18
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_skill",
+   "from": 158.6,
+   "to": 165.0,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "약 2분 30초 뒤, 두 파일이 만들어졌습니다. weekly_stats.py는 242줄, SKILL.md는 71줄입니다.",
+     "say": "약 이 분 삼십 초 뒤, 두 파일이 만들어졌습니다. 위클리 스탯츠 파이는 이백사십이 줄, 스킬 엠디는 칠십일 줄입니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 158.6,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      700,
+      330,
+      740,
+      420
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "say": 0,
+     "lead": 1.6,
+     "dur": 3.6,
+     "box_css": [
+      742,
+      614,
+      464,
+      50
+     ],
+     "text": "weekly_stats.py · SKILL.md",
+     "spotlight": 0.15
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_skill",
+   "from": 209.9,
+   "to": 213.87,
+   "speed": "auto",
+   "transition": 0,
+   "narration": [
+    {
+     "text": "답에는 스크립트 실행 방법도 적혀 있습니다. 확인하고 Accept all을 누릅니다.",
+     "say": "답에는 스크립트 실행 방법도 적혀 있습니다. 확인하고 억셉트 올을 누릅니다.",
+     "at": "click:Accept all",
+     "align": 0.92
+    }
+   ],
+   "zoom": [
+    {
+     "from": 209.9,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      700,
+      330,
+      740,
+      420
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "say": 0,
+     "lead": 0.3,
+     "dur": 2.2,
+     "box_css": [
+      790,
+      385,
+      472,
+      38
+     ],
+     "text": "python3 … weekly_stats.py --csv data/voc_tickets.csv",
+     "spotlight": 0.15
+    },
+    {
+     "at": "click:Accept all",
+     "lead": -1.0,
+     "dur": 1.3,
+     "text": "Accept all",
+     "spotlight": 0.2
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_skill_file",
+   "from": 0.3,
+   "to": 6.85,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "Explorer에서 .agents 폴더를 펼쳐 SKILL.md를 엽니다.",
+     "say": "익스플로러에서 점 에이전츠 폴더를 펼쳐 스킬 엠디를 엽니다.",
+     "at": "click:SKILL.md",
+     "align": 0.7
+    },
+    {
+     "text": "맨 위의 name과 description이 스킬의 이름표입니다. 에이전트는 평소에 이 설명만 보고 있다가, 요청이 맞으면 본문을 꺼내 읽습니다.",
+     "say": "맨 위의 네임과 디스크립션이 스킬의 이름표입니다. 에이전트는 평소에 이 설명만 보고 있다가, 요청이 맞으면 본문을 꺼내 읽습니다."
+    },
+    {
+     "text": "본문에는 핵심 3줄, 분류별 표, 원인 추정, 다음 할 일 순서의 보고서 형식이 들어 있습니다.",
+     "say": "본문에는 핵심 세 줄, 분류별 표, 원인 추정, 다음 할 일 순서의 보고서 형식이 들어 있습니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 0.3,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      42,
+      30,
+      600,
+      330
+     ],
+     "scale": 1.4
+    }
+   ],
+   "callouts": [
+    {
+     "at": "click:.agents",
+     "lead": -0.8,
+     "dur": 1.0,
+     "text": ".agents",
+     "spotlight": 0.2,
+     "pad": 0
+    },
+    {
+     "at": "click:SKILL.md",
+     "lead": -0.8,
+     "dur": 1.0,
+     "text": "SKILL.md",
+     "spotlight": 0.2,
+     "pad": 0
+    },
+    {
+     "say": 1,
+     "lead": 0.3,
+     "dur": 3.8,
+     "box_css": [
+      403,
+      87,
+      207,
+      195
+     ],
+     "text": "name · description",
+     "spotlight": 0.15,
+     "pad": 0
+    },
+    {
+     "say": 2,
+     "lead": 0.2,
+     "dur": 3.4,
+     "box_css": [
+      404,
+      302,
+      213,
+      182
+     ],
+     "text": "핵심 3줄 → 분류별 표 → 원인 추정 → 다음 할 일",
+     "spotlight": 0.15
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_use",
+   "from": 2.8,
+   "to": 32.01,
+   "speed": [
+    {
+     "from": 10.3,
+     "to": 26.8,
+     "x": 6
+    }
+   ],
+   "labels": [
+    {
+     "kicker": "STEP 4",
+     "text": "스킬이 알아서 쓰이는지 확인",
+     "at": 0.5,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "이번에는 스킬 이름을 말하지 않고, 지난주 VOC 주간 보고서를 만들어 reports 폴더에 저장해 달라고만 합니다.",
+     "say": "이번에는 스킬 이름을 말하지 않고, 지난주 브이오씨 주간 보고서를 만들어 리포츠 폴더에 저장해 달라고만 합니다.",
+     "at": "type_start",
+     "align": 0.15
+    },
+    {
+     "text": "에이전트가 가장 먼저 연 파일은, 방금 만든 voc-weekly-report 스킬의 SKILL.md입니다.",
+     "say": "에이전트가 가장 먼저 연 파일은, 방금 만든 브이오씨 위클리 리포트 스킬의 스킬 엠디입니다.",
+     "at": 27.3,
+     "align": 0.35
+    },
+    {
+     "text": "요청이 스킬 설명과 맞아서, 스스로 골라 읽은 것입니다."
+    },
+    {
+     "text": "이어서 스킬 폴더의 weekly_stats.py를 실행해, 숫자부터 계산합니다.",
+     "say": "이어서 스킬 폴더의 위클리 스탯츠 파이를 실행해, 숫자부터 계산합니다.",
+     "at": 31.95,
+     "align": 0.15
+    }
+   ],
+   "zoom": [
+    {
+     "from": 2.8,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      700,
+      0,
+      740,
+      420
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "at": "click:새 대화",
+     "lead": -0.8,
+     "dur": 1.0,
+     "text": "새 대화 (+)",
+     "spotlight": 0.2
+    },
+    {
+     "say": 1,
+     "lead": 0.5,
+     "dur": 3.2,
+     "box_css": [
+      731,
+      181,
+      313,
+      26
+     ],
+     "text": "Analyzed voc-weekly-report/SKILL.md",
+     "spotlight": 0.15
+    },
+    {
+     "say": 3,
+     "lead": 0.6,
+     "dur": 2.8,
+     "box_css": [
+      721,
+      183,
+      695,
+      78
+     ],
+     "text": "Run python3 … voc-weekly-report/scripts/weekly_stats.py",
+     "spotlight": 0.15
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_use",
+   "from": 110.0,
+   "to": 116.9,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "스킬의 지침대로 보고서를 쓰는 데 약 2분이 걸렸습니다.",
+     "say": "스킬의 지침대로 보고서를 쓰는 데 약 이 분이 걸렸습니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 110.0,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      700,
+      150,
+      740,
+      360
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": []
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_use",
+   "from": 121.3,
+   "to": 128.0,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "reports 폴더에 지난주 보고서를 저장했고, AGENTS.md와 SKILL.md를 함께 지켰다고 정리합니다.",
+     "say": "리포츠 폴더에 지난주 보고서를 저장했고, 에이전츠 엠디와 스킬 엠디를 함께 지켰다고 정리합니다.",
+     "at": 122.6,
+     "align": 0.15
+    },
+    {
+     "text": "안전 이슈 6건을 맨 위에 두고, 고객 이름과 연락처는 가렸습니다.",
+     "say": "안전 이슈 여섯 건을 맨 위에 두고, 고객 이름과 연락처는 가렸습니다."
+    },
+    {
+     "text": "맨 아래에는 데이터 출처와 기준일이 들어갔습니다. 팀 규칙 6번이 저절로 적용된 것입니다.",
+     "say": "맨 아래에는 데이터 출처와 기준일이 들어갔습니다. 팀 규칙 육 번이 저절로 적용된 것입니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 121.3,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      700,
+      150,
+      740,
+      360
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "say": 0,
+     "lead": 0.5,
+     "dur": 3.0,
+     "box_css": [
+      721,
+      190,
+      331,
+      26
+     ],
+     "text": "AGENTS.md 및 SKILL.md 준수",
+     "spotlight": 0.15
+    },
+    {
+     "say": 1,
+     "lead": 0.2,
+     "dur": 2.8,
+     "box_css": [
+      721,
+      268.5,
+      688,
+      75
+     ],
+     "text": "안전 이슈 최우선 배치",
+     "spotlight": 0.15,
+     "pad": 0
+    },
+    {
+     "say": 2,
+     "lead": 0.2,
+     "dur": 3.2,
+     "box_css": [
+      721,
+      472,
+      586,
+      26
+     ],
+     "text": "데이터 출처 … 기준일: 2026-10-25",
+     "spotlight": 0.15
+    }
+   ],
+   "transition": 0.4
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_use",
+   "from": 174.3,
+   "to": 177.81,
+   "speed": "auto",
+   "transition": 0,
+   "narration": [
+    {
+     "text": "Accept all을 눌러 보고서를 저장합니다.",
+     "say": "억셉트 올을 눌러 보고서를 저장합니다.",
+     "at": "click:Accept all",
+     "align": 0.92
+    }
+   ],
+   "zoom": [
+    {
+     "from": 174.3,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      700,
+      150,
+      740,
+      360
+     ],
+     "scale": 1.9
+    },
+    {
+     "from": "click:Accept all -1.5",
+     "box_css": [
+      700,
+      340,
+      740,
+      400
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "at": "click:Accept all",
+     "lead": -0.9,
+     "dur": 1.2,
+     "text": "Accept all",
+     "spotlight": 0.2
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_slash",
+   "from": 6.0,
+   "to": 22.0,
+   "speed": "auto",
+   "labels": [
+    {
+     "kicker": "STEP 5",
+     "text": "슬래시로 직접 부르기 · Customizations",
+     "at": 0.5,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "스킬은 직접 부를 수도 있습니다. 새 대화에서 슬래시와 voc를 입력하면,",
+     "say": "스킬은 직접 부를 수도 있습니다. 새 대화에서 슬래시와 브이오씨를 입력하면,",
+     "at": "type_end",
+     "align": 0.75
+    },
+    {
+     "text": "메뉴에 voc-weekly-report 스킬이 설명과 함께 나타납니다. Enter로 고르고,",
+     "say": "메뉴에 브이오씨 위클리 리포트 스킬이 설명과 함께 나타납니다. 엔터로 고르고,",
+     "at": "target:voc-weekly-report",
+     "align": 0.3
+    },
+    {
+     "text": "2026-10-12 주간 보고서도 같은 형식으로 만들어 달라고 이어서 적어 보냅니다.",
+     "say": "시월 십이 일 주간 보고서도 같은 형식으로 만들어 달라고 이어서 적어 보냅니다.",
+     "at": "submit",
+     "align": 0.9
+    },
+    {
+     "text": "슬래시로 부르면, 그 스킬을 반드시 쓰도록 지정할 수 있습니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 6.0,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      700,
+      0,
+      740,
+      420
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "at": "type_end",
+     "lead": 0.1,
+     "dur": 1.2,
+     "box_css": [
+      725,
+      353,
+      36,
+      24
+     ],
+     "text": "/voc",
+     "spotlight": 0.2
+    },
+    {
+     "at": "target:voc-weekly-report",
+     "lead": -1.6,
+     "dur": 1.8,
+     "box_css": [
+      717,
+      296,
+      706,
+      36
+     ],
+     "text": "voc-weekly-report",
+     "spotlight": 0.15
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_slash",
+   "from": 34.0,
+   "to": 93.5,
+   "speed": [
+    {
+     "from": 34.4,
+     "to": 89.0,
+     "x": 6
+    }
+   ],
+   "narration": [
+    {
+     "text": "에이전트는 스킬 지침대로 스크립트를 실행하고, 10월 12일 주 보고서를 씁니다.",
+     "say": "에이전트는 스킬 지침대로 스크립트를 실행하고, 시월 십이 일 주 보고서를 씁니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 34.0,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      700,
+      60,
+      740,
+      420
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "at": 91.5,
+     "lead": 0.0,
+     "dur": 1.8,
+     "box_css": [
+      720,
+      286,
+      336,
+      25
+     ],
+     "text": "Edited voc_weekly_report_2026-10-12.md +91 -0",
+     "spotlight": 0.18
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_slash",
+   "from": 197.0,
+   "to": 205.0,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "약 3분 뒤, reports 폴더에 10월 12일 주 보고서가 같은 형식으로 저장되었습니다.",
+     "say": "약 삼 분 뒤, 리포츠 폴더에 시월 십이 일 주 보고서가 같은 형식으로 저장되었습니다."
+    },
+    {
+     "text": "맨 아래 데이터 출처와 기준일도 빠지지 않았고, 변경 검토 바에는 새 보고서 파일 하나가 보입니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 197.0,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      700,
+      40,
+      740,
+      420
+     ],
+     "scale": 1.9
+    },
+    {
+     "from_say": 1,
+     "lead": 0.0,
+     "box_css": [
+      700,
+      340,
+      740,
+      400
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "say": 0,
+     "lead": 0.3,
+     "dur": 3.2,
+     "box_css": [
+      724,
+      92,
+      452,
+      26
+     ],
+     "text": "voc-weekly-report 2026-10-12 주간 보고서도 같은 형식으로",
+     "spotlight": 0.15,
+     "pad": 0
+    },
+    {
+     "say": 1,
+     "lead": 1.2,
+     "dur": 2.0,
+     "box_css": [
+      721,
+      474,
+      557,
+      26
+     ],
+     "text": "데이터 출처 … 기준일: 2026-10-25",
+     "spotlight": 0.15
+    },
+    {
+     "say": 1,
+     "lead": 3.6,
+     "dur": 2.2,
+     "box_css": [
+      742,
+      640,
+      509,
+      24
+     ],
+     "text": "voc_weekly_report_2026-10-12.md",
+     "spotlight": 0.15
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag5v_custom",
+   "from": 2.4,
+   "to": 9.4,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "마지막으로 규칙을 관리하는 화면입니다. 상태 표시줄의 설정 창에서, Customizations의 Manage를 누릅니다.",
+     "say": "마지막으로 규칙을 관리하는 화면입니다. 상태 표시줄의 설정 창에서, 커스터마이제이션스의 매니지를 누릅니다.",
+     "at": "click:Manage",
+     "align": 0.88
+    },
+    {
+     "text": "Rules 탭에, 방금 만든 AGENTS.md가 Project 규칙으로 보입니다.",
+     "say": "룰즈 탭에, 방금 만든 에이전츠 엠디가 프로젝트 규칙으로 보입니다.",
+     "at": "target:AGENTS.md",
+     "align": 0.3
+    },
+    {
+     "text": "+ Global이나 + Workspace로, 모든 프로젝트용 규칙이나 이 폴더용 규칙을 더 추가할 수 있습니다.",
+     "say": "플러스 글로벌이나 플러스 워크스페이스로, 모든 프로젝트용 규칙이나 이 폴더용 규칙을 더 추가할 수 있습니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 2.4,
+     "lead": -0.2,
+     "dur": 0.001,
+     "box_css": [
+      1080,
+      285,
+      350,
+      160
+     ],
+     "scale": 1.9
+    },
+    {
+     "from": "click:Manage +0.6",
+     "box_css": [
+      700,
+      40,
+      740,
+      300
+     ],
+     "scale": 1.9
+    }
+   ],
+   "callouts": [
+    {
+     "at": "hover:Customizations",
+     "lead": -0.2,
+     "dur": 1.2,
+     "text": "Customizations",
+     "spotlight": 0.2
+    },
+    {
+     "at": "click:Manage",
+     "lead": -0.8,
+     "dur": 1.0,
+     "text": "Manage",
+     "spotlight": 0.2
+    },
+    {
+     "say": 1,
+     "lead": 0.2,
+     "dur": 2.8,
+     "box_css": [
+      722,
+      254,
+      697,
+      41
+     ],
+     "text": "Project · AGENTS.md",
+     "spotlight": 0.15
+    },
+    {
+     "say": 2,
+     "lead": 0.3,
+     "dur": 2.8,
+     "box_css": [
+      1242,
+      184,
+      182,
+      29
+     ],
+     "text": "+ Global · + Workspace",
+     "spotlight": 0.15
+    }
+   ]
+  },
+  {
+   "type": "outro",
+   "kicker": "AG LAB 05 완료",
+   "title": "오늘의 체크리스트",
+   "checklist": [
+    "AGENTS.md — 모든 대화에 항상 적용",
+    "규칙대로 점검 · 수정",
+    "SKILL.md + 스크립트 = 주간 보고 스킬",
+    "자동 선택 · /voc 직접 호출"
+   ],
+   "subtitle": "다음 · LAB 06 MCP로 회사 데이터 연결",
+   "narration": [
+    {
+     "text": "수고하셨습니다!"
+    },
+    {
+     "text": "체크리스트로 오늘 실습을 점검해 보세요."
+    },
+    {
+     "text": "다음 실습에서는 CSV 대신 회사 BigQuery 데이터를, MCP로 직접 연결해 봅니다.",
+     "say": "다음 실습에서는 씨에스브이 대신 회사 빅쿼리 데이터를, 엠씨피로 직접 연결해 봅니다."
+    }
+   ]
+  }
+ ]
+}

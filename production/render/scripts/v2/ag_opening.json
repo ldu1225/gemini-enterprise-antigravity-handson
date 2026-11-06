@@ -1,0 +1,1811 @@
+{
+  "id": "ag_opening",
+  "track": "ag",
+  "title": "AG OPENING · 에이전트와 함께 만드는 개발",
+  "brand": "Antigravity 핸즈온 랩",
+  "bgm": true,
+  "captions": true,
+  "encode": {
+    "crf": 26,
+    "preset": "slow",
+    "audio_kbps": 160,
+    "max_mb": 90
+  },
+  "segments": [
+    {
+      "type": "title",
+      "kicker": "ANTIGRAVITY · OPENING",
+      "title": "에이전트와 함께 만드는 개발",
+      "subtitle": "Antigravity 앱 · CLI · SDK, 그리고 에이전트에게 일을 맡기는 법",
+      "duration": 5.0,
+      "narration": [
+        "안녕하세요. Antigravity 핸즈온 랩에 오신 것을 환영합니다.",
+        "실습에 앞서, Antigravity가 무엇이고, 에이전트에게 일을 맡기는 방법을 함께 살펴보겠습니다."
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "../../render/out/openings/recs/ag_s_shift",
+      "badge": false,
+      "narration": [
+        "AI와 함께 코딩하는 방식은 빠르게 바뀌어 왔습니다.",
+        {
+          "text": "처음에는 타이핑하는 코드의 다음 몇 줄을 제안하는 자동완성이었고,",
+          "at": 2.0
+        },
+        {
+          "text": "그다음은 질문하면 코드 조각과 설명을 주는 대화형 도우미였습니다. 붙여 넣고 고치는 일은 여전히 우리 몫이었죠.",
+          "at": 4.0
+        },
+        {
+          "text": "이제는 에이전트입니다. 목표를 주면 에이전트가 계획을 세우고, 파일과 터미널, 브라우저를 직접 써서 만들고 검증합니다.",
+          "at": 6.0
+        },
+        "사람은 방향을 정하고, 계획과 결과를 검토해서 승인합니다."
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "../../render/out/openings/recs/ag_s_family",
+      "badge": false,
+      "narration": [
+        "Antigravity는 이렇게 일하도록 만든, Google의 에이전트 중심 개발 플랫폼입니다.",
+        {
+          "text": "중심은 Antigravity 2.0 데스크톱 앱입니다. 오늘 실습의 주 무대죠.",
+          "say": "중심은 앤티그래비티 투 포인트 오 데스크톱 앱입니다. 오늘 실습의 주 무대죠.",
+          "at": 2.0
+        },
+        {
+          "text": "터미널에서는 Antigravity CLI, agy로 같은 에이전트를 부를 수 있고,",
+          "say": "터미널에서는 앤티그래비티 씨엘아이, 에이지와이로 같은 에이전트를 부를 수 있고,",
+          "at": 4.0
+        },
+        {
+          "text": "VS Code나 JetBrains 같은 익숙한 IDE에서는, Antigravity for IDEs 확장으로 씁니다.",
+          "say": "브이에스 코드나 젯브레인즈 같은 익숙한 아이디이에서는, 앤티그래비티 포 아이디이즈 확장으로 씁니다.",
+          "at": 6.0
+        },
+        {
+          "text": "그리고 Antigravity SDK로, 내 Python 코드 안에서 에이전트를 실행할 수도 있습니다.",
+          "say": "그리고 앤티그래비티 에스디케이로, 내 파이썬 코드 안에서 에이전트를 실행할 수도 있습니다.",
+          "at": 8.0
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "../../render/out/openings/recs/ag_s_story",
+      "badge": false,
+      "narration": [
+        {
+          "text": "오늘 실습에서는 가상 회사 Cymbal의 개발자가 되어, CX팀장이 보낸 요청서 한 장을 처음부터 끝까지 해결합니다.",
+          "say": "오늘 실습에서는 가상 회사 심벌의 개발자가 되어, 씨엑스팀장이 보낸 요청서 한 장을 처음부터 끝까지 해결합니다."
+        },
+        {
+          "text": "첫째, 고객 문의 현황을 한눈에 보는 VOC 대시보드.",
+          "say": "첫째, 고객 문의 현황을 한눈에 보는 브이오씨 대시보드.",
+          "at": 2.0
+        },
+        {
+          "text": "둘째, 매주 월요일 아침의 주간 보고 자동화.",
+          "at": 4.0
+        },
+        {
+          "text": "셋째, 팀원 누구나 Gemini Enterprise에서 물어보는 VOC 도우미입니다.",
+          "say": "셋째, 팀원 누구나 제미나이 엔터프라이즈에서 물어보는 브이오씨 도우미입니다.",
+          "at": 6.0
+        },
+        {
+          "text": "개인정보 마스킹, 안전 이슈는 맨 위 같은 팀의 조건도 함께 지켜야 하죠.",
+          "at": 8.0
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag4v_dash",
+      "from": 0.3,
+      "to": 47.5,
+      "badge": false,
+      "keep": [
+        [
+          23.3,
+          25.6
+        ]
+      ],
+      "labels": [
+        {
+          "kicker": "완성된 결과물 · Lab 4",
+          "text": "VOC 대시보드",
+          "at": 0.5,
+          "dur": 3.4
+        }
+      ],
+      "narration": [
+        {
+          "text": "먼저, 오늘 만들 결과물부터 보겠습니다. Lab 4에서 완성하는 VOC 대시보드입니다.",
+          "say": "먼저, 오늘 만들 결과물부터 보겠습니다. 랩 포에서 완성하는 브이오씨 대시보드입니다."
+        },
+        {
+          "text": "요청서대로 안전 이슈 긴급 문의가 맨 위에 있고, 고객 이름과 연락처는 가려져 있습니다."
+        },
+        {
+          "text": "아래에는 핵심 지표 네 개와, 4주 동안의 주간 문의 추이 차트가 있습니다.",
+          "say": "아래에는 핵심 지표 네 개와, 사 주 동안의 주간 문의 추이 차트가 있습니다.",
+          "at": "event:7",
+          "align": 0.0
+        },
+        {
+          "text": "막대를 누르면 그 주만 골라서,",
+          "at": "click:4주 차 막대",
+          "align": 0.3
+        },
+        {
+          "text": "제품별, 분류별 건수도 지난주 기준으로 바뀝니다.",
+          "at": "target:D 제품별 문의 건수 (지난주)",
+          "align": 0.1
+        },
+        {
+          "text": "제품을 공기청정기로 고르고 긴급만 보기를 켜면,",
+          "at": "click:긴급만 보기",
+          "align": 0.85
+        },
+        {
+          "text": "아직 하나도 처리되지 않은 긴급 문의 6건이 바로 드러납니다.",
+          "say": "아직 하나도 처리되지 않은 긴급 문의 여섯 건이 바로 드러납니다.",
+          "at": "target:D 상단 KPI 처리 완료율 (공기청정기·긴급)",
+          "align": 0.2
+        }
+      ],
+      "callouts": [
+        {
+          "say": 1,
+          "lead": 0.2,
+          "dur": 2.6,
+          "box_css": [
+            84,
+            134,
+            392,
+            32
+          ],
+          "text": "안전 이슈 (긴급 문의) 목록 · 긴급 10건 · 미완료 6건",
+          "spotlight": 0.18
+        },
+        {
+          "say": 1,
+          "lead": 3.0,
+          "dur": 2.6,
+          "box_css": [
+            648,
+            182,
+            190,
+            600
+          ],
+          "text": "고객명 · 연락처 — 마스킹",
+          "spotlight": 0.18
+        },
+        {
+          "at": "target:D KPI 4개",
+          "lead": 0.3,
+          "dur": 2.2,
+          "text": "핵심 지표 4개",
+          "spotlight": 0.18
+        },
+        {
+          "at": "click:4주 차 막대",
+          "lead": -0.9,
+          "dur": 1.2,
+          "box_css": [
+            973,
+            408,
+            84,
+            137
+          ],
+          "text": "4주 차 막대",
+          "spotlight": 0.2,
+          "pad": 0
+        },
+        {
+          "at": "target:D 제품별 문의 건수 (지난주)",
+          "lead": 0.1,
+          "dur": 1.5,
+          "text": "제품별 문의 건수",
+          "spotlight": 0.18
+        },
+        {
+          "at": "target:D 분류별 문의 건수 (지난주)",
+          "lead": 1.7,
+          "dur": 1.5,
+          "text": "분류별 문의 건수",
+          "spotlight": 0.18
+        },
+        {
+          "at": "event:44",
+          "lead": -0.3,
+          "dur": 1.3,
+          "box_css": [
+            1115,
+            26,
+            131,
+            36
+          ],
+          "text": "제품 선택 · 공기청정기",
+          "spotlight": 0.2,
+          "pad": 0
+        },
+        {
+          "at": "click:긴급만 보기",
+          "lead": -0.8,
+          "dur": 1.1,
+          "text": "긴급만 보기",
+          "spotlight": 0.2
+        },
+        {
+          "at": "target:D 상단 KPI 처리 완료율 (공기청정기·긴급)",
+          "lead": 0.3,
+          "dur": 2.6,
+          "text": "처리 완료율 0.0% · 미완료 6건",
+          "spotlight": 0.2
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag7v_deck",
+      "from": 5.6,
+      "to": 74.0,
+      "badge": false,
+      "transition": 0.4,
+      "intro": "none",
+      "speed": [
+        {
+          "from": 6.24,
+          "to": 16.86,
+          "x": 2.5
+        },
+        {
+          "from": 16.86,
+          "to": 19.1,
+          "x": 2.0
+        },
+        {
+          "from": 19.1,
+          "to": 28.82,
+          "x": 5.9
+        },
+        {
+          "from": 28.82,
+          "to": 31.06,
+          "x": 2.0
+        },
+        {
+          "from": 31.06,
+          "to": 40.74,
+          "x": 7.3
+        },
+        {
+          "from": 40.74,
+          "to": 42.98,
+          "x": 2.0
+        },
+        {
+          "from": 42.98,
+          "to": 53.66,
+          "x": 3.7
+        },
+        {
+          "from": 53.66,
+          "to": 55.9,
+          "x": 2.0
+        },
+        {
+          "from": 55.9,
+          "to": 66.58,
+          "x": 4.6
+        },
+        {
+          "from": 66.58,
+          "to": 68.82,
+          "x": 2.0
+        },
+        {
+          "from": 68.82,
+          "to": 74.0,
+          "x": 1.6
+        }
+      ],
+      "labels": [
+        {
+          "kicker": "완성된 결과물 · Lab 7",
+          "text": "임원 보고 슬라이드 6장",
+          "at": 0.5,
+          "dur": 3.4
+        }
+      ],
+      "narration": [
+        {
+          "text": "Lab 7에서는 같은 데이터로, 월요일 임원 회의에 올릴 보고 슬라이드 여섯 장을 만듭니다.",
+          "say": "랩 세븐에서는 같은 데이터로, 월요일 임원 회의에 올릴 보고 슬라이드 여섯 장을 만듭니다."
+        },
+        {
+          "text": "표지에는 안전 이슈 경보와 핵심 지표 네 개가 있고,",
+          "at": "target:S1 지표 4개 (6 · 91 · 20 · 45건)",
+          "align": 0.0
+        },
+        {
+          "text": "이어서 핵심 요약 세 줄,",
+          "at": "target:S2 핵심 1 · 안전 이슈",
+          "align": 0.05
+        },
+        {
+          "text": "최근 4주 접수 추이,",
+          "say": "최근 사 주 접수 추이,",
+          "at": "target:S3 지표 타일 4개",
+          "align": 0.05
+        },
+        {
+          "text": "빨간색으로 강조한 미완료 긴급 문의 6건,",
+          "say": "빨간색으로 강조한 미완료 긴급 문의 여섯 건,",
+          "at": "target:S4 긴급 문의 6건 표 (미완료 빨간색)",
+          "align": 0.05
+        },
+        {
+          "text": "로봇청소기 앱 연결 급증 분석,",
+          "at": "target:S5 앱 연결 주별 건수 차트",
+          "align": 0.05
+        },
+        {
+          "text": "그리고 부서별 실행 과제까지 이어집니다.",
+          "at": "target:S6 실행 3단계",
+          "align": 0.05
+        }
+      ],
+      "callouts": [
+        {
+          "at": "target:S1 안전 이슈 경보 배너",
+          "say": 1,
+          "lead": 0.1,
+          "dur": 1.6,
+          "text": "안전 이슈(긴급) 6건 경보",
+          "spotlight": 0.18
+        },
+        {
+          "at": "target:S1 지표 4개 (6 · 91 · 20 · 45건)",
+          "say": 1,
+          "lead": 1.8,
+          "dur": 1.8,
+          "text": "핵심 지표 4개 — 6건 · 91건 · 20건 · 45건",
+          "spotlight": 0.18
+        },
+        {
+          "at": "target:S4 긴급 문의 6건 표 (미완료 빨간색)",
+          "lead": 0.3,
+          "dur": 2.3,
+          "text": "미완료 안전 이슈(긴급) 6건",
+          "spotlight": 0.18
+        },
+        {
+          "at": "target:S5 앱 연결 주별 건수 차트",
+          "lead": 0.3,
+          "dur": 1.8,
+          "text": "로봇청소기 '앱 연결' 주별 추이",
+          "spotlight": 0.18
+        },
+        {
+          "at": "target:S6 실행 3단계",
+          "lead": 0.3,
+          "dur": 2.6,
+          "text": "다음 할 일 3단계 — 담당 팀 · 기한",
+          "spotlight": 0.18
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag3v_open",
+      "from": 9.95,
+      "to": 18.0,
+      "labels": [
+        {
+          "kicker": "실제 화면 · Lab 3",
+          "text": "화면 구성 — Explorer · Editor · Agent",
+          "at": 0.5,
+          "dur": 3.4
+        }
+      ],
+      "narration": [
+        "앞으로 보실 Antigravity 화면은 녹화 당시의 빌드로 녹화해서, 앱 이름과 로고가 조금 다를 수 있습니다.",
+        {
+          "text": "왼쪽 Explorer에는 작업 폴더의 파일이 보이고,",
+          "say": "왼쪽 익스플로러에는 작업 폴더의 파일이 보이고,"
+        },
+        {
+          "text": "가운데 Editor에서는 파일과, 에이전트가 만든 문서를 엽니다.",
+          "say": "가운데 에디터에서는 파일과, 에이전트가 만든 문서를 엽니다."
+        },
+        {
+          "text": "오른쪽 Agent 패널이 에이전트와 대화하는 곳입니다.",
+          "say": "오른쪽 에이전트 패널이 에이전트와 대화하는 곳입니다."
+        },
+        {
+          "text": "Lab 3에서는 이렇게 CX팀의 요청서와, data 폴더의 고객 문의 300건부터 파악합니다.",
+          "say": "랩 쓰리에서는 이렇게 씨엑스팀의 요청서와, 데이터 폴더의 고객 문의 삼백 건부터 파악합니다.",
+          "at": "click:data 폴더",
+          "align": 0.1
+        }
+      ],
+      "callouts": [
+        {
+          "say": 1,
+          "lead": 0.1,
+          "dur": 2.4,
+          "box_css": [
+            48,
+            41,
+            287,
+            741
+          ],
+          "text": "Explorer",
+          "spotlight": 0.25
+        },
+        {
+          "say": 2,
+          "lead": 0.1,
+          "dur": 2.6,
+          "box_css": [
+            348,
+            41,
+            786,
+            741
+          ],
+          "text": "Editor — 요청서_CX팀.md",
+          "spotlight": 0.25
+        },
+        {
+          "say": 3,
+          "lead": 0.1,
+          "dur": 2.6,
+          "box_css": [
+            1147,
+            41,
+            284,
+            741
+          ],
+          "text": "Agent 패널",
+          "spotlight": 0.25
+        },
+        {
+          "at": "click:data 폴더",
+          "lead": -0.6,
+          "dur": 0.9,
+          "box_css": [
+            56,
+            161.2,
+            277,
+            14.6
+          ],
+          "text": "data 폴더",
+          "spotlight": 0.2,
+          "pad": 0
+        },
+        {
+          "at": "click:voc_tickets.csv",
+          "lead": -0.8,
+          "dur": 1.1,
+          "box_css": [
+            86,
+            183,
+            247,
+            16.8
+          ],
+          "text": "voc_tickets.csv",
+          "spotlight": 0.2,
+          "pad": 0
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "../../render/out/openings/recs/ag_s_loop",
+      "badge": false,
+      "narration": [
+        "에이전트와 일하는 흐름은 다섯 단계입니다.",
+        {
+          "text": "먼저 목표와 제약을 적어서 요청합니다.",
+          "at": 2.0
+        },
+        {
+          "text": "큰 작업이라면 /plan으로, 에이전트가 Implementation Plan이라는 계획서 아티팩트를 먼저 씁니다.",
+          "say": "큰 작업이라면 슬래시 플랜으로, 에이전트가 임플리멘테이션 플랜이라는 계획서 아티팩트를 먼저 씁니다.",
+          "at": 4.0
+        },
+        {
+          "text": "계획서를 읽고 댓글로 고친 뒤, Proceed로 승인합니다.",
+          "say": "계획서를 읽고 댓글로 고친 뒤, 프로시드로 승인합니다.",
+          "at": 6.0
+        },
+        {
+          "text": "그러면 에이전트가 파일을 쓰고, 터미널 명령을 실행하고, 브라우저로 결과를 확인합니다.",
+          "at": 8.0
+        },
+        {
+          "text": "마지막으로 바뀐 내용을 검토해 Accept 하거나 Reject 합니다. 작업 요약인 Walkthrough도 남습니다.",
+          "say": "마지막으로 바뀐 내용을 검토해 억셉트 하거나 리젝트 합니다. 작업 요약인 워크스루도 남습니다.",
+          "at": 10.0
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag3v_plan",
+      "from": 0.5,
+      "to": 7.6,
+      "badge": false,
+      "labels": [
+        {
+          "kicker": "실제 화면 · Lab 3",
+          "text": "/plan — 계획부터 받기",
+          "at": 0.5,
+          "dur": 3.4
+        }
+      ],
+      "narration": [
+        {
+          "text": "실제로 /plan과 함께 VOC 대시보드 계획을 요청하면,",
+          "say": "실제로 슬래시 플랜과 함께 브이오씨 대시보드 계획을 요청하면,",
+          "at": "submit",
+          "align": 0.85
+        }
+      ],
+      "zoom": [
+        {
+          "from": "click:입력창 -0.4",
+          "to": "submit +0.3",
+          "box_css": [
+            700,
+            620,
+            740,
+            190
+          ],
+          "overscan": true
+        },
+        {
+          "from": "submit +0.8",
+          "box_css": [
+            700,
+            60,
+            740,
+            160
+          ]
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag3v_plan",
+      "from": 58.85,
+      "to": 71.5,
+      "transition": 0.4,
+      "intro": "none",
+      "narration": [
+        {
+          "text": "에이전트는 바로 만들지 않고, Implementation Plan이라는 계획서부터 씁니다.",
+          "say": "에이전트는 바로 만들지 않고, 임플리멘테이션 플랜이라는 계획서부터 씁니다.",
+          "at": "target:Implementation Plan",
+          "align": 0.3
+        },
+        {
+          "text": "고칠 점이 있으면 바로 말합니다. 주간 추이는 4주 막대 차트로, 긴급 목록에는 상태도 넣어 달라고요.",
+          "say": "고칠 점이 있으면 바로 말합니다. 주간 추이는 사 주 막대 차트로, 긴급 목록에는 상태도 넣어 달라고요.",
+          "at": "submit",
+          "align": 0.9
+        }
+      ],
+      "zoom": [
+        {
+          "from": 59.0,
+          "to": "click:입력창 -0.6",
+          "box_css": [
+            700,
+            150,
+            740,
+            250
+          ]
+        },
+        {
+          "from": "click:입력창 -0.4",
+          "to": "submit +0.3",
+          "box_css": [
+            700,
+            620,
+            740,
+            190
+          ],
+          "overscan": true
+        }
+      ],
+      "callouts": [
+        {
+          "at": "target:Implementation Plan",
+          "lead": 0.3,
+          "dur": 2.2,
+          "box_css": [
+            726,
+            258,
+            678,
+            62
+          ],
+          "text": "Implementation Plan",
+          "spotlight": 0.15
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag4v_build",
+      "from": 0.4,
+      "to": 4.8,
+      "badge": false,
+      "labels": [
+        {
+          "kicker": "실제 화면 · Lab 4",
+          "text": "Proceed → 만들기 → Accept all",
+          "at": 0.5,
+          "dur": 3.4
+        }
+      ],
+      "narration": [
+        {
+          "text": "계획이 마음에 들면 Proceed를 누릅니다.",
+          "say": "계획이 마음에 들면 프로시드를 누릅니다.",
+          "at": "click:Proceed",
+          "align": 0.8
+        }
+      ],
+      "zoom": [
+        {
+          "from": 0.5,
+          "box_css": [
+            700,
+            160,
+            740,
+            250
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "at": "click:Proceed",
+          "lead": -0.9,
+          "dur": 1.1,
+          "text": "Proceed",
+          "spotlight": 0.2
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag4v_build",
+      "from": 227.2,
+      "to": 235.0,
+      "transition": 0.4,
+      "intro": "none",
+      "narration": [
+        {
+          "text": "약 4분 뒤, 에이전트가 index.html, styles.css, app.js를 만들고, 외부 URL과 개인정보 마스킹까지 스스로 점검했습니다.",
+          "say": "약 사 분 뒤, 에이전트가 인덱스 에이치티엠엘, 스타일즈 씨에스에스, 앱 제이에스를 만들고, 외부 유알엘과 개인정보 마스킹까지 스스로 점검했습니다."
+        }
+      ],
+      "zoom": [
+        {
+          "from": 227.2,
+          "lead": -0.05,
+          "dur": 0.001,
+          "box_css": [
+            720,
+            74,
+            690,
+            356
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "say": 0,
+          "lead": 0.2,
+          "dur": 3.6,
+          "box_css": [
+            721,
+            208,
+            688,
+            152
+          ],
+          "text": "생성된 파일",
+          "spotlight": 0.15
+        },
+        {
+          "say": 0,
+          "lead": 4.2,
+          "dur": 2.6,
+          "box_css": [
+            719,
+            374,
+            164,
+            32
+          ],
+          "text": "주요 구현 및 검증 완료 항목",
+          "spotlight": 0.15
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag4v_build",
+      "from": 281.0,
+      "to": 283.2,
+      "transition": 0.4,
+      "intro": "none",
+      "narration": [
+        {
+          "text": "바뀐 파일을 확인하고 Accept all로 받아들입니다.",
+          "say": "바뀐 파일을 확인하고 억셉트 올로 받아들입니다.",
+          "at": "click:Accept all",
+          "align": 0.55
+        }
+      ],
+      "zoom": [
+        {
+          "from": 281.0,
+          "lead": -0.05,
+          "dur": 0.001,
+          "box_css": [
+            710,
+            600,
+            720,
+            110
+          ],
+          "overscan": true,
+          "overscan_px": 330
+        }
+      ],
+      "callouts": [
+        {
+          "at": "target:변경된 파일",
+          "lead": -0.6,
+          "dur": 1.4,
+          "text": "2 Files With Changes",
+          "spotlight": 0.18
+        },
+        {
+          "at": "click:Accept all",
+          "lead": -0.9,
+          "dur": 1.1,
+          "text": "Accept all",
+          "spotlight": 0.2
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "../../render/out/openings/recs/ag_s_safety",
+      "badge": false,
+      "narration": [
+        "에이전트가 무엇을 스스로 할 수 있는지는, 내가 정합니다.",
+        {
+          "text": "Request Review는 명령을 실행하기 전에 매번 확인을 받습니다. 처음 시작할 때나 회사 코드에서 권장합니다.",
+          "say": "리퀘스트 리뷰는 명령을 실행하기 전에 매번 확인을 받습니다. 처음 시작할 때나 회사 코드에서 권장합니다.",
+          "at": 2.0
+        },
+        {
+          "text": "Default는 샌드박스 안에서 실행하고, 그 밖으로 나가야 할 때만 승인을 요청합니다.",
+          "say": "디폴트는 샌드박스 안에서 실행하고, 그 밖으로 나가야 할 때만 승인을 요청합니다.",
+          "at": 4.0
+        },
+        {
+          "text": "Turbo는 확인 없이 자동으로 실행하니, 연습용 폴더에서만 쓰세요.",
+          "say": "터보는 확인 없이 자동으로 실행하니, 연습용 폴더에서만 쓰세요.",
+          "at": 6.0
+        },
+        {
+          "text": "회사 계정이라면, 관리자가 콘솔에서 파일 접근과 터미널 자동 실행, 브라우저, MCP, 허용 모델 같은 정책을 미리 정해 둡니다.",
+          "say": "회사 계정이라면, 관리자가 콘솔에서 파일 접근과 터미널 자동 실행, 브라우저, 엠씨피, 허용 모델 같은 정책을 미리 정해 둡니다.",
+          "at": 8.0
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag4v_browse",
+      "from": 2.0,
+      "to": 9.4,
+      "labels": [
+        {
+          "kicker": "실제 화면 · Lab 4",
+          "text": "/browser — 에이전트가 직접 확인",
+          "at": 0.5,
+          "dur": 3.4
+        }
+      ],
+      "narration": [
+        {
+          "text": "완성된 대시보드는, /browser로 에이전트가 직접 열어서 확인하게 합니다.",
+          "say": "완성된 대시보드는, 슬래시 브라우저로 에이전트가 직접 열어서 확인하게 합니다.",
+          "at": "submit",
+          "align": 0.85
+        }
+      ],
+      "zoom": [
+        {
+          "from": "click:새 대화 -1.0",
+          "box_css": [
+            700,
+            20,
+            740,
+            420
+          ]
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag4v_browse",
+      "from": 142.4,
+      "to": 153.0,
+      "transition": 0.4,
+      "intro": "none",
+      "narration": [
+        {
+          "text": "에이전트가 브라우저로 대시보드를 열어, 긴급 문의 10건과 마스킹, 주별 건수가 제대로 나오는지 확인했습니다.",
+          "say": "에이전트가 브라우저로 대시보드를 열어, 긴급 문의 열 건과 마스킹, 주별 건수가 제대로 나오는지 확인했습니다."
+        },
+        {
+          "text": "검증 보고서에는, 에이전트가 직접 찍은 대시보드 스크린샷도 붙어 있습니다.",
+          "at": 149.3,
+          "align": 0.25
+        }
+      ],
+      "zoom": [
+        {
+          "from": 142.5,
+          "to": "click:Dashboard Verification +0.6",
+          "box_css": [
+            700,
+            140,
+            740,
+            440
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "say": 0,
+          "lead": 0.3,
+          "dur": 3.4,
+          "box_css": [
+            721,
+            287,
+            690,
+            215
+          ],
+          "text": "확인 결과 요약",
+          "spotlight": 0.15
+        },
+        {
+          "at": "click:Dashboard Verification",
+          "lead": -1.0,
+          "dur": 1.2,
+          "text": "Dashboard Verification",
+          "spotlight": 0.2
+        },
+        {
+          "say": 1,
+          "lead": 0.6,
+          "dur": 3.0,
+          "box_css": [
+            352,
+            263,
+            327,
+            515
+          ],
+          "text": "Cymbal VOC 대시보드 전체 화면",
+          "spotlight": 0.15,
+          "pad": 0
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "../../render/out/openings/recs/ag_s_custom",
+      "badge": false,
+      "narration": [
+        "에이전트에게 매번 같은 설명을 반복할 필요는 없습니다.",
+        {
+          "text": "규칙 파일 AGENTS.md에는, 한국어로 답하기와 개인정보 마스킹처럼 팀이 언제나 지킬 원칙을 적습니다.",
+          "say": "규칙 파일 에이전츠 엠디에는, 한국어로 답하기와 개인정보 마스킹처럼 팀이 언제나 지킬 원칙을 적습니다.",
+          "at": 2.0
+        },
+        {
+          "text": "스킬은 SKILL.md에 적어 두는 작업 절차입니다. 요청이 스킬의 설명과 맞으면 에이전트가 스스로 골라 쓰고, 슬래시로 직접 부를 수도 있습니다.",
+          "say": "스킬은 스킬 엠디에 적어 두는 작업 절차입니다. 요청이 스킬의 설명과 맞으면 에이전트가 스스로 골라 쓰고, 슬래시로 직접 부를 수도 있습니다.",
+          "at": 4.0
+        },
+        {
+          "text": "그리고 MCP로 회사의 도구와 데이터를 연결하면, 에이전트가 회사 데이터를 직접 조회할 수 있습니다.",
+          "say": "그리고 엠씨피로 회사의 도구와 데이터를 연결하면, 에이전트가 회사 데이터를 직접 조회할 수 있습니다.",
+          "at": 6.0
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag5v_use",
+      "from": 2.8,
+      "to": 32.01,
+      "speed": [
+        {
+          "from": 10.3,
+          "to": 26.8,
+          "x": 6
+        }
+      ],
+      "labels": [
+        {
+          "kicker": "실제 화면 · Lab 5",
+          "text": "스킬이 자동으로 쓰이는 순간",
+          "at": 0.5,
+          "dur": 3.4
+        }
+      ],
+      "narration": [
+        {
+          "text": "Lab 5에서는 팀 규칙과 주간 보고 스킬을 만든 뒤, 스킬 이름은 말하지 않고 지난주 VOC 주간 보고서만 요청합니다.",
+          "say": "랩 파이브에서는 팀 규칙과 주간 보고 스킬을 만든 뒤, 스킬 이름은 말하지 않고 지난주 브이오씨 주간 보고서만 요청합니다.",
+          "at": "type_start",
+          "align": 0.3
+        },
+        {
+          "text": "에이전트가 가장 먼저 연 파일이, 주간 보고 스킬의 SKILL.md입니다.",
+          "say": "에이전트가 가장 먼저 연 파일이, 주간 보고 스킬의 스킬 엠디입니다.",
+          "at": 27.3,
+          "align": 0.35
+        },
+        "요청이 스킬의 설명과 맞아서, 스스로 골라 읽은 것이죠."
+      ],
+      "zoom": [
+        {
+          "from": 2.8,
+          "lead": -0.2,
+          "dur": 0.001,
+          "box_css": [
+            700,
+            0,
+            740,
+            420
+          ],
+          "scale": 1.9
+        }
+      ],
+      "callouts": [
+        {
+          "say": 1,
+          "lead": 0.5,
+          "dur": 3.2,
+          "box_css": [
+            731,
+            181,
+            313,
+            26
+          ],
+          "text": "Analyzed voc-weekly-report/SKILL.md",
+          "spotlight": 0.15
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag5v_use",
+      "from": 121.3,
+      "to": 128.0,
+      "transition": 0.4,
+      "intro": "none",
+      "narration": [
+        {
+          "text": "완성된 보고서는 안전 이슈 6건을 맨 위에 두고, 고객 이름과 연락처는 가렸습니다.",
+          "say": "완성된 보고서는 안전 이슈 여섯 건을 맨 위에 두고, 고객 이름과 연락처는 가렸습니다.",
+          "at": 122.6,
+          "align": 0.1
+        },
+        {
+          "text": "스킬의 양식과 팀 규칙이 함께 적용된 것입니다."
+        }
+      ],
+      "zoom": [
+        {
+          "from": 121.3,
+          "lead": -0.2,
+          "dur": 0.001,
+          "box_css": [
+            700,
+            150,
+            740,
+            360
+          ],
+          "scale": 1.9
+        }
+      ],
+      "callouts": [
+        {
+          "say": 0,
+          "lead": 0.4,
+          "dur": 3.0,
+          "box_css": [
+            725,
+            271.2,
+            680.5,
+            68.6
+          ],
+          "text": "안전 이슈 최우선 배치",
+          "spotlight": 0.15,
+          "pad": 0
+        },
+        {
+          "say": 1,
+          "lead": 0.2,
+          "dur": 2.6,
+          "box_css": [
+            721,
+            190,
+            331,
+            26
+          ],
+          "text": "AGENTS.md 및 SKILL.md 준수",
+          "spotlight": 0.15
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "../../render/out/openings/recs/ag_s_mcp",
+      "badge": false,
+      "narration": [
+        {
+          "text": "MCP, 모델 컨텍스트 프로토콜은 에이전트를 회사의 도구와 데이터에 연결하는 표준 플러그입니다.",
+          "say": "엠씨피, 모델 컨텍스트 프로토콜은 에이전트를 회사의 도구와 데이터에 연결하는 표준 플러그입니다."
+        },
+        {
+          "text": "에이전트는 요청을 보고, MCP 서버가 제공하는 도구를 골라 호출합니다.",
+          "say": "에이전트는 요청을 보고, 엠씨피 서버가 제공하는 도구를 골라 호출합니다.",
+          "at": 2.0
+        },
+        {
+          "text": "BigQuery 같은 데이터 서비스나 GitHub처럼, MCP 서버를 제공하는 도구라면 연결할 수 있습니다.",
+          "say": "빅쿼리 같은 데이터 서비스나 깃허브처럼, 엠씨피 서버를 제공하는 도구라면 연결할 수 있습니다.",
+          "at": 4.0
+        },
+        {
+          "text": "MCP Store에서 설치하고, 필요한 도구만 켜 두고, 호출하기 전에는 승인 카드로 확인합니다.",
+          "say": "엠씨피 스토어에서 설치하고, 필요한 도구만 켜 두고, 호출하기 전에는 승인 카드로 확인합니다.",
+          "at": 6.0
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag6v_install",
+      "from": 9.15,
+      "to": 23.9,
+      "labels": [
+        {
+          "kicker": "실제 화면 · Lab 6",
+          "text": "MCP Store에서 BigQuery 설치",
+          "at": 0.5,
+          "dur": 3.4
+        }
+      ],
+      "narration": [
+        {
+          "text": "Lab 6에서는 MCP Store에서 BigQuery를 찾아 Install을 누릅니다.",
+          "say": "랩 식스에서는 엠씨피 스토어에서 빅쿼리를 찾아 인스톨을 누릅니다.",
+          "at": "click:Install",
+          "align": 0.85
+        },
+        {
+          "text": "Tools 탭에는 에이전트가 새로 쓸 수 있게 된 도구가 보입니다. 읽기 전용 SQL 도구도 있죠.",
+          "say": "툴즈 탭에는 에이전트가 새로 쓸 수 있게 된 도구가 보입니다. 읽기 전용 에스큐엘 도구도 있죠.",
+          "at": "target:도구 목록",
+          "align": 0.25
+        }
+      ],
+      "zoom": [
+        {
+          "from": 9.15,
+          "lead": -0.3,
+          "dur": 0.05,
+          "max": 2.0,
+          "box_css": [
+            915,
+            110,
+            525,
+            200
+          ]
+        },
+        {
+          "from": 13.2,
+          "box_css": [
+            100,
+            90,
+            740,
+            200
+          ]
+        },
+        {
+          "from": "click:Tools -0.6",
+          "box_css": [
+            270,
+            220,
+            560,
+            300
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "at": "click:BigQuery 항목",
+          "lead": -1.0,
+          "dur": 1.2,
+          "box_css": [
+            930,
+            262,
+            488,
+            56
+          ],
+          "text": "BigQuery",
+          "spotlight": 0.2,
+          "pad": 0
+        },
+        {
+          "at": "click:Install",
+          "lead": -1.0,
+          "dur": 1.2,
+          "text": "Install",
+          "spotlight": 0.2
+        },
+        {
+          "at": "click:Tools",
+          "lead": -0.9,
+          "dur": 1.1,
+          "text": "Tools",
+          "spotlight": 0.2
+        },
+        {
+          "at": "target:도구 목록",
+          "lead": 0.2,
+          "dur": 2.6,
+          "box_css": [
+            280,
+            232,
+            534.2,
+            274
+          ],
+          "text": "1. list_dataset_ids … 5. execute_sql_readonly",
+          "spotlight": 0.15,
+          "pad": 0
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag6v_query",
+      "from": 2.9,
+      "to": 10.9,
+      "labels": [
+        {
+          "kicker": "실제 화면 · Lab 6",
+          "text": "MCP 도구로 BigQuery 조회",
+          "at": 0.5,
+          "dur": 3.4
+        }
+      ],
+      "narration": [
+        {
+          "text": "이제 CSV 대신 BigQuery의 실데이터로, 지난주 분류별 문의 건수를 그 전주와 비교해 달라고 합니다.",
+          "say": "이제 씨에스브이 대신 빅쿼리의 실데이터로, 지난주 분류별 문의 건수를 그 전주와 비교해 달라고 합니다.",
+          "at": "submit",
+          "align": 0.9
+        }
+      ],
+      "zoom": [
+        {
+          "from": 2.9,
+          "lead": -0.3,
+          "dur": 0.05,
+          "max": 2.0,
+          "box_css": [
+            1000,
+            330,
+            440,
+            130
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "at": "target:MCP 조회 프롬프트",
+          "lead": -1.3,
+          "dur": 1.4,
+          "text": "입력한 요청",
+          "spotlight": 0.18
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag6v_query",
+      "from": 51.2,
+      "to": 53.6,
+      "transition": 0.4,
+      "intro": "none",
+      "narration": [
+        {
+          "text": "에이전트가 MCP 도구를 부르기 전에는 승인 카드가 뜹니다. 읽기 전용 SQL 도구, execute_sql_readonly입니다.",
+          "say": "에이전트가 엠씨피 도구를 부르기 전에는 승인 카드가 뜹니다. 읽기 전용 에스큐엘 도구, 익스큐트 에스큐엘 리드온리입니다.",
+          "at": "target:권한 승인",
+          "align": 0.25
+        }
+      ],
+      "zoom": [
+        {
+          "from": 51.2,
+          "lead": -0.3,
+          "dur": 0.05,
+          "max": 2.0,
+          "box_css": [
+            931,
+            515,
+            490,
+            260
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "at": "target:권한 승인",
+          "lead": 0.1,
+          "dur": 2.0,
+          "box_css": [
+            927,
+            519,
+            500,
+            76
+          ],
+          "text": "Allow using this MCP tool? · bigquery/execute_sql_readonly",
+          "spotlight": 0.18
+        },
+        {
+          "at": "click:허용",
+          "lead": -0.9,
+          "dur": 1.1,
+          "text": "Yes, allow this time",
+          "spotlight": 0.2
+        },
+        {
+          "at": "click:Submit",
+          "lead": -0.5,
+          "dur": 0.8,
+          "text": "Submit",
+          "spotlight": 0.2
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag6v_query",
+      "from": 71.88,
+      "to": 71.9,
+      "transition": 0.4,
+      "intro": "none",
+      "narration": [
+        {
+          "text": "결과 표를 보면 안전 이슈가 2건에서 6건으로 늘었고, 팀 규칙대로 맨 위에 있습니다.",
+          "say": "결과 표를 보면 안전 이슈가 두 건에서 여섯 건으로 늘었고, 팀 규칙대로 맨 위에 있습니다."
+        }
+      ],
+      "zoom": [
+        {
+          "from": 71.88,
+          "lead": -0.3,
+          "dur": 0.05,
+          "max": 2.0,
+          "box_css": [
+            931,
+            260,
+            490,
+            300
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "say": 0,
+          "lead": 1.4,
+          "dur": 3.0,
+          "box_css": [
+            950.2,
+            480,
+            442.8,
+            52.8
+          ],
+          "text": "안전 이슈 2건 → 6건 (+200.0%)",
+          "spotlight": 0.15,
+          "pad": 0
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "../../render/out/openings/recs/ag_s_adk",
+      "badge": false,
+      "narration": [
+        {
+          "text": "CX팀의 세 번째 요청, VOC 도우미는 AI 에이전트로 직접 만듭니다. ADK는 Google의 에이전트 개발 키트이고, agents-cli는 그 전 과정을 돕는 명령줄 도구입니다.",
+          "say": "씨엑스팀의 세 번째 요청, 브이오씨 도우미는 에이아이 에이전트로 직접 만듭니다. 에이디케이는 구글의 에이전트 개발 키트이고, 에이전츠 씨엘아이는 그 전 과정을 돕는 명령줄 도구입니다."
+        },
+        {
+          "text": "scaffold create로 프로젝트를 만들고,",
+          "say": "스캐폴드 크리에이트로 프로젝트를 만들고,",
+          "at": 2.0
+        },
+        {
+          "text": "run이나 playground로 실행해 보고,",
+          "say": "런이나 플레이그라운드로 실행해 보고,",
+          "at": 4.0
+        },
+        {
+          "text": "eval로 답변 품질을 평가합니다.",
+          "say": "이밸로 답변 품질을 평가합니다.",
+          "at": 6.0
+        },
+        {
+          "text": "deploy로 Google Cloud의 Agent Runtime에 배포하고,",
+          "say": "디플로이로 구글 클라우드의 에이전트 런타임에 배포하고,",
+          "at": 8.0
+        },
+        {
+          "text": "publish gemini-enterprise로 게시하면, 동료들이 Gemini Enterprise 웹앱에서 바로 씁니다.",
+          "say": "퍼블리시 제미나이 엔터프라이즈로 게시하면, 동료들이 제미나이 엔터프라이즈 웹앱에서 바로 씁니다.",
+          "at": 10.0
+        },
+        "이 명령들은 외울 필요 없이, 에이전트에게 맡기면 됩니다."
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag8v_run",
+      "from": 8.0,
+      "to": 16.4,
+      "labels": [
+        {
+          "kicker": "실제 화면 · Lab 8",
+          "text": "VOC 분석 에이전트 — agents-cli run",
+          "at": 0.5,
+          "dur": 3.4
+        }
+      ],
+      "narration": [
+        {
+          "text": "Lab 8에서 만든 VOC 분석 에이전트를 agents-cli run으로 실행해, 지난주 긴급 문의 중 아직 처리 안 된 건을 물어봅니다.",
+          "say": "랩 에잇에서 만든 브이오씨 분석 에이전트를 에이전츠 씨엘아이 런으로 실행해, 지난주 긴급 문의 중 아직 처리 안 된 건을 물어봅니다.",
+          "at": "submit",
+          "align": 0.9
+        }
+      ],
+      "zoom": [
+        {
+          "from": 8.0,
+          "lead": -0.3,
+          "dur": 0.05,
+          "max": 2.0,
+          "box_css": [
+            920,
+            250,
+            515,
+            240
+          ]
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag8v_run",
+      "from": 192.1,
+      "to": 192.8,
+      "transition": 0.4,
+      "intro": "none",
+      "narration": [
+        {
+          "text": "에이전트는 질문을 보고, 미처리 긴급 문의를 찾는 도구 list_urgent_tickets를 스스로 골라 호출합니다.",
+          "say": "에이전트는 질문을 보고, 미처리 긴급 문의를 찾는 도구, 리스트 어전트 티켓츠를 스스로 골라 호출합니다."
+        }
+      ],
+      "zoom": [
+        {
+          "from": 192.1,
+          "lead": -0.3,
+          "dur": 0.05,
+          "max": 2.0,
+          "box_css": [
+            930,
+            400,
+            500,
+            180
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "say": 0,
+          "lead": 1.2,
+          "dur": 3.4,
+          "box_css": [
+            953,
+            554.8,
+            332.5,
+            16
+          ],
+          "text": "tool_call: list_urgent_tickets",
+          "spotlight": 0.18,
+          "pad": 0
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag8v_run",
+      "from": 262.0,
+      "to": 268.0,
+      "transition": 0.4,
+      "intro": "none",
+      "badge": false,
+      "narration": [
+        {
+          "text": "그리고 접수 3건, 처리중 3건, 모두 6건이라고, 데이터 출처와 함께 답했습니다.",
+          "say": "그리고 접수 세 건, 처리중 세 건, 모두 여섯 건이라고, 데이터 출처와 함께 답했습니다."
+        }
+      ],
+      "zoom": [
+        {
+          "from": 262.0,
+          "lead": -0.3,
+          "dur": 0.05,
+          "max": 2.0,
+          "box_css": [
+            925,
+            410,
+            500,
+            170
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "say": 0,
+          "lead": 0.3,
+          "dur": 3.0,
+          "box_css": [
+            941.8,
+            454.5,
+            238,
+            17.5
+          ],
+          "text": "상태별 건수: 접수 3건, 처리중 3건 (총 6건)",
+          "spotlight": 0.18,
+          "pad": 0
+        },
+        {
+          "say": 0,
+          "lead": 3.5,
+          "dur": 2.0,
+          "box_css": [
+            933,
+            548,
+            398,
+            20
+          ],
+          "text": "데이터 출처: BigQuery cymbal_cx.voc_tickets",
+          "spotlight": 0.18
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag9v_publish",
+      "from": 220.0,
+      "to": 234.0,
+      "badge": false,
+      "labels": [
+        {
+          "kicker": "실제 화면 · Lab 9",
+          "text": "Agent Runtime 배포 · Gemini Enterprise 게시",
+          "at": 0.5,
+          "dur": 3.4
+        }
+      ],
+      "narration": [
+        {
+          "text": "Lab 9에서는 이 에이전트를 Agent Runtime에 배포하고, agents-cli publish로 Gemini Enterprise에 게시합니다.",
+          "say": "랩 나인에서는 이 에이전트를 에이전트 런타임에 배포하고, 에이전츠 씨엘아이 퍼블리시로 제미나이 엔터프라이즈에 게시합니다."
+        },
+        {
+          "text": "결과 표에 연결된 Agent Runtime과, 등록 방식 ADK가 보입니다.",
+          "say": "결과 표에 연결된 에이전트 런타임과, 등록 방식 에이디케이가 보입니다."
+        },
+        {
+          "text": "이제 CX팀원 누구나 Gemini Enterprise에서 VOC 도우미를 쓸 수 있습니다.",
+          "say": "이제 씨엑스팀원 누구나 제미나이 엔터프라이즈에서 브이오씨 도우미를 쓸 수 있습니다."
+        }
+      ],
+      "zoom": [
+        {
+          "from": 220.0,
+          "lead": -0.3,
+          "dur": 0.05,
+          "max": 2.0,
+          "box_css": [
+            930,
+            175,
+            500,
+            270
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "say": 1,
+          "lead": 0.2,
+          "dur": 2.2,
+          "box_css": [
+            946,
+            214,
+            446,
+            55
+          ],
+          "text": "연결된 Agent Runtime",
+          "spotlight": 0.18
+        },
+        {
+          "say": 1,
+          "lead": 2.6,
+          "dur": 2.2,
+          "box_css": [
+            944,
+            375,
+            282,
+            58
+          ],
+          "text": "등록 방식 adk (상태: created)",
+          "spotlight": 0.18
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag9v_ge_use",
+      "from": 1.5,
+      "to": 61.5,
+      "max_speed": 16,
+      "transition": 0.4,
+      "intro": "none",
+      "labels": [
+        {
+          "kicker": "실제 화면 · Lab 9",
+          "text": "Gemini Enterprise에서 바로 쓰기",
+          "at_rec": 14.6,
+          "dur": 3.2
+        }
+      ],
+      "narration": [
+        {
+          "text": "에이전트 목록에서 Cymbal VOC 분석가를 고르고,",
+          "say": "에이전트 목록에서 심벌 브이오씨 분석가를 고르고,",
+          "at": "click:Cymbal VOC 분석가",
+          "align": 0.8
+        },
+        {
+          "text": "지난주 미처리 안전 이슈를 물어보면,",
+          "at": "submit",
+          "align": 0.8
+        },
+        {
+          "text": "고객 정보를 가린 미처리 6건 목록으로 바로 답합니다.",
+          "say": "고객 정보를 가린 미처리 여섯 건 목록으로 바로 답합니다.",
+          "at": "wait_end",
+          "align": 0.15
+        }
+      ],
+      "zoom": [
+        {
+          "from": "click:Cymbal VOC 분석가 -1.6",
+          "to": "click:Cymbal VOC 분석가 +0.7",
+          "box_css": [
+            370,
+            555,
+            500,
+            240
+          ]
+        },
+        {
+          "from": "wait_end -0.2",
+          "box_css": [
+            455,
+            195,
+            760,
+            450
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "at": "click:Cymbal VOC 분석가",
+          "lead": -0.9,
+          "dur": 1.1,
+          "text": "Cymbal VOC 분석가",
+          "spotlight": 0.2
+        },
+        {
+          "say": 2,
+          "lead": 0.3,
+          "dur": 3.0,
+          "box_css": [
+            471,
+            235,
+            301,
+            28
+          ],
+          "text": "[긴급/안전 이슈] 미처리 문의 현황 (총 6건)",
+          "spotlight": 0.18
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "../../render/out/openings/recs/ag_s_signin",
+      "badge": false,
+      "narration": [
+        "그럼 어떻게 시작할까요? 로그인 방법은 두 가지입니다.",
+        {
+          "text": "회사에서 Gemini Enterprise 라이선스를 받았다면, Use Business Account를 씁니다.",
+          "say": "회사에서 제미나이 엔터프라이즈 라이선스를 받았다면, 유즈 비즈니스 어카운트를 씁니다.",
+          "at": 2.0
+        },
+        "사용량은 회사 구독에 포함되고, 관리자가 정한 보안 정책과 허용 모델이 적용됩니다. Lab 1에서 다룹니다.",
+        {
+          "text": "개인 Google 계정이라면 Continue with Google을 씁니다.",
+          "say": "개인 구글 계정이라면 컨티뉴 위드 구글을 씁니다.",
+          "at": 4.0
+        },
+        "무료 요금제는 주간 할당량 안에서 Gemini 3.8 Flash를 쓰고, Google AI Pro나 Ultra는 할당량이 더 넉넉합니다. Lab 2에서 다룹니다."
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "ag2a_signin",
+      "from": 0,
+      "to": 2.0,
+      "labels": [
+        {
+          "kicker": "실제 화면 · Lab 1 · 2",
+          "text": "첫 화면의 두 가지 로그인 버튼",
+          "at": 0.5,
+          "dur": 3.4
+        }
+      ],
+      "narration": [
+        "앱을 처음 실행하면, 이렇게 두 버튼이 나타납니다.",
+        {
+          "text": "위의 Continue with Google은 개인 계정,",
+          "say": "위의 컨티뉴 위드 구글은 개인 계정,"
+        },
+        {
+          "text": "아래 Use Business Account는 회사 계정입니다.",
+          "say": "아래 유즈 비즈니스 어카운트는 회사 계정입니다."
+        }
+      ],
+      "zoom": [
+        {
+          "from": 0.2,
+          "box_css": [
+            380,
+            150,
+            680,
+            330
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "say": 1,
+          "lead": 0.1,
+          "dur": 2.4,
+          "box_css": [
+            505,
+            280,
+            430,
+            40
+          ],
+          "text": "개인 계정",
+          "spotlight": 0.22
+        },
+        {
+          "say": 2,
+          "lead": 0.1,
+          "dur": 2.8,
+          "box_css": [
+            505,
+            336,
+            430,
+            40
+          ],
+          "text": "회사 계정 (GE 라이선스)",
+          "spotlight": 0.22
+        }
+      ]
+    },
+    {
+      "type": "screen",
+      "rec": "../../render/out/openings/recs/ag_s_labs",
+      "badge": false,
+      "narration": [
+        "이제 오늘의 실습 지도입니다.",
+        {
+          "text": "Lab 1과 2에서 로그인 방법을 고르고,",
+          "say": "랩 원과 투에서 로그인 방법을 고르고,",
+          "at": 2.0
+        },
+        {
+          "text": "Lab 3부터는 방금 본 CX팀 프로젝트를 이어서 키웁니다. 계획과 대시보드, 규칙과 스킬,",
+          "say": "랩 쓰리부터는 방금 본 씨엑스팀 프로젝트를 이어서 키웁니다. 계획과 대시보드, 규칙과 스킬,",
+          "at": 4.0
+        },
+        {
+          "text": "MCP 연결과 임원 보고 슬라이드,",
+          "say": "엠씨피 연결과 임원 보고 슬라이드,",
+          "at": 6.0
+        },
+        {
+          "text": "그리고 VOC 에이전트와 배포, 운영 자동화까지 차례로 완성합니다.",
+          "say": "그리고 브이오씨 에이전트와 배포, 운영 자동화까지 차례로 완성합니다.",
+          "at": 8.0
+        }
+      ]
+    },
+    {
+      "type": "card",
+      "kicker": "실습할 때 기억하세요",
+      "title": "안전하게, 검토하며",
+      "bullets": [
+        "연습용 폴더에서 시작하고, 처음에는 Request Review로",
+        "계획서와 변경 내용은 꼭 읽고 승인하기",
+        "에이전트의 결과는 매번 조금씩 달라요 — 달라도 괜찮습니다"
+      ],
+      "narration": [
+        {
+          "text": "실습은 연습용 폴더에서 시작하고, 처음에는 Request Review로 명령마다 확인하세요.",
+          "say": "실습은 연습용 폴더에서 시작하고, 처음에는 리퀘스트 리뷰로 명령마다 확인하세요."
+        },
+        "에이전트가 쓴 계획서와 변경 내용은, 꼭 읽어 본 뒤 승인합니다.",
+        "에이전트의 결과는 매번 조금씩 다를 수 있으니, 영상과 달라도 걱정하지 마세요."
+      ]
+    },
+    {
+      "type": "outro",
+      "kicker": "LET'S BUILD",
+      "title": "이제 직접 만들어 볼까요?",
+      "subtitle": "Lab 1 · 시작하기부터 함께합니다",
+      "duration": 4.5,
+      "narration": [
+        "설명은 여기까지입니다.",
+        "그럼 Lab 1, 시작하기부터 함께 해 보겠습니다."
+      ]
+    }
+  ]
+}

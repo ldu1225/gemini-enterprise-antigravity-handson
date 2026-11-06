@@ -1,0 +1,15 @@
+# Python 3.10+ (tested with 3.12). Install:
+#   python3 -m pip install -r requirements.txt
+#   python3 -m playwright install chromium
+# External tools: ffmpeg/ffprobe (render, video QA), Google Chrome (capture, smoke test), gcloud (deploy, labs),
+# macOS for Apple Vision OCR (production/qa/find_text.py and the OCR checks of the audits),
+# optional tesseract (production/render/tools/ocr.py), NanumGothic font (practice-file PDFs).
+# Versions below are the ones the Korean edition was produced with.
+playwright>=1.55
+Pillow>=11.2
+numpy>=2.2
+opencv-python>=4.12
+scipy>=1.16
+pypdf>=5.9
+XlsxWriter>=3.2
+PyYAML>=6.0

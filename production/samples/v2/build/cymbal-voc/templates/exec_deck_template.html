@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cymbal 주간 VOC 임원 보고 — 회사 표준 템플릿</title>
+<!--
+  ============================================================================================
+  Cymbal 임원 보고 슬라이드 — 회사 표준 템플릿 (CX팀 · 디자인 가이드 v2)
+  --------------------------------------------------------------------------------------------
+  사용법
+  1) 이 파일을 복사해 새 보고서를 만듭니다. <style>과 <script>는 바꾸지 말고 그대로 씁니다.
+     (외부 CDN·외부 폰트 없음 — 시스템 글꼴과 인라인 SVG만 사용)
+  2) 슬라이드는 1280×720(16:9) <section class="slide"> 단위입니다. [대괄호] 자리만 실제 데이터로 바꿉니다.
+  3) 제목은 <h2 class="s-title">일반 글자 <em>강조 단어</em></h2> — 강조 단어는 오렌지로 표시됩니다.
+  4) 안전 이슈·긴급은 빨간색(.alert, .row-open, .badge-open)만 씁니다. 오렌지는 일반 강조용입니다.
+  5) 모든 슬라이드 아래(footer)에 데이터 출처와 기준일, 오른쪽 아래에 쪽 번호를 둡니다.
+  6) 차트는 인라인 SVG로 직접 그립니다: .chart-bars(막대) · .donut(원형) · .hbar(가로 막대) · .marker(시점 표시).
+  컴포넌트: .alert(안전 경보 띠) · .kpi-tiles(지표 타일 4개) · .hl-list(핵심 3줄 배너) · .card · .cols-2/.cols-3
+            .data-table(표, 미완료 행 .row-open) · .badge-open/.badge-doing/.badge-done · .process(단계 화살표)
+            .steps(계단식 인포그래픽) · .quote(문의 원문 인용, 개인정보 마스킹)
+  ============================================================================================
+-->
+<style>
+  :root {
+    --orange: #E8572A; --orange-d: #C2410C; --orange-l: #F59E62; --amber: #F4B23E; --brown: #7C2D12;
+    --char: #26272B; --char-2: #3F4046; --grey: #6B6E75; --mute: #A3A6AD; --line: #E7E1D8;
+    --paper: #FBF9F5; --canvas: #ECE8E1; --red: #C81E1E; --red-d: #991B1B; --red-bg: #FEF0EF; --green: #2F7D4F;
+    --font: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+    --font-num: "DIN Condensed", "Avenir Next Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: var(--canvas); font-family: var(--font); color: var(--char); -webkit-font-smoothing: antialiased; }
+
+  /* ---------- toolbar ---------- */
+  .toolbar { position: sticky; top: 0; z-index: 10; height: 56px; display: flex; align-items: center; gap: 14px;
+    padding: 0 22px; background: var(--char); color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.18); }
+  .toolbar .brand { display: flex; align-items: center; gap: 9px; font-weight: 800; letter-spacing: .2px; }
+  .toolbar .brand i { width: 22px; height: 22px; border-radius: 50%; background: conic-gradient(var(--orange) 0 25%, #fff 0 50%, var(--orange) 0 75%, #fff 0); }
+  .toolbar .doc { color: #C9CBD1; font-size: 13.5px; }
+  .toolbar .alert-pill { margin-left: 6px; background: var(--red); color: #fff; font-size: 12.5px; font-weight: 700; padding: 4px 10px; border-radius: 999px; }
+  .toolbar .sp { flex: 1; }
+  .toolbar button { font: 700 13px var(--font); color: #fff; background: #3A3B41; border: 1px solid #55575E; border-radius: 6px;
+    padding: 7px 12px; cursor: pointer; }
+  .toolbar button.primary { background: var(--orange); border-color: var(--orange); }
+  .toolbar button:hover { filter: brightness(1.1); }
+  .toolbar #slideIndicator { font: 700 18px var(--font-num); color: #fff; min-width: 46px; text-align: center; letter-spacing: 1px; }
+
+  /* ---------- deck & slide frame ---------- */
+  .deck { padding: 28px 0 40px; display: flex; flex-direction: column; align-items: center; gap: 28px; }
+  .slide { position: relative; width: 1280px; height: 720px; flex: none; overflow: hidden; background: var(--paper);
+    box-shadow: 0 10px 30px rgba(38,39,43,.16), 0 1px 3px rgba(38,39,43,.12); padding: 46px 60px 64px; }
+  .slide::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(120% 90% at 100% 0%, rgba(232,87,42,.05), transparent 55%); }
+
+  /* ---------- slide head ---------- */
+  .kicker { font: 700 14px var(--font-num); letter-spacing: 2.6px; text-transform: uppercase; color: var(--orange); margin: 0 0 8px 20px; }
+  .s-title { position: relative; margin: 0; padding-left: 20px; font: 800 36px/1.18 var(--font); letter-spacing: -.8px; color: var(--char); }
+  .s-title::before { content: ""; position: absolute; left: 0; top: 7px; width: 6px; height: 30px; background: var(--orange); border-radius: 1px; }
+  .s-title em { font-style: normal; color: var(--orange); }
+  .s-sub { margin: 10px 0 0 20px; font-size: 16px; color: var(--grey); }
+  .s-head { margin-bottom: 24px; }
+  .s-head.with-badge { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+
+  /* ---------- footer ---------- */
+  .s-foot { position: absolute; left: 60px; right: 60px; bottom: 20px; display: flex; align-items: center; gap: 18px;
+    border-top: 1px solid var(--line); padding-top: 9px; font-size: 11.5px; color: #9B9EA5; }
+  .s-foot .src { flex: 1; text-align: center; }
+  .s-foot .pg { background: var(--orange); color: #fff; font: 700 15px var(--font-num); letter-spacing: 1px; padding: 4px 10px 2px; border-radius: 2px; }
+
+  /* ---------- safety alert (red only) ---------- */
+  .alert { display: flex; align-items: center; gap: 14px; padding: 11px 16px; border-radius: 6px; color: #fff;
+    background: linear-gradient(90deg, var(--red-d), var(--red)); box-shadow: 0 6px 16px rgba(200,30,30,.25); font-size: 16px; }
+  .alert .ico { font-size: 20px; }
+  .alert b { font-weight: 800; }
+  .alert .tag { margin-left: auto; background: #fff; color: var(--red-d); font-weight: 800; font-size: 13px; padding: 4px 10px; border-radius: 4px; white-space: nowrap; }
+
+  /* ---------- cover ---------- */
+  .cover { padding: 0; display: grid; grid-template-columns: 1fr 470px; }
+  .cover .c-left { position: relative; padding: 50px 56px 64px 64px; display: flex; flex-direction: column; }
+  .cover .logo { display: flex; align-items: center; gap: 10px; font: 800 17px var(--font); letter-spacing: .5px; color: var(--char); }
+  .cover .logo i { width: 30px; height: 30px; border-radius: 50%; background: conic-gradient(var(--orange) 0 25%, var(--char) 0 50%, var(--orange) 0 75%, var(--char) 0); }
+  .cover .alert { margin-top: 26px; }
+  .cover .c-kicker { margin: 44px 0 10px; font: 700 15px var(--font-num); letter-spacing: 3px; color: var(--orange); }
+  .cover h1 { margin: 0; font: 800 66px/1.08 var(--font); letter-spacing: -2px; color: var(--char); }
+  .cover h1 em { font-style: normal; color: var(--orange); }
+  .cover .c-rule { width: 96px; height: 5px; background: var(--orange); margin-top: 22px; }
+  .cover .period { margin-top: 16px; font: 700 21px var(--font); color: var(--orange-d); }
+  .cover .prepared { margin-top: auto; align-self: flex-start; background: var(--char); color: #fff; font-size: 14px; padding: 9px 16px; border-radius: 2px; }
+  .cover .prepared b { color: var(--amber); }
+  .cover .c-right { position: relative; background: var(--char); color: #fff; padding: 46px 40px 64px; display: flex; flex-direction: column; gap: 14px; }
+  .cover .c-right::before { content: ""; position: absolute; left: -46px; top: 0; bottom: 0; width: 46px; background: linear-gradient(90deg, transparent, rgba(38,39,43,.06)); }
+  .cover .c-right h3 { margin: 0 0 4px; font: 700 14px var(--font-num); letter-spacing: 2.4px; color: var(--orange-l); }
+  .cover .stat { display: grid; grid-template-columns: 120px 1fr; align-items: center; gap: 14px; padding: 13px 16px; border-radius: 6px; background: #313238; }
+  .cover .stat .n { font: 700 48px/1 var(--font-num); color: #fff; letter-spacing: .5px; }
+  .cover .stat .n small { font-size: 22px; margin-left: 2px; }
+  .cover .stat .l { font-size: 14px; color: #D5D7DC; line-height: 1.35; }
+  .cover .stat .l b { display: block; color: #fff; font-size: 15.5px; }
+  .cover .stat.red { background: var(--red); }
+  .cover .stat.red .l { color: #FFE3E1; }
+  .cover .stat.orange { background: var(--orange); }
+  .cover .stat.orange .l { color: #FFEADF; }
+  .cover .s-foot { left: 64px; right: 510px; }
+
+  /* ---------- KPI tiles ---------- */
+  .kpi-tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .kpi { position: relative; padding: 16px 18px 15px; border-radius: 6px; background: #fff; border: 1px solid var(--line); }
+  .kpi .l { font-size: 14px; font-weight: 700; color: var(--grey); }
+  .kpi .n { margin-top: 6px; font: 700 50px/1 var(--font-num); color: var(--char); letter-spacing: .5px; }
+  .kpi .n small { font-size: 22px; margin-left: 3px; color: var(--grey); }
+  .kpi .d { margin-top: 6px; font-size: 13px; color: var(--grey); }
+  .kpi .d .up { color: var(--orange-d); font-weight: 800; }
+  .kpi.red { background: var(--red-bg); border-color: #F5C2BF; }
+  .kpi.red .n, .kpi.red .d .up { color: var(--red); }
+  .kpi.orange { background: var(--orange); border-color: var(--orange); }
+  .kpi.orange .l, .kpi.orange .d, .kpi.orange .n small { color: #FFE7DB; }
+  .kpi.orange .n, .kpi.orange .d .up { color: #fff; }
+  .kpi.char { background: var(--char); border-color: var(--char); }
+  .kpi.char .l, .kpi.char .d, .kpi.char .n small { color: #C9CBD1; }
+  .kpi.char .n, .kpi.char .d .up { color: #fff; }
+
+  /* ---------- highlights (핵심 3줄) ---------- */
+  .hl-list { display: flex; flex-direction: column; gap: 16px; }
+  .hl { display: grid; grid-template-columns: 74px 1fr 210px; align-items: stretch; min-height: 118px; border-radius: 6px; overflow: hidden;
+    background: #fff; border: 1px solid var(--line); box-shadow: 0 4px 12px rgba(38,39,43,.06); }
+  .hl .no { display: flex; align-items: center; justify-content: center; font: 700 40px var(--font-num); color: #fff; background: var(--orange); }
+  .hl .tx { padding: 18px 24px; display: flex; flex-direction: column; justify-content: center; gap: 7px; }
+  .hl .tx .chip { align-self: flex-start; font-size: 12px; font-weight: 800; letter-spacing: .3px; padding: 3px 9px; border-radius: 3px; background: #FFF1EA; color: var(--orange-d); }
+  .hl .tx b { font-size: 21px; line-height: 1.35; letter-spacing: -.3px; }
+  .hl .tx span { font-size: 14.5px; color: var(--grey); line-height: 1.45; }
+  .hl .big { display: flex; flex-direction: column; align-items: center; justify-content: center; background: #FFF7F2; border-left: 1px solid var(--line); }
+  .hl .big .n { font: 700 54px/1 var(--font-num); color: var(--orange-d); }
+  .hl .big .u { font-size: 13px; color: var(--grey); margin-top: 4px; }
+  .hl.red .no { background: var(--red); }
+  .hl.red { border-color: #F5C2BF; }
+  .hl.red .tx .chip { background: var(--red-bg); color: var(--red); }
+  .hl.red .big { background: var(--red-bg); }
+  .hl.red .big .n { color: var(--red); }
+  .hl.char .no { background: var(--char); }
+
+  /* ---------- layout helpers ---------- */
+  .cols-2 { display: grid; grid-template-columns: 1.35fr 1fr; gap: 22px; }
+  .cols-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 18px 20px; box-shadow: 0 4px 12px rgba(38,39,43,.05); }
+  .card h4 { margin: 0 0 12px; font-size: 15px; font-weight: 800; color: var(--orange-d); letter-spacing: .2px; }
+  .card h4 .note { float: right; font-weight: 600; color: var(--mute); font-size: 12.5px; }
+  .legend { display: flex; gap: 16px; font-size: 12.5px; color: var(--grey); margin-top: 6px; }
+  .legend i { display: inline-block; width: 11px; height: 11px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+
+  /* ---------- charts (inline SVG) ---------- */
+  .chart-bars text, .hbar text, .donut text { font-family: var(--font); }
+  .chart-bars .v { font: 700 22px var(--font-num); fill: var(--char); }
+  .chart-bars .v.hot { fill: var(--orange-d); }
+  .chart-bars .x { font-size: 13px; fill: var(--grey); }
+  .chart-bars .x2 { font-size: 11.5px; fill: var(--mute); }
+  .chart-bars .grid { stroke: #EEE8E0; stroke-width: 1; }
+  .chart-bars .bar { fill: #F2C3A9; }
+  .chart-bars .bar.hot { fill: var(--orange); }
+  .chart-bars .dot { fill: var(--red); }
+  .chart-bars .dline { stroke: var(--red); stroke-width: 2.5; fill: none; }
+  .marker line { stroke: var(--char); stroke-width: 2; stroke-dasharray: 5 4; }
+  .marker rect { fill: var(--char); }
+  .marker text { font: 700 13px var(--font); fill: #fff; }
+  .hbar .lbl { font-size: 14px; fill: var(--char-2); }
+  .hbar .val { font: 700 18px var(--font-num); fill: var(--char); }
+  .hbar .track { fill: #F1ECE5; }
+  .hbar .fill { fill: var(--orange-l); }
+  .hbar .fill.hot { fill: var(--orange); }
+  .hbar .fill.red { fill: var(--red); }
+  .donuts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; text-align: center; }
+  .donut .pct { font: 700 30px var(--font-num); fill: var(--char); }
+  .donut .ring-bg { stroke: #F1ECE5; }
+  .donut .ring { stroke: var(--orange); stroke-linecap: butt; transform: rotate(-90deg); transform-origin: 50% 50%; }
+  .donut .ring.red { stroke: var(--red); }
+  .donut .ring.char { stroke: var(--char); }
+  .donut-cap { margin-top: 4px; font-size: 13.5px; font-weight: 800; color: var(--char-2); }
+  .donut-cap small { display: block; font-weight: 500; color: var(--grey); font-size: 12px; margin-top: 2px; }
+
+  /* ---------- table ---------- */
+  .data-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 14px; background: #fff; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .data-table th { background: var(--char); color: #fff; font-weight: 700; text-align: left; padding: 10px 12px; font-size: 13px; letter-spacing: .2px; }
+  .data-table td { padding: 10px 12px; border-top: 1px solid #F0EBE4; color: var(--char-2); vertical-align: middle; }
+  .data-table tr:nth-child(even) td { background: #FCFAF7; }
+  .data-table td.num, .data-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .data-table .mono { font-family: "SF Mono", Menlo, monospace; font-size: 12.5px; color: var(--char); }
+  .data-table tr.row-open td { background: var(--red-bg); }
+  .data-table tr.row-open td:first-child { box-shadow: inset 4px 0 0 var(--red); }
+  .badge-open, .badge-doing, .badge-done { display: inline-block; min-width: 54px; text-align: center; font-size: 12px; font-weight: 800; padding: 3px 8px; border-radius: 3px; }
+  .badge-open { background: var(--red); color: #fff; }
+  .badge-doing { background: #FFE2D3; color: var(--orange-d); }
+  .badge-done { background: #E2F2E8; color: var(--green); }
+
+  /* ---------- process & steps ---------- */
+  .process { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 4px; }
+  .process .st { position: relative; height: 104px; display: flex; align-items: center; padding: 0 30px 0 44px; color: #fff;
+    clip-path: polygon(0 0, calc(100% - 34px) 0, 100% 50%, calc(100% - 34px) 100%, 0 100%, 34px 50%); }
+  .process .st:first-child { clip-path: polygon(0 0, calc(100% - 34px) 0, 100% 50%, calc(100% - 34px) 100%, 0 100%); padding-left: 26px; }
+  .process .st:nth-child(1) { background: var(--orange); }
+  .process .st:nth-child(2) { background: var(--orange-d); margin-left: -18px; }
+  .process .st:nth-child(3) { background: var(--char); margin-left: -18px; }
+  .process .st .k { font: 700 15px var(--font-num); letter-spacing: 2px; opacity: .85; margin-right: 14px; }
+  .process .st b { font-size: 19px; letter-spacing: -.3px; line-height: 1.25; }
+  .process-detail { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 18px; }
+  .process-detail .card { padding: 16px 18px; }
+  .process-detail .who { font-size: 13px; font-weight: 800; color: var(--orange-d); }
+  .process-detail .what { margin-top: 6px; font-size: 15px; line-height: 1.5; color: var(--char-2); }
+  .process-detail .due { margin-top: 10px; font: 700 15px var(--font-num); letter-spacing: 1px; color: var(--char); }
+  .steps { display: flex; flex-direction: column; gap: 12px; }
+  .steps .s { display: grid; grid-template-columns: 58px 1fr; align-items: center; border-radius: 4px; overflow: hidden; background: #fff; border: 1px solid var(--line); }
+  .steps .s .k { height: 100%; display: flex; align-items: center; justify-content: center; font: 700 22px var(--font-num); color: #fff; background: var(--orange); }
+  .steps .s:nth-child(2) .k { background: var(--orange-d); }
+  .steps .s:nth-child(3) .k { background: var(--brown); }
+  .steps .s:nth-child(4) .k { background: var(--char); }
+  .steps .s .t { padding: 14px 16px; font-size: 15px; line-height: 1.45; color: var(--char-2); }
+  .steps .s .t b { color: var(--char); }
+  .mini-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+  .mini-cards .card { padding: 14px 18px; }
+  .mini-cards .k { font-size: 13px; font-weight: 800; color: var(--orange-d); }
+  .mini-cards .v { margin-top: 6px; font-size: 15.5px; line-height: 1.45; color: var(--char-2); }
+  .mini-cards .card.red { background: var(--red-bg); border-color: #F5C2BF; }
+  .mini-cards .card.red .k { color: var(--red); }
+  .asks { display: grid; grid-template-columns: 1.2fr 1fr; gap: 18px; margin-top: 18px; }
+  .asks ol { margin: 0; padding-left: 22px; font-size: 15.5px; line-height: 1.6; color: var(--char-2); }
+  .asks ol li::marker { color: var(--orange); font-weight: 800; }
+  .watch { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .watch td { padding: 8px 4px; border-top: 1px solid #F0EBE4; color: var(--char-2); }
+  .watch tr:first-child td { border-top: 0; }
+  .watch td.n { text-align: right; font: 700 22px var(--font-num); color: var(--char); letter-spacing: .5px; }
+  .watch td.n.red { color: var(--red); }
+  .watch td.dir { width: 70px; text-align: right; font-size: 13px; font-weight: 800; color: var(--green); }
+  .quote { border-left: 4px solid var(--orange); background: #fff; padding: 10px 14px; font-size: 14px; color: var(--char-2); line-height: 1.5; border-radius: 0 4px 4px 0; }
+  .quote small { display: block; margin-top: 4px; color: var(--mute); font-size: 12px; }
+
+  /* ---------- presentation mode ---------- */
+  body.present { background: #15161A; overflow: hidden; }
+  body.present .deck { position: fixed; inset: 56px 0 0 0; padding: 0; display: block; }
+  body.present .slide { position: absolute; left: 50%; top: 50%; margin: 0; transform-origin: center center; }
+  body.present .slide:not(.current-slide) { display: none; }
+
+  @media print {
+    @page { size: 1280px 720px; margin: 0; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }   /* keep slide colours in browser print */
+    body, body.present { background: none; overflow: visible; }
+    .toolbar { display: none; }
+    .deck, body.present .deck { position: static; padding: 0; gap: 0; display: block; }
+    .slide, body.present .slide, body.present .slide:not(.current-slide) { display: block; position: relative; left: auto;
+      top: auto; transform: none !important; margin: 0; box-shadow: none; page-break-after: always; break-after: page; }
+    .slide.cover, body.present .slide.cover, body.present .slide.cover:not(.current-slide) { display: grid; } /* 2 columns */
+  }
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <div class="brand"><i></i>CYMBAL CX</div>
+  <div class="doc">주간 VOC 임원 보고 슬라이드 ([YYYY-MM-DD] ~ [YYYY-MM-DD])</div>
+  <div class="alert-pill">🚨 안전 이슈(긴급) [N]건 · 미완료 [N]건</div>
+  <div class="sp"></div>
+  <button type="button" id="modeBtn" class="primary">슬라이드 발표 모드</button>
+  <button type="button" id="prevBtn">◀ 이전</button>
+  <div id="slideIndicator">1 / 6</div>
+  <button type="button" id="nextBtn">다음 ▶</button>
+</div>
+
+<main class="deck">
+
+  <!-- ================================================= 1. 표지 ================================================= -->
+  <section class="slide cover" data-title="표지">
+    <div class="c-left">
+      <div class="logo"><i></i>CYMBAL 고객경험(CX)팀</div>
+      <div class="alert"><span class="ico">🚨</span><span><b>안전 이슈(긴급) [N]건</b> · [제품·증상 한 줄] — <b>[N]건 미완료</b></span><span class="tag">즉시 조치 필요</span></div>
+      <div class="c-kicker">EXECUTIVE WEEKLY BRIEFING</div>
+      <h1>주간 <em>VOC</em><br>임원 보고</h1>
+      <div class="c-rule"></div>
+      <div class="period">[YYYY-MM-DD] ~ [YYYY-MM-DD] · 지난주</div>
+      <div class="prepared">보고 <b>Cymbal CX팀</b> &nbsp;|&nbsp; [YYYY-MM-DD] (월) 08:30 임원 회의</div>
+    </div>
+    <div class="c-right">
+      <h3>THIS WEEK AT A GLANCE</h3>
+      <div class="stat red"><div class="n">[N]<small>건</small></div><div class="l"><b>안전 이슈(긴급)</b>전주 [N]건 → [N]건 · 미완료 [N]건</div></div>
+      <div class="stat orange"><div class="n">[N]<small>건</small></div><div class="l"><b>지난주 총 접수</b>전주 대비 [+N]건 ([+N.N]%)</div></div>
+      <div class="stat"><div class="n">[N]<small>건</small></div><div class="l"><b>[급증 분류·제품]</b>전주 [N]건 → [N]건</div></div>
+      <div class="stat"><div class="n">[N]<small>건</small></div><div class="l"><b>미완료 문의</b>접수 [N] · 처리중 [N]</div></div>
+    </div>
+    <footer class="s-foot"><span>[YYYY-MM-DD] 보고</span><span class="src">데이터 출처: BigQuery cymbal_cx.voc_tickets | 기준일: [YYYY-MM-DD]</span><span class="pg">01</span></footer>
+  </section>
+
+  <!-- ================================================= 2. 핵심 3줄 ================================================= -->
+  <section class="slide" data-title="핵심 3줄">
+    <div class="s-head"><div class="kicker">KEY TAKEAWAYS</div><h2 class="s-title">지난주 <em>핵심 3줄</em></h2></div>
+    <div class="hl-list">
+      <div class="hl red"><div class="no">01</div><div class="tx"><span class="chip">🚨 안전 이슈 · 최우선</span><b>[안전 이슈 핵심 문장]</b><span>[근거: 제품 · 증상 · 미완료 현황]</span></div><div class="big"><div class="n">[N]건</div><div class="u">[전주 N건 → 지난주 N건]</div></div></div>
+      <div class="hl"><div class="no">02</div><div class="tx"><span class="chip">전체 접수량</span><b>[전체 접수량 핵심 문장]</b><span>[근거: 전주 대비 증감]</span></div><div class="big"><div class="n">[N]건</div><div class="u">[전주 대비 +N.N%]</div></div></div>
+      <div class="hl char"><div class="no">03</div><div class="tx"><span class="chip">급증 분류·제품</span><b>[급증 분류·제품 핵심 문장]</b><span>[근거: 증가 원인 추정]</span></div><div class="big"><div class="n">[+N.N]%</div><div class="u">[전주 N건 → N건]</div></div></div>
+    </div>
+    <footer class="s-foot"><span>[YYYY-MM-DD] 보고</span><span class="src">데이터 출처: BigQuery cymbal_cx.voc_tickets | 기준일: [YYYY-MM-DD]</span><span class="pg">02</span></footer>
+  </section>
+
+  <!-- ================================================= 3. 주간 추이 ================================================= -->
+  <section class="slide" data-title="주간 추이">
+    <div class="s-head"><div class="kicker">WEEKLY TREND</div><h2 class="s-title">최근 4주 <em>접수 추이</em></h2></div>
+    <div class="kpi-tiles" style="margin-bottom:18px">
+      <div class="kpi red"><div class="l">안전 이슈(긴급)</div><div class="n">[N]<small>건</small></div><div class="d">전주 대비 <span class="up">[+N]건</span></div></div>
+      <div class="kpi orange"><div class="l">지난주 총 접수</div><div class="n">[N]<small>건</small></div><div class="d">전주 대비 <span class="up">[+N.N]%</span></div></div>
+      <div class="kpi char"><div class="l">[분류 A]</div><div class="n">[N]<small>건</small></div><div class="d">전주 대비 <span class="up">[+N]건</span></div></div>
+      <div class="kpi"><div class="l">미완료</div><div class="n">[N]<small>건</small></div><div class="d">접수 [N] · 처리중 [N]</div></div>
+    </div>
+    <div class="cols-2">
+      <div class="card">
+        <h4>주별 접수 건수 <span class="note">막대: 전체 · 빨간 점: 안전 이슈</span></h4>
+        <!-- 막대 높이 = 값 / 최댓값 × 230. 마지막(지난주) 막대만 .hot -->
+        <svg class="chart-bars" width="610" height="300" viewBox="0 0 610 300" role="img" aria-label="주별 접수 건수">
+          <line class="grid" x1="20" y1="260" x2="600" y2="260"/><line class="grid" x1="20" y1="180" x2="600" y2="180"/><line class="grid" x1="20" y1="100" x2="600" y2="100"/>
+          <rect class="bar" x="45" y="[y]" width="96" height="[h]" rx="3"/><text class="v" x="93" y="[y-10]" text-anchor="middle">[N]</text>
+          <rect class="bar" x="190" y="[y]" width="96" height="[h]" rx="3"/><text class="v" x="238" y="[y-10]" text-anchor="middle">[N]</text>
+          <rect class="bar" x="335" y="[y]" width="96" height="[h]" rx="3"/><text class="v" x="383" y="[y-10]" text-anchor="middle">[N]</text>
+          <rect class="bar hot" x="480" y="[y]" width="96" height="[h]" rx="3"/><text class="v hot" x="528" y="[y-10]" text-anchor="middle">[N]</text>
+          <polyline class="dline" points="93,[y] 238,[y] 383,[y] 528,[y]"/>
+          <circle class="dot" cx="93" cy="[y]" r="5"/><circle class="dot" cx="238" cy="[y]" r="5"/><circle class="dot" cx="383" cy="[y]" r="5"/><circle class="dot" cx="528" cy="[y]" r="6"/>
+          <text class="x" x="93" y="280" text-anchor="middle">1주 차</text><text class="x2" x="93" y="296" text-anchor="middle">[MM-DD]</text>
+          <text class="x" x="238" y="280" text-anchor="middle">2주 차</text><text class="x2" x="238" y="296" text-anchor="middle">[MM-DD]</text>
+          <text class="x" x="383" y="280" text-anchor="middle">3주 차</text><text class="x2" x="383" y="296" text-anchor="middle">[MM-DD]</text>
+          <text class="x" x="528" y="280" text-anchor="middle">지난주</text><text class="x2" x="528" y="296" text-anchor="middle">[MM-DD]</text>
+        </svg>
+      </div>
+      <div class="card">
+        <h4>지난주 분류별 건수 <span class="note">많은 순</span></h4>
+        <!-- 막대 길이 = 값 / 최댓값 × 250. 안전 이슈는 .red, 가장 큰 증가는 .hot -->
+        <svg class="hbar" width="420" height="300" viewBox="0 0 420 300" role="img" aria-label="분류별 건수">
+          <text class="lbl" x="0" y="30">[분류]</text><rect class="track" x="110" y="15" width="250" height="22" rx="3"/><rect class="fill hot" x="110" y="15" width="[w]" height="22" rx="3"/><text class="val" x="370" y="33">[N]</text>
+          <text class="lbl" x="0" y="80">[분류]</text><rect class="track" x="110" y="65" width="250" height="22" rx="3"/><rect class="fill" x="110" y="65" width="[w]" height="22" rx="3"/><text class="val" x="370" y="83">[N]</text>
+          <text class="lbl" x="0" y="130">[분류]</text><rect class="track" x="110" y="115" width="250" height="22" rx="3"/><rect class="fill" x="110" y="115" width="[w]" height="22" rx="3"/><text class="val" x="370" y="133">[N]</text>
+          <text class="lbl" x="0" y="180">[분류]</text><rect class="track" x="110" y="165" width="250" height="22" rx="3"/><rect class="fill" x="110" y="165" width="[w]" height="22" rx="3"/><text class="val" x="370" y="183">[N]</text>
+          <text class="lbl" x="0" y="230">안전 이슈</text><rect class="track" x="110" y="215" width="250" height="22" rx="3"/><rect class="fill red" x="110" y="215" width="[w]" height="22" rx="3"/><text class="val" x="370" y="233">[N]</text>
+        </svg>
+      </div>
+    </div>
+    <footer class="s-foot"><span>[YYYY-MM-DD] 보고</span><span class="src">데이터 출처: BigQuery cymbal_cx.voc_tickets | 기준일: [YYYY-MM-DD]</span><span class="pg">03</span></footer>
+  </section>
+
+  <!-- ================================================= 4. 안전 이슈 긴급 문의 ================================================= -->
+  <section class="slide" data-title="안전 이슈 긴급 문의">
+    <div class="s-head"><div class="kicker">SAFETY FIRST</div><h2 class="s-title">안전 이슈 <em>긴급 문의</em></h2></div>
+    <div class="alert" style="margin-bottom:16px"><span class="ico">🚨</span><span><b>미완료 긴급 문의 [N]건</b> — 접수 [N]건 · 처리중 [N]건 · [공통 증상 한 줄]</span><span class="tag">해피콜 · 회수 접수</span></div>
+    <!-- 미완료 행은 class="row-open", 상태 배지: 접수 .badge-open · 처리중 .badge-doing · 완료 .badge-done. 고객명·연락처는 마스킹 -->
+    <table class="data-table">
+      <thead><tr><th>티켓 ID</th><th>접수일</th><th>고객명</th><th>연락처</th><th>제품</th><th>문의 요약</th><th>상태</th></tr></thead>
+      <tbody>
+        <tr class="row-open"><td class="mono">[CX-0000-0000]</td><td>[YYYY-MM-DD]</td><td>[김*수]</td><td>[010-****-0000]</td><td>[제품]</td><td>[문의 요약]</td><td><span class="badge-open">접수</span></td></tr>
+        <tr class="row-open"><td class="mono">[CX-0000-0000]</td><td>[YYYY-MM-DD]</td><td>[이*은]</td><td>[010-****-0000]</td><td>[제품]</td><td>[문의 요약]</td><td><span class="badge-doing">처리중</span></td></tr>
+      </tbody>
+    </table>
+    <div class="mini-cards">
+      <div class="card red"><div class="k">공통 증상</div><div class="v">[증상 요약]</div></div>
+      <div class="card"><div class="k">조치 현황</div><div class="v">접수 [N] · 처리중 [N] · 완료 [N]</div></div>
+      <div class="card"><div class="k">요청 사항</div><div class="v">[오늘 해야 할 조치]</div></div>
+    </div>
+    <footer class="s-foot"><span>[YYYY-MM-DD] 보고</span><span class="src">데이터 출처: BigQuery cymbal_cx.voc_tickets | 기준일: [YYYY-MM-DD]</span><span class="pg">04</span></footer>
+  </section>
+
+  <!-- ================================================= 5. 급증 이슈 ================================================= -->
+  <section class="slide" data-title="급증 이슈">
+    <div class="s-head"><div class="kicker">SPIKE ANALYSIS</div><h2 class="s-title">[제품] <em>[분류]</em> 문의 급증</h2></div>
+    <div class="cols-2">
+      <div class="card">
+        <h4>[분류] 주별 건수 <span class="note">[전주 N건 → 지난주 N건]</span></h4>
+        <!-- 막대 높이 = 값 / 최댓값 × 300 (바닥 y=360). 특정 날짜 표시는 <g class="marker">(점선 + 라벨) -->
+        <svg class="chart-bars" width="610" height="400" viewBox="0 0 610 400" role="img" aria-label="급증 분류 주별 건수">
+          <line class="grid" x1="20" y1="360" x2="600" y2="360"/><line class="grid" x1="20" y1="260" x2="600" y2="260"/><line class="grid" x1="20" y1="160" x2="600" y2="160"/>
+          <rect class="bar" x="45" y="[y]" width="96" height="[h]" rx="3"/><text class="v" x="93" y="[y-10]" text-anchor="middle">[N]</text>
+          <rect class="bar" x="190" y="[y]" width="96" height="[h]" rx="3"/><text class="v" x="238" y="[y-10]" text-anchor="middle">[N]</text>
+          <rect class="bar" x="335" y="[y]" width="96" height="[h]" rx="3"/><text class="v" x="383" y="[y-10]" text-anchor="middle">[N]</text>
+          <rect class="bar hot" x="480" y="[y]" width="96" height="[h]" rx="3"/><text class="v hot" x="528" y="[y-10]" text-anchor="middle">[N]</text>
+          <text class="x" x="93" y="380" text-anchor="middle">1주 차</text><text class="x2" x="93" y="396" text-anchor="middle">[MM-DD]</text>
+          <text class="x" x="238" y="380" text-anchor="middle">2주 차</text><text class="x2" x="238" y="396" text-anchor="middle">[MM-DD]</text>
+          <text class="x" x="383" y="380" text-anchor="middle">3주 차</text><text class="x2" x="383" y="396" text-anchor="middle">[MM-DD]</text>
+          <text class="x" x="528" y="380" text-anchor="middle">지난주</text><text class="x2" x="528" y="396" text-anchor="middle">[MM-DD]</text>
+        </svg>
+      </div>
+      <div>
+        <div class="steps">
+          <div class="s"><div class="k">01</div><div class="t"><b>[무엇이 늘었나]</b> [건수·비중]</div></div>
+          <div class="s"><div class="k">02</div><div class="t"><b>[언제부터]</b> [시점]</div></div>
+          <div class="s"><div class="k">03</div><div class="t"><b>[원인 추정]</b> [근거]</div></div>
+          <div class="s"><div class="k">04</div><div class="t"><b>[영향]</b> [고객 영향]</div></div>
+        </div>
+        <div class="quote" style="margin-top:14px">“[대표 문의 원문 일부]”<small>[CX-0000-0000] · [YYYY-MM-DD] · 고객 [김*수]</small></div>
+      </div>
+    </div>
+    <footer class="s-foot"><span>[YYYY-MM-DD] 보고</span><span class="src">데이터 출처: BigQuery cymbal_cx.voc_tickets | 기준일: [YYYY-MM-DD]</span><span class="pg">05</span></footer>
+  </section>
+
+  <!-- ================================================= 6. 다음 할 일 ================================================= -->
+  <section class="slide" data-title="다음 할 일">
+    <div class="s-head"><div class="kicker">NEXT ACTIONS</div><h2 class="s-title">이번 주 <em>다음 할 일</em></h2></div>
+    <div class="process">
+      <div class="st"><span class="k">STEP 1</span><b>[최우선 조치]</b></div>
+      <div class="st"><span class="k">STEP 2</span><b>[두 번째 조치]</b></div>
+      <div class="st"><span class="k">STEP 3</span><b>[세 번째 조치]</b></div>
+    </div>
+    <div class="process-detail">
+      <div class="card"><div class="who">[담당 부서]</div><div class="what">[구체적인 할 일]</div><div class="due">[기한 YYYY-MM-DD]</div></div>
+      <div class="card"><div class="who">[담당 부서]</div><div class="what">[구체적인 할 일]</div><div class="due">[기한 YYYY-MM-DD]</div></div>
+      <div class="card"><div class="who">[담당 부서]</div><div class="what">[구체적인 할 일]</div><div class="due">[기한 YYYY-MM-DD]</div></div>
+    </div>
+    <div class="asks">
+      <div class="card"><h4>임원 결정 요청</h4><ol><li>[결정이 필요한 사항 1]</li><li>[결정이 필요한 사항 2]</li></ol></div>
+      <div class="card"><h4>다음 주 확인 지표 <span class="note">이번 주 값</span></h4>
+        <table class="watch"><tr><td>[지표 1 · 안전 이슈 미완료]</td><td class="n red">[N]건</td><td class="dir">▼ 줄이기</td></tr>
+          <tr><td>[지표 2]</td><td class="n">[N]건</td><td class="dir">▼ 줄이기</td></tr>
+          <tr><td>[지표 3]</td><td class="n">[N]건</td><td class="dir">▼ 줄이기</td></tr></table></div>
+    </div>
+    <footer class="s-foot"><span>[YYYY-MM-DD] 보고</span><span class="src">데이터 출처: BigQuery cymbal_cx.voc_tickets | 기준일: [YYYY-MM-DD]</span><span class="pg">06</span></footer>
+  </section>
+
+</main>
+
+<script>
+(() => {
+  const slides = [...document.querySelectorAll('.slide')];
+  const ind = document.getElementById('slideIndicator');
+  const modeBtn = document.getElementById('modeBtn');
+  let cur = 0;
+  const fit = () => {
+    if (!document.body.classList.contains('present')) return;
+    const s = Math.min((innerWidth - 64) / 1280, (innerHeight - 56 - 40) / 720);
+    slides.forEach(el => { el.style.transform = `translate(-50%, -50%) scale(${s})`; });
+  };
+  const show = (i) => {
+    cur = Math.max(0, Math.min(slides.length - 1, i));
+    slides.forEach((el, k) => el.classList.toggle('current-slide', k === cur));
+    ind.textContent = `${cur + 1} / ${slides.length}`;
+    if (!document.body.classList.contains('present')) slides[cur].scrollIntoView({behavior: 'smooth', block: 'center'});
+  };
+  modeBtn.addEventListener('click', () => {
+    const on = document.body.classList.toggle('present');
+    modeBtn.textContent = on ? '전체 보기' : '슬라이드 발표 모드';
+    if (!on) slides.forEach(el => { el.style.transform = ''; });
+    fit(); show(cur);
+  });
+  document.getElementById('prevBtn').addEventListener('click', () => show(cur - 1));
+  document.getElementById('nextBtn').addEventListener('click', () => show(cur + 1));
+  addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); show(cur + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(cur - 1); }
+  });
+  addEventListener('resize', fit);
+  slides[0].classList.add('current-slide');
+})();
+</script>
+</body>
+</html>

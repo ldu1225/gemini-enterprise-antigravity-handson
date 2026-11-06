@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="t d">
+  <title id="t">Hands-on Lab — production architecture</title>
+  <desc id="d">Real UI is captured over CDP, rendered into narrated videos, combined with Korean lab content and synthetic practice files by a static site builder, checked by quality gates and deployed to Cloud Run.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5F6368"/>
+    </marker>
+    <style>
+      text { font-family: "Google Sans", Roboto, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+      .h1 { font-size: 28px; font-weight: 700; fill: #202124; }
+      .sub { font-size: 16px; fill: #5F6368; }
+      .gt { font-size: 18px; font-weight: 700; }
+      .ct { font-size: 15.5px; font-weight: 700; fill: #202124; }
+      .cs { font-size: 13px; fill: #5F6368; }
+      .note { font-size: 12.5px; fill: #5F6368; }
+      .lbl { font-size: 12.5px; font-weight: 700; fill: #3C4043; }
+      .card { fill: #FFFFFF; stroke: #DADCE0; stroke-width: 1.2; }
+      .dcard { fill: #FFFFFF; stroke: #9AA0A6; stroke-width: 1.4; stroke-dasharray: 6 5; }
+      .arrow { stroke: #5F6368; stroke-width: 2.4; fill: none; marker-end: url(#ah); }
+      .darrow { stroke: #5F6368; stroke-width: 2; fill: none; stroke-dasharray: 5 5; marker-end: url(#ah); }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="1000" fill="#FFFFFF"/>
+  <text class="h1" x="40" y="56">Hands-on Lab — how the portal and the videos are produced</text>
+  <text class="sub" x="40" y="86">Solid boxes = code in this repo · dashed boxes = generated media (kept out of git) · real product UI only, fictional Cymbal data</text>
+
+  <!-- 1 CAPTURE -->
+  <rect x="40" y="118" width="500" height="404" rx="18" fill="#E8F0FE" stroke="#4285F4" stroke-width="1.6"/>
+  <text class="gt" x="64" y="152" fill="#1967D2">1 · Capture the real UI (Playwright over CDP)</text>
+  <rect class="card" x="64" y="170" width="452" height="64" rx="10"/>
+  <text class="ct" x="80" y="196">Gemini Enterprise web app (demo app, Korean UI)</text>
+  <text class="cs" x="80" y="219">Chrome :9222 · capture/ge.py + capture/v2/ge1–9 scripts</text>
+  <rect class="card" x="64" y="244" width="452" height="64" rx="10"/>
+  <text class="ct" x="80" y="270">Antigravity desktop app (isolated recording copy)</text>
+  <text class="cs" x="80" y="293">CDP :9334 · capture/agy/agrec.py + agv.py · window 1440×810</text>
+  <rect class="card" x="64" y="318" width="452" height="64" rx="10"/>
+  <text class="ct" x="80" y="344">Files the agent built (dashboard, deck, eval report)</text>
+  <text class="cs" x="80" y="367">headless Chromium at 2× · capture/agy/showcase.py</text>
+  <rect class="card" x="64" y="392" width="452" height="64" rx="10"/>
+  <text class="ct" x="80" y="418">Google Cloud console (read-only admin screens)</text>
+  <text class="cs" x="80" y="441">capture/agy/gconsole.py + ag1r_console.py</text>
+  <text class="note" x="64" y="480">Every click and mark is logged with its DOM box (events.json);</text>
+  <text class="note" x="64" y="499">every still saves &lt;stem&gt;.boxes.json — callouts are measured, never guessed.</text>
+
+  <!-- 2 MEDIA -->
+  <rect x="590" y="118" width="330" height="404" rx="18" fill="#F8F9FA" stroke="#9AA0A6" stroke-width="1.6" stroke-dasharray="8 6"/>
+  <text class="gt" x="612" y="152" fill="#3C4043">2 · Captured media</text>
+  <text class="cs" x="612" y="172">production/assets/ (not in git)</text>
+  <rect class="dcard" x="612" y="188" width="286" height="92" rx="10"/>
+  <text class="ct" x="628" y="214">Screen recordings</text>
+  <text class="cs" x="628" y="237">recordings/&lt;id&gt;/frames/*.jpg</text>
+  <text class="cs" x="628" y="258">frames.json · events.json</text>
+  <rect class="dcard" x="612" y="294" width="286" height="92" rx="10"/>
+  <text class="ct" x="628" y="320">Stills + measured boxes</text>
+  <text class="cs" x="628" y="343">shots/&lt;stem&gt;.png (2× stills)</text>
+  <text class="cs" x="628" y="364">&lt;stem&gt;.boxes.json (CSS px)</text>
+  <rect class="dcard" x="612" y="400" width="286" height="92" rx="10"/>
+  <text class="ct" x="628" y="426">Opening-talk slides</text>
+  <text class="cs" x="628" y="449">HTML slides recorded as frames</text>
+  <text class="cs" x="628" y="470">render/out/openings/make_slides.py</text>
+
+  <!-- 3 RENDER -->
+  <rect x="970" y="118" width="590" height="404" rx="18" fill="#F3E8FD" stroke="#9B72CB" stroke-width="1.6"/>
+  <text class="gt" x="994" y="152" fill="#8430CE">3 · Render narrated videos</text>
+  <rect class="card" x="994" y="170" width="542" height="64" rx="10"/>
+  <text class="ct" x="1010" y="196">render/render.py + render/engine/</text>
+  <text class="cs" x="1010" y="219">timeline · compositor · typography · recording · callout tracking</text>
+  <rect class="card" x="994" y="244" width="542" height="64" rx="10"/>
+  <text class="ct" x="1010" y="270">21 scripts: render/scripts/v2/&lt;id&gt;.json</text>
+  <text class="cs" x="1010" y="293">title / card / screen / outro segments · narration · callouts · zoom · chapters</text>
+  <rect class="card" x="994" y="318" width="266" height="64" rx="10"/>
+  <text class="ct" x="1010" y="344">Gemini TTS + ASR check</text>
+  <text class="cs" x="1010" y="367">engine/voice.py · tts.py</text>
+  <rect class="card" x="1270" y="318" width="266" height="64" rx="10"/>
+  <text class="ct" x="1286" y="344">Lyria music bed</text>
+  <text class="cs" x="1286" y="367">engine/music.py</text>
+  <rect class="dcard" x="994" y="400" width="542" height="92" rx="10"/>
+  <text class="ct" x="1010" y="426">production/video_v2/&lt;id&gt;.mp4 (not in git)</text>
+  <text class="cs" x="1010" y="449">1920×1080 · 30 fps · H.264 + AAC · burned-in captions</text>
+  <text class="cs" x="1010" y="470">.ko.vtt · .jpg poster · .chapters.json / .chapters.vtt (1 chapter = 1 step)</text>
+
+  <!-- 4 CONTENT -->
+  <rect x="40" y="572" width="500" height="330" rx="18" fill="#E6F4EA" stroke="#34A853" stroke-width="1.6"/>
+  <text class="gt" x="64" y="606" fill="#188038">4 · Lab content and practice files</text>
+  <rect class="card" x="64" y="624" width="452" height="86" rx="10"/>
+  <text class="ct" x="80" y="650">production/content/v2/ (Korean, Python dicts)</text>
+  <text class="cs" x="80" y="673">site.py (SITE, TRACKS) · ge.py / ag.py (LABS)</text>
+  <text class="cs" x="80" y="694">ge_labs/lab1–9 · ag_labs/lab1–10: steps, prompts, code, callouts</text>
+  <rect class="card" x="64" y="720" width="452" height="86" rx="10"/>
+  <text class="ct" x="80" y="746">production/samples/v2/ (synthetic Cymbal data)</text>
+  <text class="cs" x="80" y="769">Excel · policy PDFs · skill ZIP · VOC starter (300 tickets)</text>
+  <text class="cs" x="80" y="790">build_all.py → samples/v2/build/ (learner downloads)</text>
+  <rect class="card" x="64" y="816" width="452" height="64" rx="10"/>
+  <text class="ct" x="80" y="842">Rules and schema</text>
+  <text class="cs" x="80" y="865">DESIGN_v2.md · content/v2/schema.md · AGENTS.md</text>
+
+  <!-- 5 BUILD -->
+  <rect x="590" y="572" width="480" height="330" rx="18" fill="#FEF7E0" stroke="#F9AB00" stroke-width="1.6"/>
+  <text class="gt" x="612" y="606" fill="#B06000">5 · Build the static portal</text>
+  <rect class="card" x="612" y="624" width="436" height="86" rx="10"/>
+  <text class="ct" x="628" y="650">site_build_v2/build.py</text>
+  <text class="cs" x="628" y="673">escapes all text · small markdown subset · callout CSS</text>
+  <text class="cs" x="628" y="694">WebP 800/1600/2400 · ?v= content hash · search.json</text>
+  <rect class="card" x="612" y="720" width="436" height="64" rx="10"/>
+  <text class="ct" x="628" y="746">static/ + vendor/fonts</text>
+  <text class="cs" x="628" y="769">portal.css · portal.js · Google Cloud brand files</text>
+  <rect class="dcard" x="612" y="796" width="436" height="84" rx="10"/>
+  <text class="ct" x="628" y="822">site_v2/ — 23 static pages (not in git)</text>
+  <text class="cs" x="628" y="845">home · 2 track pages · 19 lab pages · 404</text>
+  <text class="cs" x="628" y="866">strict CSP: no inline script or style</text>
+
+  <!-- 6 DEPLOY -->
+  <rect x="1120" y="572" width="440" height="200" rx="18" fill="#FCE8E6" stroke="#EA4335" stroke-width="1.6"/>
+  <text class="gt" x="1144" y="606" fill="#C5221F">6 · Deploy and serve</text>
+  <rect class="card" x="1144" y="624" width="392" height="64" rx="10"/>
+  <text class="ct" x="1160" y="650">deploy/deploy.sh → Cloud Run</text>
+  <text class="cs" x="1160" y="673">nginx (non-root) · security headers · HTTP/2</text>
+  <rect class="card" x="1144" y="698" width="392" height="56" rx="10"/>
+  <text class="ct" x="1160" y="722">Learners' browsers</text>
+  <text class="cs" x="1160" y="742">guide + demo video + practice files per lab</text>
+
+  <!-- QA -->
+  <rect x="1120" y="792" width="440" height="110" rx="18" fill="#FFFFFF" stroke="#5F6368" stroke-width="1.6"/>
+  <text class="gt" x="1144" y="824" fill="#3C4043">Quality gates</text>
+  <text class="cs" x="1144" y="848">site_build_v2/qa.py — console, CSP, overflow, callouts ≤ 1.5 px</text>
+  <text class="cs" x="1144" y="869">qa/callout_audit · video_callout_audit · ring_band_audit</text>
+  <text class="cs" x="1144" y="890">render.py --strict-callouts · contact sheets reviewed by eye</text>
+
+  <!-- arrows -->
+  <path class="arrow" d="M540 320 L586 320"/>
+  <path class="arrow" d="M898 234 L966 234"/>
+  <text class="lbl" x="904" y="224">frames</text>
+  <path class="arrow" d="M898 446 L966 446"/>
+  <path class="arrow" d="M755 522 L755 568"/>
+  <text class="lbl" x="764" y="550">stills + boxes</text>
+  <path class="arrow" d="M1030 522 L1030 568"/>
+  <text class="lbl" x="1038" y="550">videos</text>
+  <path class="arrow" d="M540 737 L586 737"/>
+  <path class="arrow" d="M1048 656 L1116 656"/>
+  <path class="darrow" d="M1120 847 L1074 847"/>
+
+  <text class="sub" x="40" y="950">In the labs, learners use Gemini Enterprise, the Antigravity app, BigQuery (via MCP), ADK / agents-cli and Agent Runtime</text>
+  <text class="sub" x="40" y="974">in their own Google Cloud project. The pipeline itself only calls Vertex AI for narration (Gemini TTS / ASR) and music (Lyria).</text>
+</svg>

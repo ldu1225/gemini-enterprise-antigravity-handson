@@ -1,0 +1,28 @@
+# Generated media and build output — re-create them with the capture / render / build scripts.
+production/assets/
+production/video_v2/
+production/render/cache/
+production/render/out/*
+!production/render/out/openings/
+production/render/out/openings/*
+!production/render/out/openings/make_slides.py
+production/qa/out/
+production/samples/v2/work/
+production/site_build_v2/qa/
+site_v2/
+site_v2_fixture/
+deploy/.build/
+_build_check/
+
+# Local environment and secrets — never commit these.
+.env
+*.env.local
+lab.env.local
+.venv/
+venv/
+
+# Python / OS noise
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store

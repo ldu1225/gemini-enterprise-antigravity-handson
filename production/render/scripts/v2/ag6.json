@@ -1,0 +1,650 @@
+{
+ "id": "ag6",
+ "track": "ag",
+ "lab": "lab6",
+ "title": "AG LAB 06 · MCP로 회사 데이터 연결 — BigQuery",
+ "brand": "Antigravity 핸즈온 랩",
+ "bgm": true,
+ "captions": true,
+ "encode": {"crf": 26, "preset": "slow", "audio_kbps": 160, "max_mb": 45},
+ "chapters": [
+  {"step": 1, "seg": 2},
+  {"step": 2, "seg": 5},
+  {"step": 3, "seg": 8},
+  {"step": 4, "seg": 15},
+  {"step": 5, "seg": 20}
+ ],
+ "segments": [
+  {
+   "type": "title",
+   "kicker": "ANTIGRAVITY · LAB 06",
+   "title": "MCP로 회사 데이터 연결",
+   "subtitle": "MCP Store · 도구 목록 · MCP 도구 호출 · 스킬 업그레이드",
+   "duration": 4.2,
+   "narration": [
+    {"text": "Antigravity 여섯 번째 실습, MCP로 회사 데이터 연결입니다.",
+     "say": "앤티그래비티 여섯 번째 실습, 엠씨피로 회사 데이터 연결입니다."}
+   ]
+  },
+  {
+   "type": "card",
+   "kicker": "이번 실습에서 할 일",
+   "title": "CSV는 복사본, 원본은 회사 BigQuery에",
+   "bullets": [
+    "lab.env 채우고 BigQuery에 데이터 올리기",
+    "MCP Store에서 BigQuery MCP 설치",
+    "MCP 도구로 실데이터 조회 · 원인 찾기",
+    "주간 보고 스킬을 BigQuery로 업그레이드"
+   ],
+   "narration": [
+    {"text": "CSV는 4주치 복사본이라, 먼저 같은 데이터를 내 BigQuery에 올립니다.",
+     "say": "씨에스브이는 사 주치 복사본이라, 먼저 같은 데이터를 내 빅쿼리에 올립니다."},
+    {"text": "MCP Store에서 BigQuery MCP를 설치해, 에이전트를 회사 데이터에 연결하고,",
+     "say": "엠씨피 스토어에서 빅쿼리 엠씨피를 설치해, 에이전트를 회사 데이터에 연결하고,"},
+    {"text": "MCP 도구로 지난주 문의와 늘어난 원인을 조회합니다.",
+     "say": "엠씨피 도구로 지난주 문의와 늘어난 원인을 조회합니다."},
+    {"text": "마지막으로 주간 보고 스킬이 BigQuery를 읽도록 고쳐 다시 실행합니다.",
+     "say": "마지막으로 주간 보고 스킬이 빅쿼리를 읽도록 고쳐 다시 실행합니다."}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_env",
+   "from": 3.0,
+   "to": 11.4,
+   "speed": "auto",
+   "labels": [{"kicker": "STEP 1", "text": "실습 변수 채우고 BigQuery에 데이터 올리기", "at": 0.5, "dur": 3.4}],
+   "narration": [
+    {"text": "Lab 5에서 만든 cymbal-voc 프로젝트에 이어서, 새 대화를 엽니다.",
+     "say": "랩 파이브에서 만든 심벌 브이오씨 프로젝트에 이어서, 새 대화를 엽니다."},
+    {"text": "lab.env에 내 프로젝트 값을 채우고, 적재 스크립트로 VOC 데이터를 BigQuery에 올려 달라고 요청합니다.",
+     "say": "랩 닷 엔브에 내 프로젝트 값을 채우고, 적재 스크립트로 브이오씨 데이터를 빅쿼리에 올려 달라고 요청합니다.",
+     "at": "submit", "align": 0.92}
+   ],
+   "zoom": [
+    {"from": 3.0, "lead": -0.3, "dur": 0.05, "max": 2.4, "box_css": [1000, 330, 440, 160]}
+   ],
+   "callouts": [
+    {"at": "target:환경 변수와 적재 프롬프트", "lead": -1.3, "dur": 1.4, "text": "입력한 요청", "spotlight": 0.18}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_env",
+   "from": 67.2,
+   "to": 114.6,
+   "speed": 6,
+   "narration": [
+    {"text": "에이전트가 스크립트와 lab.env를 읽은 뒤, lab.env의 값을 바꿨습니다.",
+     "say": "에이전트가 스크립트와 랩 닷 엔브를 읽은 뒤, 랩 닷 엔브의 값을 바꿨습니다.",
+     "at": 68.5, "align": 0.3},
+    {"text": "편집기에서 빨간 줄은 원래 값, 초록 줄은 새 값입니다.",
+     "at": 70.5, "align": 1.0},
+    {"text": "이어서 적재 스크립트를 실행해, CSV 300건을 BigQuery 테이블 cymbal_cx.voc_tickets로 올립니다.",
+     "say": "이어서 적재 스크립트를 실행해, 씨에스브이 삼백 건을 빅쿼리 테이블, 심벌 씨엑스 점 브이오씨 티켓츠로 올립니다.",
+     "at": 86.0, "align": 0.5}
+   ],
+   "zoom": [
+    {"from": 67.2, "lead": -0.3, "dur": 0.05, "box_css": [342, 60, 1098, 320]},
+    {"from": 80.0, "box_css": [915, 150, 525, 220]}
+   ],
+   "callouts": [
+    {"say": 1, "lead": 0.2, "dur": 2.8, "box_css": [404, 122.9, 225, 216.2], "pad": 0, "text": "PROJECT_ID · … · GE_LOCATION", "spotlight": 0.15},
+    {"at": 86.0, "lead": 0.0, "dur": 3.0, "box_css": [931, 282, 428, 66], "text": "Run bash setup/load_to_bigquery.sh", "spotlight": 0.15}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_env",
+   "from": 114.6,
+   "to": 170.3,
+   "speed": "auto",
+   "badge": false,
+   "narration": [
+    {"text": "약 1분 40초 뒤, BigQuery에서 다시 센 주별 건수가 나왔습니다.",
+     "say": "약 일 분 사십 초 뒤, 빅쿼리에서 다시 센 주별 건수가 나왔습니다."},
+    {"text": "62, 68, 79, 91건, 합계 300건으로 CSV와 똑같습니다.",
+     "say": "육십이, 육십팔, 칠십구, 구십일 건, 합계 삼백 건으로 씨에스브이와 똑같습니다."},
+    {"text": "답 끝에는 팀 규칙대로 데이터 출처와 기준일이 붙어 있습니다."},
+    {"text": "lab.env 변경은 Accept all로 확정합니다.",
+     "say": "랩 닷 엔브 변경은 억셉트 올로 확정합니다.",
+     "at": "click:Accept all", "align": 0.9}
+   ],
+   "zoom": [
+    {"from": 114.6, "lead": -0.3, "dur": 0.05, "box_css": [930, 170, 490, 340]},
+    {"from": "click:Accept all -1.8", "box_css": [1150, 600, 290, 110]}
+   ],
+   "callouts": [
+    {"say": 1, "lead": 0.2, "dur": 3.0, "box_css": [970, 220, 436, 218], "text": "주별 건수 — 합계 300건", "spotlight": 0.15},
+    {"say": 2, "lead": 0.2, "dur": 2.6, "box_css": [936, 452, 470, 46], "text": "데이터 출처 · 기준일", "spotlight": 0.15},
+    {"at": "click:Accept all", "lead": -0.9, "dur": 1.1, "text": "Accept all", "spotlight": 0.2}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_install",
+   "from": 3.7,
+   "to": 7.0,
+   "speed": "auto",
+   "labels": [{"kicker": "STEP 2", "text": "MCP Store에서 BigQuery MCP 설치", "at": 0.5, "dur": 3.4}],
+   "narration": [
+    {"text": "이제 에이전트를 BigQuery에 연결해 줄 MCP 서버를 설치합니다.",
+     "say": "이제 에이전트를 빅쿼리에 연결해 줄 엠씨피 서버를 설치합니다."},
+    {"text": "에이전트 패널 오른쪽 위 추가 옵션 메뉴에서 MCP Servers를 고릅니다.",
+     "say": "에이전트 패널 오른쪽 위 추가 옵션 메뉴에서 엠씨피 서버스를 고릅니다.",
+     "at": "hover:MCP Servers", "align": 0.65}
+   ],
+   "zoom": [
+    {"from": 3.7, "lead": -0.3, "dur": 0.05, "max": 2.0, "box_css": [1240, 30, 200, 110]}
+   ],
+   "callouts": [
+    {"at": "click:추가 옵션", "lead": -0.7, "dur": 1.0, "text": "추가 옵션", "spotlight": 0.2},
+    {"at": "hover:MCP Servers", "lead": -0.3, "dur": 1.8, "text": "MCP Servers", "spotlight": 0.2}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_install",
+   "from": 9.15,
+   "to": 23.9,
+   "speed": "auto",
+   "transition": 0,
+   "narration": [
+    {"text": "MCP Store가 열리면 검색창에 BigQuery를 입력하고, 목록에서 BigQuery를 고릅니다.",
+     "say": "엠씨피 스토어가 열리면 검색창에 빅쿼리를 입력하고, 목록에서 빅쿼리를 고릅니다.",
+     "at": "click:BigQuery 항목", "align": 0.9},
+    {"text": "BigQuery MCP 페이지에서 Install을 누르면, 잠시 뒤 Enabled로 바뀌며 설치가 끝납니다.",
+     "say": "빅쿼리 엠씨피 페이지에서 인스톨을 누르면, 잠시 뒤 이네이블드로 바뀌며 설치가 끝납니다.",
+     "at": "target:Enabled", "align": 0.85},
+    {"text": "Tools 탭에는 에이전트가 새로 쓸 수 있게 된 도구가 나옵니다.",
+     "say": "툴즈 탭에는 에이전트가 새로 쓸 수 있게 된 도구가 나옵니다.",
+     "at": "click:Tools", "align": 0.5},
+    {"text": "테이블을 조회하는 도구와, 읽기 전용 SQL 도구 execute_sql_readonly가 보입니다.",
+     "say": "테이블을 조회하는 도구와, 읽기 전용 에스큐엘 도구 익스큐트 에스큐엘 리드온리가 보입니다.",
+     "at": 23.85, "align": 0.0},
+    {"text": "도구마다 스위치가 있어서, 필요한 도구만 켜 둘 수 있습니다."}
+   ],
+   "zoom": [
+    {"from": 9.15, "lead": -0.3, "dur": 0.05, "max": 2.0, "box_css": [915, 110, 525, 200]},
+    {"from": 13.2, "box_css": [100, 90, 740, 200]},
+    {"from": "click:Tools -0.6", "box_css": [270, 220, 560, 300]}
+   ],
+   "callouts": [
+    {"at": "target:검색창", "lead": -0.2, "dur": 1.5, "text": "BigQuery 검색", "spotlight": 0.18, "track": false},
+    {"at": "click:BigQuery 항목", "lead": -1.0, "dur": 1.2, "box_css": [929.5, 261, 63.8, 19.5], "pad": 0, "text": "BigQuery", "spotlight": 0.2},
+    {"at": "click:Install", "lead": -1.0, "dur": 1.2, "text": "Install", "spotlight": 0.2},
+    {"at": "target:Enabled", "lead": 0.1, "dur": 1.5, "text": "Enabled", "spotlight": 0.2},
+    {"at": "click:Tools", "lead": -0.9, "dur": 1.1, "text": "Tools", "spotlight": 0.2},
+    {"say": 3, "lead": 0.2, "dur": 3.2, "box_css": [276, 228, 540, 280], "pad": 0, "text": "1. list_dataset_ids … 5. execute_sql_readonly", "spotlight": 0.15},
+    {"say": 4, "lead": 0.2, "dur": 2.4, "box_css": [778, 485, 38, 22], "pad": 0, "text": "켜기/끄기 스위치", "spotlight": 0.2}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_install",
+   "from": 26.3,
+   "to": 36.45,
+   "speed": "auto",
+   "transition": 0.4,
+   "narration": [
+    {"text": "아래쪽 execute_sql은 데이터를 바꾸는 쿼리도 실행할 수 있으니, 조회만 한다면 꺼 두는 편이 안전합니다.",
+     "say": "아래쪽 익스큐트 에스큐엘은 데이터를 바꾸는 쿼리도 실행할 수 있으니, 조회만 한다면 꺼 두는 편이 안전합니다."},
+    {"text": "Configure 탭에는 따로 설정할 것이 없다고 나옵니다.",
+     "say": "컨피거 탭에는 따로 설정할 것이 없다고 나옵니다.",
+     "at": "target:No configuration needed", "align": 0.4},
+    {"text": "BigQuery MCP는 내 Google Cloud 로그인으로 인증하기 때문입니다.",
+     "say": "빅쿼리 엠씨피는 내 구글 클라우드 로그인으로 인증하기 때문입니다."},
+    {"text": "Manage MCP Servers를 누르면, 설치한 서버와 켜진 도구 수를 한눈에 볼 수 있습니다.",
+     "say": "매니지 엠씨피 서버스를 누르면, 설치한 서버와 켜진 도구 수를 한눈에 볼 수 있습니다.",
+     "at": "click:Manage MCP Servers", "align": 0.5},
+    {"text": "BigQuery의 도구 9개가 모두 켜져 있습니다.",
+     "say": "빅쿼리의 도구 아홉 개가 모두 켜져 있습니다."}
+   ],
+   "zoom": [
+    {"from": 26.3, "lead": -0.3, "dur": 0.05, "box_css": [270, 290, 560, 120]},
+    {"from": "click:Configure -0.7", "box_css": [110, 220, 450, 120]},
+    {"from_say": 3, "lead": -0.2, "box_css": [1100, 60, 340, 100]},
+    {"from": 33.0, "box_css": [100, 95, 740, 140]}
+   ],
+   "callouts": [
+    {"say": 0, "lead": 0.3, "dur": 3.0, "box_css": [276, 308, 106, 24], "pad": 0, "text": "6. execute_sql", "spotlight": 0.18},
+    {"at": "click:Configure", "lead": -0.9, "dur": 1.1, "text": "Configure", "spotlight": 0.2},
+    {"at": "target:No configuration needed", "lead": 0.1, "dur": 2.0, "text": "No configuration needed for BigQuery.", "spotlight": 0.18},
+    {"at": "click:Manage MCP Servers", "lead": -0.9, "dur": 1.1, "text": "Manage MCP Servers", "spotlight": 0.2},
+    {"say": 4, "lead": 0.2, "dur": 2.4, "box_css": [134, 163, 126, 24], "text": "BigQuery 9 / 9", "spotlight": 0.18}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_query",
+   "from": 2.9,
+   "to": 10.9,
+   "speed": "auto",
+   "labels": [{"kicker": "STEP 3", "text": "MCP 도구로 실데이터 조회", "at": 0.5, "dur": 3.4}],
+   "narration": [
+    {"text": "이제 설치한 MCP 도구로 회사 데이터를 직접 조회해 봅니다.",
+     "say": "이제 설치한 엠씨피 도구로 회사 데이터를 직접 조회해 봅니다."},
+    {"text": "새 대화에서, 테이블 구조를 확인하고 지난주 분류별 문의 건수를 그 전주와 비교해 달라고 합니다.",
+     "at": "submit", "align": 0.92}
+   ],
+   "zoom": [
+    {"from": 2.9, "lead": -0.3, "dur": 0.05, "max": 2.0, "box_css": [1000, 330, 440, 130]}
+   ],
+   "callouts": [
+    {"at": "target:MCP 조회 프롬프트", "lead": -1.3, "dur": 1.4, "text": "입력한 요청", "spotlight": 0.18}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_query",
+   "from": 10.9,
+   "to": 31.5,
+   "speed": 6,
+   "zoom": [
+    {"from": 10.9, "lead": -0.3, "dur": 0.05, "max": 2.0, "box_css": [931, 80, 490, 220]},
+    {"from": 26.0, "max": 2.0, "box_css": [931, 515, 490, 260]}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_query",
+   "from": 31.5,
+   "to": 34.2,
+   "speed": "auto",
+   "transition": 0,
+   "narration": [
+    {"text": "에이전트가 MCP 도구를 부르기 전에, Allow using this MCP tool? 카드가 나타납니다.",
+     "say": "에이전트가 엠씨피 도구를 부르기 전에, 얼라우 유징 디스 엠씨피 툴 카드가 나타납니다.",
+     "at": "target:권한 승인", "align": 0.35},
+    {"text": "부르려는 도구가 bigquery/get_table_info인지 확인합니다.",
+     "say": "부르려는 도구가 빅쿼리 겟 테이블 인포인지 확인합니다.",
+     "at": 32.25, "align": 1.0},
+    {"text": "Yes, allow this time을 고르고 Submit을 누릅니다.",
+     "say": "예스, 얼라우 디스 타임을 고르고 서브밋을 누릅니다.",
+     "at": "click:Submit", "align": 0.9}
+   ],
+   "zoom": [
+    {"from": 31.5, "lead": -0.3, "dur": 0.05, "max": 2.0, "box_css": [931, 515, 490, 260]}
+   ],
+   "callouts": [
+    {"at": "target:권한 승인", "lead": 0.1, "dur": 7.0, "box_css": [927, 519, 500, 76], "text": "Allow using this MCP tool? · bigquery/get_table_info", "spotlight": 0.18},
+    {"at": "click:허용", "lead": -1.0, "dur": 1.2, "text": "Yes, allow this time", "spotlight": 0.2},
+    {"at": "click:Submit", "lead": -0.6, "dur": 0.9, "text": "Submit", "spotlight": 0.2}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_query",
+   "from": 34.2,
+   "to": 51.2,
+   "speed": 6,
+   "transition": 0.3,
+   "narration": [
+    {"text": "도구 결과는 JSON 형식으로 돌아옵니다.",
+     "say": "도구 결과는 제이슨 형식으로 돌아옵니다.",
+     "at": 37.0, "align": 0.3},
+    {"text": "테이블 정보에 행 수 300이 보입니다.",
+     "say": "테이블 정보에 행 수 삼백이 보입니다.",
+     "at": 41.0, "align": 1.0}
+   ],
+   "zoom": [
+    {"from": 34.2, "lead": -0.3, "dur": 0.05, "max": 2.0, "box_css": [931, 200, 490, 300]},
+    {"from": 46.0, "max": 2.0, "box_css": [931, 515, 490, 260]}
+   ],
+   "callouts": [
+    {"say": 1, "lead": 0.2, "dur": 2.4, "box_css": [984, 268.1, 122, 16.1], "pad": 0, "text": "\"numRows\": \"300\"", "spotlight": 0.2}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_query",
+   "from": 51.2,
+   "to": 53.6,
+   "speed": "auto",
+   "transition": 0,
+   "narration": [
+    {"text": "집계 SQL을 실행하는 execute_sql_readonly도 같은 방법으로 허용합니다.",
+     "say": "집계 에스큐엘을 실행하는 익스큐트 에스큐엘 리드온리도 같은 방법으로 허용합니다.",
+     "at": 51.9, "align": 0.6}
+   ],
+   "zoom": [
+    {"from": 51.2, "lead": -0.3, "dur": 0.05, "max": 2.0, "box_css": [931, 515, 490, 260]}
+   ],
+   "callouts": [
+    {"at": "target:권한 승인", "lead": 0.1, "dur": 3.0, "box_css": [927, 519, 500, 76], "text": "Allow using this MCP tool? · bigquery/execute_sql_readonly", "spotlight": 0.18},
+    {"at": "click:허용", "lead": -0.9, "dur": 1.1, "text": "Yes, allow this time", "spotlight": 0.2},
+    {"at": "click:Submit", "lead": -0.5, "dur": 0.8, "text": "Submit", "spotlight": 0.2}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_query",
+   "from": 53.6,
+   "to": 71.87,
+   "speed": 6,
+   "transition": 0.3,
+   "zoom": [
+    {"from": 53.6, "lead": -0.3, "dur": 0.05, "max": 2.0, "box_css": [931, 260, 490, 300]}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_query",
+   "from": 71.87,
+   "to": 76.0,
+   "speed": "auto",
+   "transition": 0,
+   "narration": [
+    {"text": "약 1분 뒤, 분류별 비교 표가 나왔습니다.",
+     "say": "약 일 분 뒤, 분류별 비교 표가 나왔습니다."},
+    {"text": "안전 이슈는 2건에서 6건으로 늘었고, 팀 규칙대로 표 맨 위에 있습니다.",
+     "say": "안전 이슈는 두 건에서 여섯 건으로 늘었고, 팀 규칙대로 표 맨 위에 있습니다.",
+     "at": 71.95, "align": 1.0},
+    {"text": "전체 문의는 79건에서 91건으로, 12건, 15.2% 늘었습니다.",
+     "say": "전체 문의는 칠십구 건에서 구십일 건으로, 열두 건, 십오 점 이 퍼센트 늘었습니다.",
+     "at": 74.5, "align": 0.0},
+    {"text": "마지막 줄에는 데이터 출처와 기준일도 적혀 있습니다."}
+   ],
+   "zoom": [
+    {"from": 71.87, "lead": -0.3, "dur": 0.05, "max": 2.0, "box_css": [931, 260, 490, 300]},
+    {"from": 74.3, "max": 2.0, "box_css": [931, 258, 490, 310]}
+   ],
+   "callouts": [
+    {"say": 1, "lead": 0.2, "dur": 3.4, "box_css": [941, 475, 464, 63], "text": "안전 이슈 2건 → 6건", "spotlight": 0.15},
+    {"say": 2, "lead": 0.3, "dur": 3.0, "box_css": [941, 459, 464, 46], "text": "합계 79건 → 91건 (+15.2%)", "spotlight": 0.15},
+    {"say": 3, "lead": 0.2, "dur": 2.6, "box_css": [932, 523, 476, 44], "text": "데이터 출처 · 기준일", "spotlight": 0.15}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_insight",
+   "from": 2.9,
+   "to": 9.85,
+   "speed": "auto",
+   "labels": [{"kicker": "STEP 4", "text": "데이터에서 원인 찾기", "at": 0.5, "dur": 3.4}],
+   "narration": [
+    {"text": "이번에는 숫자 뒤의 원인을 데이터에서 찾아봅니다."},
+    {"text": "로봇청소기 앱 연결 문의를 일자별로 조회해, 언제부터 늘었는지 찾아 달라고 합니다.",
+     "at": "submit", "align": 0.92}
+   ],
+   "zoom": [
+    {"from": 2.9, "lead": -0.3, "dur": 0.05, "max": 2.0, "box_css": [1000, 330, 440, 130]}
+   ],
+   "callouts": [
+    {"at": "target:급증 원인 찾기 프롬프트", "lead": -1.3, "dur": 1.4, "text": "입력한 요청", "spotlight": 0.18}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_insight",
+   "from": 9.85,
+   "to": 40.6,
+   "speed": 6,
+   "narration": [
+    {"text": "에이전트는 MCP 도구의 사용법부터 확인합니다.",
+     "say": "에이전트는 엠씨피 도구의 사용법부터 확인합니다.",
+     "at": 36.0, "align": 0.3}
+   ],
+   "zoom": [
+    {"from": 9.85, "lead": -0.3, "dur": 0.05, "max": 2.0, "box_css": [931, 80, 490, 220]},
+    {"from": 37.5, "max": 2.0, "box_css": [931, 515, 490, 260]}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_insight",
+   "from": 40.6,
+   "to": 43.0,
+   "speed": "auto",
+   "transition": 0,
+   "narration": [
+    {"text": "도구를 부를 때마다 승인 카드가 뜹니다. 이번에도 도구 이름을 보고 허용합니다.",
+     "at": 41.2, "align": 0.6}
+   ],
+   "zoom": [
+    {"from": 40.6, "lead": -0.3, "dur": 0.05, "max": 2.0, "box_css": [931, 515, 490, 260]}
+   ],
+   "callouts": [
+    {"at": "target:권한 승인", "lead": 0.1, "dur": 3.0, "box_css": [927, 519, 500, 76], "text": "Allow using this MCP tool? · bigquery/get_table_info", "spotlight": 0.18},
+    {"at": "click:허용", "lead": -0.9, "dur": 1.1, "text": "Yes, allow this time", "spotlight": 0.2},
+    {"at": "click:Submit", "lead": -0.5, "dur": 0.8, "text": "Submit", "spotlight": 0.2}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_insight",
+   "from": 43.0,
+   "to": 66.85,
+   "speed": 6,
+   "transition": 0.3,
+   "narration": [
+    {"text": "녹화에서는 조회를 네 번 하면서, 그때마다 허용했습니다."},
+    {"text": "같은 대화에서 계속 허용하려면, 두 번째 옵션 Yes, and always allow in this conversation을 고르면 됩니다.",
+     "say": "같은 대화에서 계속 허용하려면, 두 번째 옵션, 예스, 앤드 올웨이즈 얼라우 인 디스 컨버세이션을 고르면 됩니다."}
+   ],
+   "zoom": [
+    {"from": 43.0, "lead": -0.3, "dur": 0.05, "max": 2.0, "box_css": [931, 515, 490, 260]}
+   ],
+   "callouts": [
+    {"say": 1, "lead": 0.3, "dur": 3.6, "box_css": [931, 630, 286, 25], "pad": 0, "text": "Yes, and always allow in this conversation", "spotlight": 0.18}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_insight",
+   "from": 96.6,
+   "to": 110.0,
+   "speed": "auto",
+   "transition": 0.4,
+   "narration": [
+    {"text": "답을 쓰기 전에, 에이전트는 AGENTS.md의 팀 규칙도 다시 확인합니다.",
+     "say": "답을 쓰기 전에, 에이전트는 에이전츠 엠디의 팀 규칙도 다시 확인합니다.",
+     "at": 97.0, "align": 0.3},
+    {"text": "약 1분 40초 만에 답이 나왔습니다.",
+     "say": "약 일 분 사십 초 만에 답이 나왔습니다.",
+     "at": 104.0, "align": 0.2},
+    {"text": "앱 연결 문의는 10월 13일까지 하루 0~1건이었다가, 10월 14일 하루 6건으로 급증했습니다.",
+     "say": "앱 연결 문의는 시월 십삼 일까지 하루 영에서 한 건이었다가, 시월 십사 일 하루 여섯 건으로 급증했습니다.",
+     "at": 107.5, "align": 0.0},
+    {"text": "그 뒤로도 매일 이어져, 12일 동안 33건이 몰렸습니다.",
+     "say": "그 뒤로도 매일 이어져, 십이 일 동안 삼십삼 건이 몰렸습니다."}
+   ],
+   "zoom": [
+    {"from": 96.6, "lead": -0.3, "dur": 0.05, "max": 2.0, "box_css": [931, 380, 490, 200]},
+    {"from": 103.0, "max": 2.0, "box_css": [931, 200, 490, 310]}
+   ],
+   "callouts": [
+    {"say": 2, "lead": 0.2, "dur": 3.4, "box_css": [933, 401, 273, 25], "pad": 0, "text": "2026-10-14 부터 문의가 급증", "spotlight": 0.15},
+    {"say": 3, "lead": 0.2, "dur": 3.0, "box_css": [931, 454.9, 472, 63.6], "pad": 0, "text": "2026-10-14 (급증 시작일) … 총 33건", "spotlight": 0.15}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_skill",
+   "from": 2.9,
+   "to": 10.0,
+   "speed": "auto",
+   "labels": [{"kicker": "STEP 5", "text": "스킬을 MCP로 업그레이드하고 다시 실행", "at": 0.5, "dur": 3.4}],
+   "narration": [
+    {"text": "마지막으로, Lab 5에서 만든 voc-weekly-report 스킬을 업그레이드합니다.",
+     "say": "마지막으로, 랩 파이브에서 만든 브이오씨 위클리 리포트 스킬을 업그레이드합니다."},
+    {"text": "CSV 대신 BigQuery MCP로 최신 데이터를 조회하고, 출처 표기와 파일 링크도 고쳐 달라고 합니다.",
+     "say": "씨에스브이 대신 빅쿼리 엠씨피로 최신 데이터를 조회하고, 출처 표기와 파일 링크도 고쳐 달라고 합니다.",
+     "at": "submit", "align": 0.92}
+   ],
+   "zoom": [
+    {"from": 2.9, "lead": -0.3, "dur": 0.05, "max": 2.2, "box_css": [1000, 330, 440, 130]}
+   ],
+   "callouts": [
+    {"at": "target:스킬 업그레이드 프롬프트", "lead": -1.3, "dur": 1.4, "text": "입력한 요청", "spotlight": 0.18}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_skill",
+   "from": 150.0,
+   "to": 194.6,
+   "speed": 6,
+   "transition": 0.4,
+   "narration": [
+    {"text": "에이전트가 스킬 파일과 스크립트, 보고서를 읽고 SKILL.md를 고칩니다. 약 3분 걸렸습니다.",
+     "say": "에이전트가 스킬 파일과 스크립트, 보고서를 읽고 스킬 엠디를 고칩니다. 약 삼 분 걸렸습니다.",
+     "at": 152.0, "align": 0.3}
+   ],
+   "zoom": [
+    {"from": 150.0, "lead": -0.3, "dur": 0.05, "max": 2.2, "box_css": [931, 80, 490, 270]},
+    {"from": 186.0, "max": 2.2, "box_css": [931, 150, 490, 180]}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_skill",
+   "from": 194.6,
+   "to": 205.5,
+   "speed": "auto",
+   "badge": false,
+   "transition": 0,
+   "narration": [
+    {"text": "바뀐 내용은 세 가지로 정리됐습니다.",
+     "at": 195.0, "align": 0.0},
+    {"text": "데이터는 BigQuery MCP의 execute_sql_readonly로 조회하고,",
+     "say": "데이터는 빅쿼리 엠씨피의 익스큐트 에스큐엘 리드온리로 조회하고,"},
+    {"text": "데이터 출처는 BigQuery 테이블로, 파일 링크는 상대 경로로 바꿨습니다.",
+     "say": "데이터 출처는 빅쿼리 테이블로, 파일 링크는 상대 경로로 바꿨습니다.",
+     "at": 205.0, "align": 1.0}
+   ],
+   "zoom": [
+    {"from": 194.6, "lead": -0.3, "dur": 0.05, "max": 2.2, "box_css": [931, 150, 490, 180]},
+    {"from_say": 2, "lead": -0.3, "max": 2.2, "box_css": [931, 300, 490, 190]}
+   ],
+   "callouts": [
+    {"say": 1, "lead": 0.2, "dur": 2.8, "box_css": [929, 163, 484, 142], "pad": 0, "text": "1. BigQuery MCP 데이터 조회 절차로 변경", "spotlight": 0.15},
+    {"say": 2, "lead": 0.2, "dur": 3.2, "box_css": [929, 308, 484, 174], "pad": 0, "text": "2. 데이터 출처 표기 변경 · 3. 상대 경로 링크 적용", "spotlight": 0.15}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_skill",
+   "from": 244.6,
+   "to": 247.0,
+   "speed": "auto",
+   "transition": 0.3,
+   "narration": [
+    {"text": "확인했으면 Accept all을 누릅니다.",
+     "say": "확인했으면 억셉트 올을 누릅니다.",
+     "at": "click:Accept all", "align": 0.9}
+   ],
+   "zoom": [
+    {"from": 244.6, "lead": -0.3, "dur": 0.05, "max": 2.2, "box_css": [1150, 600, 290, 110]}
+   ],
+   "callouts": [
+    {"at": "click:Accept all", "lead": -0.9, "dur": 1.1, "text": "Accept all", "spotlight": 0.2}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_run",
+   "from": 2.9,
+   "to": 9.3,
+   "speed": "auto",
+   "transition": 0.4,
+   "narration": [
+    {"text": "이제 고친 스킬로 보고서를 다시 만듭니다."},
+    {"text": "입력창에 /voc를 입력하면, 슬래시 메뉴에 voc-weekly-report 스킬이 나옵니다.",
+     "say": "입력창에 슬래시 브이오씨를 입력하면, 슬래시 메뉴에 브이오씨 위클리 리포트 스킬이 나옵니다.",
+     "at": "target:voc-weekly-report", "align": 0.6},
+    {"text": "스킬을 고르고, 지난주 보고서를 BigQuery 최신 데이터로 다시 만들어 달라고 보냅니다.",
+     "say": "스킬을 고르고, 지난주 보고서를 빅쿼리 최신 데이터로 다시 만들어 달라고 보냅니다.",
+     "at": "submit", "align": 0.9}
+   ],
+   "zoom": [
+    {"from": 2.9, "lead": -0.3, "dur": 0.05, "max": 2.0, "box_css": [1000, 290, 440, 170]}
+   ],
+   "callouts": [
+    {"at": "target:voc-weekly-report", "lead": -1.8, "dur": 1.6, "text": "voc-weekly-report", "spotlight": 0.2},
+    {"at": "target:BigQuery로 보고서 프롬프트", "lead": -1.0, "dur": 1.1, "text": "입력한 요청", "spotlight": 0.18}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_run",
+   "from": 9.3,
+   "to": 72.5,
+   "speed": 6,
+   "narration": [
+    {"text": "에이전트는 스킬 절차대로 BigQuery MCP로 데이터를 조회합니다.",
+     "say": "에이전트는 스킬 절차대로 빅쿼리 엠씨피로 데이터를 조회합니다."},
+    {"text": "이번에도 승인 카드에서 네 번 허용했습니다."}
+   ],
+   "zoom": [
+    {"from": 9.3, "lead": -0.3, "dur": 0.05, "max": 2.0, "box_css": [931, 80, 490, 260]},
+    {"from": 40.5, "max": 2.0, "box_css": [931, 515, 490, 260]}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_run",
+   "from": 98.0,
+   "to": 125.4,
+   "speed": "auto",
+   "transition": 0.4,
+   "narration": [
+    {"text": "약 1분 30초 뒤, 보고서가 다시 만들어졌습니다.",
+     "say": "약 일 분 삼십 초 뒤, 보고서가 다시 만들어졌습니다.",
+     "at": 99.0, "align": 0.2},
+    {"text": "안전 이슈 6건, 전주보다 4건 증가 같은 숫자를 이제 BigQuery에서 바로 가져옵니다.",
+     "say": "안전 이슈 여섯 건, 전주보다 네 건 증가 같은 숫자를 이제 빅쿼리에서 바로 가져옵니다."},
+    {"text": "바뀐 줄은 플러스 1, 마이너스 1, 단 한 줄입니다.",
+     "say": "바뀐 줄은 플러스 일, 마이너스 일, 단 한 줄입니다."},
+    {"text": "편집기를 보면, 데이터 출처가 CSV에서 BigQuery 테이블로 바뀌었습니다. 같은 데이터라 숫자는 그대로입니다.",
+     "say": "편집기를 보면, 데이터 출처가 씨에스브이에서 빅쿼리 테이블로 바뀌었습니다. 같은 데이터라 숫자는 그대로입니다."}
+   ],
+   "zoom": [
+    {"from": 98.0, "lead": -0.3, "dur": 0.05, "box_css": [931, 195, 490, 450]},
+    {"from_say": 3, "lead": -0.3, "box_css": [100, 200, 700, 260]}
+   ],
+   "callouts": [
+    {"say": 1, "lead": 0.2, "dur": 3.4, "box_css": [946, 508, 450, 130], "text": "안전 이슈 6건 · +4건(+200.0%)", "spotlight": 0.15},
+    {"say": 2, "lead": 0.2, "dur": 2.6, "box_css": [931, 203, 331, 23], "text": "Edited voc_weekly_report_2026-10-19.md +1 -1", "spotlight": 0.18},
+    {"say": 3, "lead": 1.0, "dur": 3.6, "box_css": [104, 419, 494, 39], "pad": 0, "text": "데이터 출처: data/voc_tickets.csv → BigQuery cymbal_cx.voc_tickets", "spotlight": 0.15}
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag6v_run",
+   "from": 179.0,
+   "to": 183.6,
+   "speed": "auto",
+   "transition": 0.3,
+   "narration": [
+    {"text": "Accept all로 확정하면, 주간 보고 스킬이 회사 데이터에 연결됩니다.",
+     "say": "억셉트 올로 확정하면, 주간 보고 스킬이 회사 데이터에 연결됩니다.",
+     "at": "click:Accept all", "align": 0.9}
+   ],
+   "zoom": [
+    {"from": 179.0, "lead": -0.3, "dur": 0.05, "max": 2.0, "box_css": [1150, 600, 290, 110]}
+   ],
+   "callouts": [
+    {"at": "click:Accept all", "lead": -0.9, "dur": 1.1, "text": "Accept all", "spotlight": 0.2}
+   ]
+  },
+  {
+   "type": "outro",
+   "kicker": "AG LAB 06 완료",
+   "title": "오늘의 체크리스트",
+   "checklist": [
+    "lab.env 채우고 BigQuery에 적재",
+    "MCP Store에서 BigQuery MCP 설치",
+    "MCP 도구 호출은 내용 보고 승인",
+    "주간 보고 스킬도 BigQuery로"
+   ],
+   "subtitle": "다음 · LAB 07 임원 보고 슬라이드",
+   "narration": [
+    {"text": "수고하셨습니다!"},
+    {"text": "체크리스트로 오늘 실습을 점검해 보세요."},
+    {"text": "다음 실습에서는 BigQuery 데이터로 임원 보고 슬라이드를 만들어 봅니다.",
+     "say": "다음 실습에서는 빅쿼리 데이터로 임원 보고 슬라이드를 만들어 봅니다."}
+   ]
+  }
+ ]
+}

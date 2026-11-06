@@ -1,0 +1,1330 @@
+{
+ "id": "ag8",
+ "track": "ag",
+ "lab": "lab8",
+ "title": "AG LAB 08 · VOC 분석 에이전트 — ADK",
+ "brand": "Antigravity 핸즈온 랩",
+ "bgm": true,
+ "captions": true,
+ "encode": {
+  "crf": 26,
+  "preset": "slow",
+  "audio_kbps": 160,
+  "max_mb": 45
+ },
+ "chapters": [
+  {
+   "step": 1,
+   "seg": 4
+  },
+  {
+   "step": 2,
+   "seg": 6
+  },
+  {
+   "step": 3,
+   "seg": 12
+  },
+  {
+   "step": 4,
+   "seg": 17
+  },
+  {
+   "step": 5,
+   "seg": 20
+  }
+ ],
+ "segments": [
+  {
+   "type": "title",
+   "kicker": "ANTIGRAVITY · LAB 08",
+   "title": "VOC 분석 에이전트 — ADK",
+   "subtitle": "agents-cli 생성 · BigQuery 도구 · run · eval",
+   "duration": 4.2,
+   "narration": [
+    {
+     "text": "Antigravity 여덟 번째 실습, VOC 분석 에이전트 만들기입니다.",
+     "say": "앤티그래비티 여덟 번째 실습, 브이오씨 분석 에이전트 만들기입니다."
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_run",
+   "from": 216.0,
+   "to": 216.55,
+   "speed": "auto",
+   "labels": [
+    {
+     "kicker": "결과물 미리 보기",
+     "text": "VOC 분석 에이전트의 답변과 평가 점수",
+     "at": 0.45,
+     "dur": 3.0
+    }
+   ],
+   "narration": [
+    {
+     "text": "이번 Lab의 결과물입니다."
+    },
+    {
+     "text": "아직 처리 안 된 긴급 문의를 물으면, 에이전트가 BigQuery에서 찾은 6건을 표로 답하고,",
+     "say": "아직 처리 안 된 긴급 문의를 물으면, 에이전트가 빅쿼리에서 찾은 여섯 건을 표로 답하고,"
+    }
+   ],
+   "zoom": [
+    {
+     "from": 216.05,
+     "box_css": [
+      915,
+      178,
+      525,
+      396
+     ],
+     "scale": 1.75,
+     "lead": -0.05,
+     "dur": 0.001
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_score",
+   "from": 0.3,
+   "to": 4.0,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "평가 보고서에서는 세 케이스 모두 5점 만점을 받습니다.",
+     "say": "평가 보고서에서는 세 케이스 모두 오 점 만점을 받습니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 0.35,
+     "box_css": [
+      100,
+      60,
+      1240,
+      300
+     ],
+     "lead": -0.05,
+     "dur": 0.001
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "kicker": "이번 실습에서 할 일",
+   "title": "누구나 물어보는 VOC 에이전트",
+   "bullets": [
+    "agents-cli로 ADK 에이전트 프로젝트 만들기",
+    "BigQuery 도구 2개 — 주간 요약 · 긴급 문의",
+    "agents-cli run으로 실행 — 도구 호출 확인",
+    "agents-cli eval로 평가 → 보고서에서 점수 확인"
+   ],
+   "narration": [
+    {
+     "text": "먼저 agents-cli로 ADK 에이전트 프로젝트를 만들고,",
+     "say": "먼저 에이전츠 씨엘아이로 에이디케이 에이전트 프로젝트를 만들고,"
+    },
+    {
+     "text": "BigQuery에서 주간 요약과 긴급 문의를 가져오는 도구 두 개를 붙입니다.",
+     "say": "빅쿼리에서 주간 요약과 긴급 문의를 가져오는 도구 두 개를 붙입니다."
+    },
+    {
+     "text": "agents-cli run으로 실제 질문을 보내 도구가 호출되는지 확인하고,",
+     "say": "에이전츠 씨엘아이 런으로 실제 질문을 보내 도구가 호출되는지 확인하고,"
+    },
+    {
+     "text": "평가를 돌려, 보고서에서 점수까지 확인합니다."
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_create",
+   "from": 6.6,
+   "to": 57.5,
+   "speed": [
+    {
+     "from": 6.6,
+     "to": 16.0,
+     "x": 1.2
+    },
+    {
+     "from": 16.0,
+     "to": 39.0,
+     "x": 6
+    },
+    {
+     "from": 39.0,
+     "to": 57.5,
+     "x": 2.5
+    }
+   ],
+   "labels": [
+    {
+     "kicker": "STEP 1",
+     "text": "agents-cli로 ADK 에이전트 프로젝트 만들기",
+     "at": 0.5,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "요청서 3번, 누구나 물어보는 VOC 도우미를 만들 차례입니다. 새 대화를 엽니다.",
+     "say": "요청서 삼 번, 누구나 물어보는 브이오씨 도우미를 만들 차례입니다. 새 대화를 엽니다.",
+     "at": "click:새 대화",
+     "align": 0.85
+    },
+    {
+     "text": "agents-cli로 cymbal-voc-agent 프로젝트를 만들어 달라고 하면서, 배포 대상과 프로토타입 구성을 함께 적습니다.",
+     "say": "에이전츠 씨엘아이로 심벌 브이오씨 에이전트 프로젝트를 만들어 달라고 하면서, 배포 대상과 프로토타입 구성을 함께 적습니다.",
+     "at": "submit",
+     "align": 0.92
+    },
+    {
+     "text": "에이전트는 먼저 agents-cli create --help로 쓸 수 있는 옵션을 확인합니다.",
+     "say": "에이전트는 먼저 에이전츠 씨엘아이 크리에이트 헬프로 쓸 수 있는 옵션을 확인합니다.",
+     "at": 47.0,
+     "align": 0.1
+    }
+   ],
+   "zoom": [
+    {
+     "from": 6.6,
+     "box_css": [
+      915,
+      0,
+      525,
+      380
+     ],
+     "scale": 1.8,
+     "lead": -0.05,
+     "dur": 0.001
+    },
+    {
+     "from": "click:입력창 -0.4",
+     "box_css": [
+      915,
+      100,
+      525,
+      420
+     ],
+     "scale": 1.8
+    },
+    {
+     "from": "submit +0.6",
+     "box_css": [
+      915,
+      60,
+      525,
+      330
+     ],
+     "scale": 2.0
+    }
+   ],
+   "callouts": [
+    {
+     "say": 0,
+     "at": "click:새 대화",
+     "lead": 4.7,
+     "dur": 1.1,
+     "text": "새 대화",
+     "spotlight": 0.2
+    },
+    {
+     "at": "type_end",
+     "lead": -1.4,
+     "dur": 1.6,
+     "box_css": [
+      936,
+      345,
+      482,
+      88
+     ],
+     "text": "agents-cli · Agent Runtime · 프로토타입",
+     "spotlight": 0.18
+    },
+    {
+     "say": 2,
+     "lead": 0.3,
+     "dur": 3.0,
+     "box_css": [
+      936,
+      222,
+      253,
+      17
+     ],
+     "text": "Run agents-cli create --help",
+     "spotlight": 0.18
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_create",
+   "from": 147.0,
+   "to": 170.0,
+   "speed": "auto",
+   "max_speed": 4,
+   "narration": [
+    {
+     "text": "옵션을 확인하고 프로젝트를 만드는 데 약 2분 20초가 걸렸습니다.",
+     "say": "옵션을 확인하고 프로젝트를 만드는 데 약 이 분 이십 초가 걸렸습니다.",
+     "at": 156.0,
+     "align": 0.1
+    },
+    {
+     "text": "lab.env의 프로젝트 ID와 리전으로 cymbal-voc-agent 프로젝트를 만들었습니다.",
+     "say": "랩 닷 엔브의 프로젝트 아이디와 리전으로 심벌 브이오씨 에이전트 프로젝트를 만들었습니다."
+    },
+    {
+     "text": "템플릿은 adk, 에이전트 본체는 app 폴더의 agent.py, 배포 대상은 Agent Runtime, 구성은 프로토타입입니다.",
+     "say": "템플릿은 에이디케이, 에이전트 본체는 앱 폴더의 에이전트 닷 파이, 배포 대상은 에이전트 런타임, 구성은 프로토타입입니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 147.1,
+     "box_css": [
+      915,
+      195,
+      525,
+      300
+     ],
+     "scale": 2.4
+    }
+   ],
+   "callouts": [
+    {
+     "say": 1,
+     "lead": 0.2,
+     "dur": 3.6,
+     "box_css": [
+      934,
+      218,
+      477,
+      63
+     ],
+     "text": "lab.env PROJECT_ID · REGION으로 생성",
+     "spotlight": 0.18
+    },
+    {
+     "say": 2,
+     "lead": 0.2,
+     "dur": 6.0,
+     "box_css": [
+      934,
+      295,
+      325,
+      162
+     ],
+     "text": "생성된 프로젝트 설정 요약",
+     "spotlight": 0.18
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_tools",
+   "from": 6.6,
+   "to": 20.0,
+   "speed": "auto",
+   "max_speed": 2,
+   "labels": [
+    {
+     "kicker": "STEP 2",
+     "text": "BigQuery 도구 2개 붙이기 — 주간 요약 · 긴급 문의",
+     "at": 0.5,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "이제 BigQuery 도구 두 개를 붙입니다. 다시 새 대화를 엽니다.",
+     "say": "이제 빅쿼리 도구 두 개를 붙입니다. 다시 새 대화를 엽니다.",
+     "at": "click:새 대화",
+     "align": 0.85
+    },
+    {
+     "text": "도구 이름과 인자, 돌려줄 내용, 그리고 마스킹 같은 규칙을 함께 적어 보냅니다.",
+     "at": "submit",
+     "align": 0.92
+    }
+   ],
+   "zoom": [
+    {
+     "from": 6.6,
+     "box_css": [
+      915,
+      0,
+      525,
+      380
+     ],
+     "scale": 1.8,
+     "lead": -0.05,
+     "dur": 0.001
+    },
+    {
+     "from": "click:입력창 -0.4",
+     "box_css": [
+      915,
+      100,
+      525,
+      420
+     ],
+     "scale": 1.8
+    }
+   ],
+   "callouts": [
+    {
+     "at": "click:새 대화",
+     "lead": -0.9,
+     "dur": 1.1,
+     "text": "새 대화",
+     "spotlight": 0.2
+    },
+    {
+     "at": "type_end",
+     "lead": -1.4,
+     "dur": 1.6,
+     "box_css": [
+      936,
+      345,
+      472,
+      136
+     ],
+     "text": "get_weekly_summary · list_urgent_tickets",
+     "spotlight": 0.18
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_tools",
+   "from": 61.0,
+   "to": 141.2,
+   "speed": [
+    {
+     "from": 61.0,
+     "to": 141.2,
+     "x": 8
+    }
+   ],
+   "narration": [
+    {
+     "text": "에이전트는 프로젝트 안내 파일과 데이터, agent.py를 읽고, BigQuery 라이브러리 사용법을 찾아봅니다.",
+     "say": "에이전트는 프로젝트 안내 파일과 데이터, 에이전트 닷 파이를 읽고, 빅쿼리 라이브러리 사용법을 찾아봅니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 61.1,
+     "box_css": [
+      915,
+      150,
+      525,
+      420
+     ],
+     "scale": 2.0,
+     "lead": -0.05,
+     "dur": 0.001
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_tools",
+   "from": 141.3,
+   "to": 143.6,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "그리고 Lab 6에서 연결한 BigQuery MCP로 실제 테이블을 조회해 봅니다.",
+     "say": "그리고 랩 식스에서 연결한 빅쿼리 엠씨피로 실제 테이블을 조회해 봅니다."
+    },
+    {
+     "text": "승인 카드의 SQL은 주별 전체, 안전 이슈, 긴급, 미완료 건수를 세는 쿼리입니다.",
+     "say": "승인 카드의 에스큐엘은 주별 전체, 안전 이슈, 긴급, 미완료 건수를 세는 쿼리입니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 141.35,
+     "box_css": [
+      915,
+      330,
+      525,
+      450
+     ],
+     "overscan": true,
+     "lead": -0.05,
+     "dur": 0.001
+    },
+    {
+     "from_say": 1,
+     "lead": -0.2,
+     "box_css": [
+      915,
+      360,
+      525,
+      150
+     ],
+     "scale": 2.4
+    }
+   ],
+   "callouts": [
+    {
+     "say": 0,
+     "lead": 0.6,
+     "dur": 2.6,
+     "box_css": [
+      935,
+      526,
+      187,
+      15
+     ],
+     "text": "Allow using this MCP tool?",
+     "spotlight": 0.18
+    },
+    {
+     "say": 1,
+     "lead": 1.2,
+     "dur": 4.6,
+     "box_css": [
+      972,
+      393.5,
+      419,
+      91.5
+     ],
+     "text": "query: SELECT … total_cnt · safety_cnt · urgent_cnt · open_cnt",
+     "spotlight": 0.18,
+     "pad": 0
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_tools",
+   "from": 143.6,
+   "to": 147.2,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "읽어 보고 Yes, allow this time과 Submit을 누릅니다.",
+     "say": "읽어 보고 예스, 얼라우 디스 타임과 서브밋을 누릅니다.",
+     "at": "click:허용",
+     "align": 0.3
+    }
+   ],
+   "zoom": [
+    {
+     "from": 143.65,
+     "box_css": [
+      915,
+      330,
+      525,
+      450
+     ],
+     "overscan": true,
+     "lead": -0.05,
+     "dur": 0.001
+    }
+   ],
+   "callouts": [
+    {
+     "at": "click:허용",
+     "lead": -0.9,
+     "dur": 1.1,
+     "text": "Yes, allow this time",
+     "spotlight": 0.2
+    },
+    {
+     "at": "click:Submit",
+     "lead": -0.7,
+     "dur": 0.9,
+     "text": "Submit",
+     "spotlight": 0.2
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_tools",
+   "from": 318.0,
+   "to": 366.0,
+   "speed": [
+    {
+     "from": 318.0,
+     "to": 366.0,
+     "x": 7
+    }
+   ],
+   "narration": [
+    {
+     "text": "확인이 끝나자 agent.py에 도구 두 개와 한국어 지침을 넣고, 단위 테스트도 고쳐 실행합니다.",
+     "say": "확인이 끝나자 에이전트 닷 파이에 도구 두 개와 한국어 지침을 넣고, 단위 테스트도 고쳐 실행합니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 318.1,
+     "box_css": [
+      915,
+      150,
+      525,
+      450
+     ],
+     "scale": 2.0,
+     "lead": -0.05,
+     "dur": 0.001
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_tools",
+   "from": 366.2,
+   "to": 424.6,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "프롬프트를 보내고 약 6분 뒤 답변이 나왔습니다.",
+     "say": "프롬프트를 보내고 약 육 분 뒤 답변이 나왔습니다."
+    },
+    {
+     "text": "agent.py와 테스트 파일, 두 파일이 바뀌었습니다.",
+     "say": "에이전트 닷 파이와 테스트 파일, 두 파일이 바뀌었습니다."
+    },
+    {
+     "text": "테스트가 끝나기 전에 답변이 끝났으니, 도구가 실제로 동작하는지는 다음 단계에서 직접 실행해 확인합니다."
+    },
+    {
+     "text": "Accept all을 누릅니다.",
+     "say": "억셉트 올을 누릅니다.",
+     "at": "click:Accept all",
+     "align": 0.8
+    }
+   ],
+   "zoom": [
+    {
+     "from": 366.3,
+     "box_css": [
+      915,
+      190,
+      525,
+      150
+     ],
+     "scale": 2.4,
+     "lead": -0.05,
+     "dur": 0.001
+    },
+    {
+     "from_say": 2,
+     "lead": 0.2,
+     "box_css": [
+      915,
+      595,
+      525,
+      105
+     ],
+     "scale": 2.4,
+     "overscan": true
+    }
+   ],
+   "callouts": [
+    {
+     "say": 1,
+     "lead": 0.1,
+     "dur": 2.6,
+     "box_css": [
+      944,
+      299,
+      155,
+      18
+     ],
+     "text": "2 files changed +490 −37",
+     "spotlight": 0.18
+    },
+    {
+     "say": 2,
+     "lead": 1.4,
+     "dur": 3.0,
+     "box_css": [
+      939,
+      617,
+      409,
+      44
+     ],
+     "text": "agent.py +422 −26 · test_dummy.py +60 −3",
+     "spotlight": 0.18
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_run",
+   "from": 8.9,
+   "to": 16.6,
+   "speed": "auto",
+   "max_speed": 2,
+   "labels": [
+    {
+     "kicker": "STEP 3",
+     "text": "agents-cli run으로 실행 — 도구 호출 확인",
+     "at": 0.5,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "이제 만든 에이전트에게 실제로 물어봅니다."
+    },
+    {
+     "text": "새 대화에서, agents-cli run으로 질문을 보내고 끝날 때까지 기다렸다가 도구 호출과 답변을 그대로 보여 달라고 합니다.",
+     "say": "새 대화에서, 에이전츠 씨엘아이 런으로 질문을 보내고 끝날 때까지 기다렸다가 도구 호출과 답변을 그대로 보여 달라고 합니다.",
+     "at": "submit",
+     "align": 0.92
+    }
+   ],
+   "zoom": [
+    {
+     "from": 8.9,
+     "box_css": [
+      915,
+      100,
+      525,
+      420
+     ],
+     "scale": 1.8,
+     "lead": -0.05,
+     "dur": 0.001
+    }
+   ],
+   "callouts": [
+    {
+     "at": "type_end",
+     "lead": -1.4,
+     "dur": 1.6,
+     "box_css": [
+      936,
+      345,
+      482,
+      88
+     ],
+     "text": "agents-cli run '지난주 긴급 문의 중 …'",
+     "spotlight": 0.18
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_run",
+   "from": 44.0,
+   "to": 71.0,
+   "speed": [
+    {
+     "from": 44.0,
+     "to": 55.0,
+     "x": 5
+    },
+    {
+     "from": 55.0,
+     "to": 61.0,
+     "x": 1.5
+    },
+    {
+     "from": 61.0,
+     "to": 71.0,
+     "x": 3
+    }
+   ],
+   "narration": [
+    {
+     "text": "처음에는 실습 폴더 맨 위에서 실행해서, agents-cli-manifest.yaml을 찾을 수 없다는 오류가 났습니다.",
+     "say": "처음에는 실습 폴더 맨 위에서 실행해서, 에이전츠 씨엘아이 매니페스트 파일을 찾을 수 없다는 오류가 났습니다.",
+     "at": 56.0,
+     "align": 0.15
+    },
+    {
+     "text": "에이전트가 오류를 읽고, 프로젝트 폴더로 옮겨 다시 실행합니다.",
+     "at": 69.2,
+     "align": 0.2
+    }
+   ],
+   "zoom": [
+    {
+     "from": 44.1,
+     "box_css": [
+      915,
+      180,
+      525,
+      340
+     ],
+     "scale": 2.1,
+     "lead": -0.05,
+     "dur": 0.001
+    }
+   ],
+   "callouts": [
+    {
+     "say": 0,
+     "lead": 0.6,
+     "dur": 3.4,
+     "box_css": [
+      955,
+      272,
+      455,
+      116
+     ],
+     "text": "Error: No agents-cli-manifest.yaml found",
+     "spotlight": 0.18,
+     "pad": 0
+    },
+    {
+     "say": 1,
+     "lead": 1.1,
+     "dur": 2.8,
+     "box_css": [
+      958,
+      471,
+      451,
+      34
+     ],
+     "text": "cymbal-voc-agent $ agents-cli run …",
+     "spotlight": 0.18
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_run",
+   "from": 186.0,
+   "to": 194.05,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "로컬 서버가 처음 뜰 때 시간이 걸려 한 번 더 실행했고, 약 3분 만에 결과가 나왔습니다.",
+     "say": "로컬 서버가 처음 뜰 때 시간이 걸려 한 번 더 실행했고, 약 삼 분 만에 결과가 나왔습니다.",
+     "at": 190.5,
+     "align": 0.2
+    },
+    {
+     "text": "질문을 받은 에이전트가 list_urgent_tickets 도구를, only_open true로 불렀습니다.",
+     "say": "질문을 받은 에이전트가 리스트 어전트 티켓츠 도구를, 온리 오픈 트루로 불렀습니다.",
+     "at": 193.95,
+     "align": 0
+    },
+    {
+     "text": "도구 응답의 total_count는 6. 미처리 긴급 문의 여섯 건을 BigQuery에서 받아 왔습니다.",
+     "say": "도구 응답의 토털 카운트는 여섯. 미처리 긴급 문의 여섯 건을 빅쿼리에서 받아 왔습니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 186.1,
+     "box_css": [
+      915,
+      330,
+      525,
+      240
+     ],
+     "scale": 2.6,
+     "lead": -0.05,
+     "dur": 0.001
+    }
+   ],
+   "callouts": [
+    {
+     "say": 1,
+     "lead": 0.0,
+     "dur": 1.6,
+     "box_css": [
+      952,
+      445,
+      292,
+      14
+     ],
+     "text": "[user]: 지난주 긴급 문의 중 …",
+     "spotlight": 0.18,
+     "pad": 4
+    },
+    {
+     "say": 1,
+     "lead": 1.8,
+     "dur": 6.4,
+     "box_css": [
+      946,
+      482,
+      446,
+      54.5
+     ],
+     "text": "tool_call list_urgent_tickets → total_count 6",
+     "spotlight": 0.18,
+     "pad": 0
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_run",
+   "from": 211.0,
+   "to": 216.55,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "에이전트는 이 결과로 미처리 긴급 문의 6건을 표로 정리했습니다.",
+     "say": "에이전트는 이 결과로 미처리 긴급 문의 여섯 건을 표로 정리했습니다.",
+     "at": 216.5,
+     "align": 0.15
+    },
+    {
+     "text": "여섯 건 모두 공기청정기 어댑터 문의이고, 고객 이름과 연락처는 마스킹되어 있습니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 211.1,
+     "box_css": [
+      915,
+      178,
+      525,
+      396
+     ],
+     "scale": 1.75,
+     "lead": -0.05,
+     "dur": 0.001
+    }
+   ],
+   "callouts": [
+    {
+     "say": 0,
+     "lead": 0.8,
+     "dur": 6.0,
+     "box_css": [
+      948,
+      251.5,
+      444,
+      319.5
+     ],
+     "text": "CX-2610-0259 … 0210 — 6건",
+     "spotlight": 0.18,
+     "pad": 0
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_run",
+   "from": 225.9,
+   "to": 236.0,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "답변 끝에는 상태별 건수, 접수 3건과 처리중 3건이 정리되고,",
+     "say": "답변 끝에는 상태별 건수, 접수 세 건과 처리중 세 건이 정리되고,"
+    },
+    {
+     "text": "지침대로 데이터 출처와 기준일도 붙었습니다. Lab 4 대시보드의 미완료 6건과 같은 숫자입니다.",
+     "say": "지침대로 데이터 출처와 기준일도 붙었습니다. 랩 포 대시보드의 미완료 여섯 건과 같은 숫자입니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 226.0,
+     "box_css": [
+      915,
+      450,
+      525,
+      150
+     ],
+     "scale": 2.7,
+     "lead": -0.05,
+     "dur": 0.001
+    }
+   ],
+   "callouts": [
+    {
+     "say": 0,
+     "lead": 0.3,
+     "dur": 6.0,
+     "box_css": [
+      939,
+      418,
+      466,
+      149
+     ],
+     "text": "주요 현황 요약 · 데이터 출처",
+     "spotlight": 0.18
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_eval",
+   "from": 1.4,
+   "to": 9.6,
+   "speed": "auto",
+   "max_speed": 2,
+   "labels": [
+    {
+     "kicker": "STEP 4",
+     "text": "agents-cli eval로 평가 — 케이스 3개",
+     "at": 0.5,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "이번에는 에이전트를 평가합니다. 새 대화를 엽니다.",
+     "at": "click:새 대화",
+     "align": 0.85
+    },
+    {
+     "text": "주간 요약, 미처리 긴급 문의, 제품별 질문, 평가 케이스 세 개를 만들어 eval run으로 평가해 달라고 합니다.",
+     "say": "주간 요약, 미처리 긴급 문의, 제품별 질문, 평가 케이스 세 개를 만들어 이밸 런으로 평가해 달라고 합니다.",
+     "at": "submit",
+     "align": 0.9
+    }
+   ],
+   "zoom": [
+    {
+     "from": 1.4,
+     "box_css": [
+      915,
+      0,
+      525,
+      380
+     ],
+     "scale": 2.0,
+     "lead": -0.05,
+     "dur": 0.001
+    },
+    {
+     "from": "click:입력창 -0.4",
+     "box_css": [
+      915,
+      100,
+      525,
+      420
+     ],
+     "scale": 2.0
+    }
+   ],
+   "callouts": [
+    {
+     "at": "click:새 대화",
+     "lead": -0.9,
+     "dur": 1.1,
+     "text": "새 대화",
+     "spotlight": 0.2
+    },
+    {
+     "at": "type_end",
+     "lead": -1.4,
+     "dur": 1.6,
+     "box_css": [
+      936,
+      345,
+      482,
+      64
+     ],
+     "text": "평가 케이스 3개 · agents-cli eval run",
+     "spotlight": 0.18
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_eval",
+   "from": 61.0,
+   "to": 198.8,
+   "speed": [
+    {
+     "from": 61.0,
+     "to": 160.0,
+     "x": 8
+    },
+    {
+     "from": 160.0,
+     "to": 198.8,
+     "x": 4
+    }
+   ],
+   "narration": [
+    {
+     "text": "에이전트는 평가 설정과 데이터셋을 읽고, 도구가 내놓는 숫자도 직접 확인합니다.",
+     "at": 95.0,
+     "align": 0.3
+    },
+    {
+     "text": "템플릿의 예시 케이스를 VOC 질문 세 개로 바꾸고, 질문마다 기대 답변을 적은 뒤,",
+     "say": "템플릿의 예시 케이스를 브이오씨 질문 세 개로 바꾸고, 질문마다 기대 답변을 적은 뒤,",
+     "at": 166.5,
+     "align": 0.3
+    },
+    {
+     "text": "agents-cli eval run을 실행합니다. 질문마다 에이전트를 돌리고, LLM 채점자가 1점에서 5점으로 매깁니다.",
+     "say": "에이전츠 씨엘아이 이밸 런을 실행합니다. 질문마다 에이전트를 돌리고, 엘엘엠 채점자가 일 점에서 오 점으로 매깁니다.",
+     "at": 186.0,
+     "align": 0.1
+    }
+   ],
+   "zoom": [
+    {
+     "from": 61.1,
+     "box_css": [
+      915,
+      150,
+      525,
+      420
+     ],
+     "scale": 2.0,
+     "lead": -0.05,
+     "dur": 0.001
+    }
+   ],
+   "callouts": [
+    {
+     "say": 1,
+     "lead": 1.2,
+     "dur": 2.8,
+     "box_css": [
+      936,
+      433,
+      233,
+      15
+     ],
+     "text": "Edited basic-dataset.json +59 −23",
+     "spotlight": 0.18
+    },
+    {
+     "say": 2,
+     "lead": 0.2,
+     "dur": 3.2,
+     "box_css": [
+      936,
+      511,
+      214,
+      15
+     ],
+     "text": "Run agents-cli eval run",
+     "spotlight": 0.18
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_eval",
+   "from": 548.6,
+   "to": 553.5,
+   "speed": "auto",
+   "narration": [
+    {
+     "text": "평가 실행부터 결과 요약까지 약 5분 걸렸습니다.",
+     "say": "평가 실행부터 결과 요약까지 약 오 분 걸렸습니다."
+    },
+    {
+     "text": "바뀐 파일을 확인하고 Accept all을 누릅니다.",
+     "say": "바뀐 파일을 확인하고 억셉트 올을 누릅니다.",
+     "at": "click:Accept all",
+     "align": 0.8
+    },
+    {
+     "text": "결과 요약에는, 세 케이스 모두에서 안전 이슈 6건이 맨 위에 강조되고, 마스킹 규칙도 지켜졌다고 정리되었습니다.",
+     "say": "결과 요약에는, 세 케이스 모두에서 안전 이슈 여섯 건이 맨 위에 강조되고, 마스킹 규칙도 지켜졌다고 정리되었습니다."
+    }
+   ],
+   "zoom": [
+    {
+     "from": 548.7,
+     "box_css": [
+      915,
+      500,
+      525,
+      200
+     ],
+     "scale": 2.6,
+     "lead": -0.05,
+     "dur": 0.001
+    }
+   ],
+   "callouts": [
+    {
+     "say": 2,
+     "lead": 0.2,
+     "dur": 6.0,
+     "box_css": [
+      954,
+      510,
+      432,
+      140
+     ],
+     "text": "CAUTION — 3개 케이스 결과 요약",
+     "spotlight": 0.18
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag8v_score",
+   "from": 0.2,
+   "to": 25.0,
+   "speed": "auto",
+   "labels": [
+    {
+     "kicker": "STEP 5",
+     "text": "평가 보고서 열어 점수 확인",
+     "at": 0.5,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "점수는 eval run이 남긴 HTML 보고서에서 확인합니다. artifacts 폴더의 보고서를 브라우저로 엽니다.",
+     "say": "점수는 이밸 런이 남긴 에이치티엠엘 보고서에서 확인합니다. 아티팩츠 폴더의 보고서를 브라우저로 엽니다.",
+     "at": 0.6,
+     "align": 0.1
+    },
+    {
+     "text": "Summary Metrics의 custom_response_quality 평균이 5.0, 표준편차는 0. 세 케이스 모두 5점 만점입니다.",
+     "say": "써머리 메트릭스의 커스텀 리스폰스 퀄리티 평균이 오 점 영, 표준편차는 영. 세 케이스 모두 오 점 만점입니다."
+    },
+    {
+     "text": "케이스 0, 주간 요약 질문에서는 get_weekly_summary 도구가 10월 19일 주로 호출됐고,",
+     "say": "케이스 영, 주간 요약 질문에서는 겟 위클리 써머리 도구가 시월 십구 일 주로 호출됐고,",
+     "at": 9.3,
+     "align": 0.1
+    },
+    {
+     "text": "채점자는 답변이 정확하고 기대한 데이터와 맞는다며 5점을 줬습니다.",
+     "say": "채점자는 답변이 정확하고 기대한 데이터와 맞는다며 오 점을 줬습니다.",
+     "at": 13.0,
+     "align": 0.1
+    },
+    {
+     "text": "케이스 1, 미처리 긴급 문의 질문도 총 6건, 접수 3건과 처리중 3건으로 정확히 답했습니다.",
+     "say": "케이스 일, 미처리 긴급 문의 질문도 총 여섯 건, 접수 세 건과 처리중 세 건으로 정확히 답했습니다.",
+     "at": 19.0,
+     "align": 0.1
+    }
+   ],
+   "zoom": [
+    {
+     "from": 0.25,
+     "box_css": [
+      100,
+      60,
+      1240,
+      300
+     ],
+     "to": 6.9,
+     "lead": -0.05,
+     "dur": 0.001
+    },
+    {
+     "from": 8.45,
+     "box_css": [
+      137,
+      0,
+      560,
+      480
+     ],
+     "to": 12.6
+    },
+    {
+     "from": 12.65,
+     "box_css": [
+      137,
+      610,
+      1166,
+      190
+     ],
+     "to": 16.4
+    },
+    {
+     "from": 18.05,
+     "box_css": [
+      150,
+      60,
+      1140,
+      380
+     ],
+     "to": 21.6
+    },
+    {
+     "from": 21.65,
+     "box_css": [
+      150,
+      400,
+      1140,
+      410
+     ]
+    }
+   ],
+   "callouts": [
+    {
+     "say": 1,
+     "at": "target:E custom_response_quality 5.0000",
+     "lead": 0.2,
+     "dur": 4.6,
+     "text": "custom_response_quality · Mean 5.0000",
+     "spotlight": 0.18
+    },
+    {
+     "say": 2,
+     "at": "target:E Function Call: get_weekly_summary",
+     "lead": 0.2,
+     "dur": 3.4,
+     "text": "Function Call · get_weekly_summary",
+     "spotlight": 0.18
+    },
+    {
+     "say": 3,
+     "lead": 0.3,
+     "dur": 3.6,
+     "box_css": [
+      170,
+      690,
+      1100,
+      19
+     ],
+     "text": "custom_response_quality 5.00",
+     "spotlight": 0.18
+    },
+    {
+     "say": 4,
+     "at": "target:E Case #1 답변 요약 (총 6건)",
+     "lead": 0.2,
+     "dur": 3.4,
+     "text": "총 6건 — 접수 3건 · 처리중 3건",
+     "spotlight": 0.18
+    }
+   ]
+  },
+  {
+   "type": "outro",
+   "kicker": "AG LAB 08 완료",
+   "title": "오늘의 체크리스트",
+   "checklist": [
+    "agents-cli create — adk · Agent Runtime · 프로토타입",
+    "BigQuery 도구 2개 + 한국어 지침 · 마스킹",
+    "agents-cli run — tool_call과 미처리 6건 확인",
+    "agents-cli eval — 보고서 평균 5.0"
+   ],
+   "subtitle": "다음 · LAB 09 배포 + Gemini Enterprise 게시",
+   "narration": [
+    {
+     "text": "수고하셨습니다!"
+    },
+    {
+     "text": "체크리스트로 오늘 실습을 점검해 보세요."
+    },
+    {
+     "text": "다음 실습에서는 이 에이전트를 배포해, CX팀이 Gemini Enterprise에서 바로 물어볼 수 있게 합니다."
+    }
+   ]
+  }
+ ]
+}

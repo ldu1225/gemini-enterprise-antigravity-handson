@@ -1,0 +1,182 @@
+{
+ "id": "ag2",
+ "track": "ag",
+ "lab": "lab2",
+ "title": "AG LAB 02 · 시작하기 B — 개인 Google 계정",
+ "brand": "Antigravity 핸즈온 랩",
+ "bgm": true,
+ "captions": true,
+ "encode": {
+  "crf": 24,
+  "preset": "slow",
+  "audio_kbps": 160,
+  "max_mb": 40
+ },
+ "chapters": [
+  {
+   "step": 1,
+   "seg": 2
+  },
+  {
+   "step": 2,
+   "seg": 2,
+   "say": 2
+  },
+  {
+   "step": 3,
+   "seg": 3
+  },
+  {
+   "step": 4,
+   "seg": 4
+  },
+  {
+   "step": 5,
+   "seg": 5
+  }
+ ],
+ "segments": [
+  {
+   "type": "title",
+   "kicker": "ANTIGRAVITY · LAB 02",
+   "title": "시작하기 B — 개인 Google 계정",
+   "subtitle": "Continue with Google과 요금제 차이",
+   "duration": 4.2,
+   "narration": "Antigravity 두 번째 실습, 개인 Google 계정으로 시작하기입니다."
+  },
+  {
+   "type": "card",
+   "kicker": "로그인 방법은 두 가지",
+   "title": "내 상황에 맞는 버튼 고르기",
+   "bullets": [
+    "회사 GE 라이선스가 있다면 — Use Business Account (Lab 1)",
+    "개인 Google 계정이라면 — Continue with Google (이번 실습)"
+   ],
+   "narration": [
+    "회사에서 Gemini Enterprise 라이선스를 받았다면, Use Business Account로 로그인합니다.",
+    "라이선스가 없다면, 개인 Google 계정으로 바로 시작할 수 있습니다."
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ag2a_signin",
+   "from": 0,
+   "to": 9.0,
+   "labels": [
+    {
+     "kicker": "STEP 1",
+     "text": "Continue with Google",
+     "at": 0.5,
+     "dur": 3.2
+    },
+    {
+     "kicker": "STEP 2",
+     "text": "브라우저에서 로그인",
+     "say": 2,
+     "dur": 3.2
+    }
+   ],
+   "narration": [
+    "앱을 설치하고 처음 실행하면, Welcome to Antigravity 화면이 나타납니다.",
+    {
+     "text": "개인 계정은 파란색 Continue with Google 버튼을 누릅니다.",
+     "at": "click:Continue with Google",
+     "align": 0.7
+    },
+    "그러면 기본 브라우저에서 Google 로그인 화면이 열리고, 앱은 로그인을 기다립니다.",
+    "브라우저에서 계정을 고르고 승인하면, 앱으로 자동으로 돌아옵니다. 다른 계정을 쓰려면 Back을 누르세요."
+   ],
+   "zoom": [
+    {
+     "from": 0.6,
+     "box_css": [
+      380,
+      60,
+      680,
+      420
+     ]
+    }
+   ],
+   "callouts": [
+    {
+     "at": "click:Continue with Google",
+     "lead": -1.4,
+     "dur": 1.7,
+     "text": "Continue with Google",
+     "spotlight": 0.22
+    },
+    {
+     "dur": 2.3,
+     "box_css": [
+      696,
+      333,
+      48,
+      22
+     ],
+     "text": "Back — 처음으로",
+     "spotlight": 0.18,
+     "say": 4
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "kicker": "요금제별 차이",
+   "title": "기능은 같고, 할당량과 모델이 다릅니다",
+   "bullets": [
+    "무료 — 주 단위 할당량 · Gemini 3.8 Flash",
+    "Google AI Pro — 5시간마다 갱신 · Gemini 4 Argon · Claude",
+    "Google AI Ultra — 가장 높은 할당량 · 파트너 모델 상시"
+   ],
+   "narration": [
+    "무료 요금제는 주 단위로 갱신되는 할당량 안에서, Gemini 3.8 Flash 같은 모델을 씁니다.",
+    "Google AI Pro는 5시간마다 할당량이 갱신되고, Gemini 4 Argon과 Claude 모델도 고를 수 있습니다.",
+    "Google AI Ultra는 가장 높은 할당량과 함께, 파트너 모델을 상시 사용할 수 있습니다."
+   ]
+  },
+  {
+   "type": "card",
+   "kicker": "할당량을 다 쓰면",
+   "title": "AI Credit Overages",
+   "bullets": [
+    "Never — 다음 갱신까지 기다리기",
+    "Always — 구매한 AI 크레딧으로 이어서 쓰기"
+   ],
+   "narration": [
+    "Pro와 Ultra 사용자는 AI 크레딧을 구매해 둘 수 있습니다.",
+    "설정에서 Never를 고르면 갱신을 기다리고, Always를 고르면 구매한 크레딧으로 이어서 씁니다."
+   ]
+  },
+  {
+   "type": "card",
+   "kicker": "회사 계정과의 차이",
+   "title": "회사 코드는 회사 계정으로",
+   "bullets": [
+    "결제 — 개인 요금제 vs 회사 GE 구독",
+    "정책 — 내 설정 vs 관리자 보안 정책",
+    "회사 코드·데이터는 Use Business Account"
+   ],
+   "narration": [
+    "개인 계정은 내 요금제로 결제되고, 정책도 내가 정합니다.",
+    "회사 계정은 관리자가 정한 보안 정책과 허용 모델이 적용됩니다.",
+    "회사 코드와 데이터를 다룬다면, 꼭 회사 계정으로 로그인하세요."
+   ]
+  },
+  {
+   "type": "outro",
+   "kicker": "AG LAB 02 완료",
+   "title": "오늘의 체크리스트",
+   "checklist": [
+    "Continue with Google 로그인 흐름을 안다",
+    "요금제별 할당량과 모델 차이를 안다",
+    "AI Credit Overages 설정을 안다"
+   ],
+   "subtitle": "다음 · LAB 03 화면 구성과 기본 사용",
+   "narration": [
+    "수고하셨습니다!",
+    "체크리스트로 오늘 실습을 점검해 보세요.",
+    "다음 실습에서는 Antigravity 화면을 둘러보고, 에이전트에게 첫 일을 맡겨 봅니다."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,639 @@
+{
+ "id": "ge_opening",
+ "track": "ge",
+ "title": "GE OPENING · Gemini Enterprise로 일하는 방식",
+ "brand": "Gemini Enterprise 핸즈온 랩",
+ "bgm": true,
+ "captions": true,
+ "encode": {
+  "crf": 26,
+  "preset": "slow",
+  "audio_kbps": 160,
+  "max_mb": 90
+ },
+ "segments": [
+  {
+   "type": "title",
+   "kicker": "GEMINI ENTERPRISE · OPENING",
+   "title": "Gemini Enterprise로 일하는 방식",
+   "subtitle": "실습을 시작하기 전에 — 무엇이고, 일을 어떻게 바꾸는가",
+   "duration": 5.0,
+   "narration": [
+    "안녕하세요. Gemini Enterprise 핸즈온 랩에 오신 것을 환영합니다.",
+    "실습을 시작하기 전에, Gemini Enterprise가 무엇이고, 우리가 일하는 방식을 어떻게 바꾸는지 함께 살펴보겠습니다."
+   ]
+  },
+  {
+   "type": "card",
+   "kicker": "오늘의 목표",
+   "title": "보고, 써 보고, 만들어 봅니다",
+   "bullets": [
+    "Gemini Enterprise로 할 수 있는 일의 큰 그림 이해하기",
+    "프롬프트 · 데이터 분석 · 이미지처럼 내일 바로 쓸 기본기 익히기",
+    "코딩 없이 나만의 에이전트와 워크플로 만들기"
+   ],
+   "narration": [
+    "첫째, Gemini Enterprise로 무엇을 할 수 있는지 큰 그림을 이해합니다.",
+    "둘째, 프롬프트와 데이터 분석, 이미지 만들기처럼 내일 바로 쓸 수 있는 기본기를 익힙니다.",
+    "셋째, 코딩 없이 나만의 에이전트와 워크플로를 직접 만들어 봅니다."
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "../../render/out/openings/recs/ge_s_shift",
+   "badge": false,
+   "narration": [
+    "먼저 우리가 일해 온 방식을 잠시 돌아보겠습니다.",
+    {
+     "text": "예전에는 검색창에 키워드를 넣고, 링크를 하나씩 열어 읽은 다음, 정리는 결국 우리 몫이었습니다.",
+     "at": 2.0
+    },
+    {
+     "text": "생성형 AI가 등장하면서, 이제는 질문만 하면 AI가 자료를 읽고, 출처와 함께 답을 정리해 줍니다.",
+     "at": 4.0
+    },
+    {
+     "text": "그리고 지금은 한 걸음 더 나아가, 목표를 알려 주면 AI가 스스로 계획을 세우고, 도구를 써서 일을 끝까지 진행합니다.",
+     "at": 6.0
+    },
+    "사람은 방향을 정하고, 결과를 검토하는 역할을 맡게 되죠."
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "../../render/out/openings/recs/ge_s_gate",
+   "badge": false,
+   "narration": [
+    {
+     "text": "Gemini Enterprise는 이런 변화를 회사 안에서 안전하게 누리도록 만든, 업무용 AI의 하나의 입구입니다.",
+     "at": 2.0
+    },
+    "한 화면에서 질문하고 요약하고, 글을 쓰고, 파일과 데이터를 분석하는 AI 어시스턴트를 씁니다.",
+    {
+     "text": "Deep Research나 Gemini Notebook 같은 에이전트, 그리고 내가 직접 만든 에이전트와 워크플로도 같은 곳에서 씁니다.",
+     "at": 4.0
+    },
+    {
+     "text": "커넥터로 메일과 문서, 협업 도구 같은 회사 데이터를 연결할 수 있고, 원래의 접근 권한이 그대로 지켜집니다.",
+     "at": 6.0
+    },
+    {
+     "text": "관리자는 기능과 모델, 공유를 관리하고, 회사 데이터는 모델 학습에 쓰이지 않습니다.",
+     "at": 8.0
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ge1a_welcome",
+   "from": 0,
+   "to": 12.6,
+   "labels": [
+    {
+     "kicker": "실제 화면 · Lab 1",
+     "text": "처음 접속하면 — 환영 화면",
+     "at": 0.6,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    "실제 화면을 볼까요? 회사에서 안내받은 주소로 처음 접속하면, 이렇게 환영 화면이 나타납니다.",
+    {
+     "text": "시작하기를 누르면 홈 화면으로 이동하고,",
+     "at": "click:시작하기",
+     "align": 0.5
+    },
+    "가운데 입력창에 하고 싶은 일을 적는 것이 기본 사용법입니다."
+   ],
+   "zoom": [
+    {
+     "from": 1.0,
+     "to": "click:시작하기 -1.3",
+     "box_css": [
+      400,
+      110,
+      640,
+      590
+     ]
+    },
+    {
+     "from": "click:시작하기 -1.3",
+     "to": "click:시작하기 +0.7",
+     "box": "click:시작하기"
+    }
+   ],
+   "callouts": [
+    {
+     "at": "click:시작하기",
+     "lead": -1.1,
+     "dur": 1.6,
+     "text": "시작하기",
+     "spotlight": 0.22
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ge1b_tour",
+   "from": 1.0,
+   "to": 23.0,
+   "transition": 0,
+   "intro": "none",
+   "narration": [
+    {
+     "text": "왼쪽 사이드바에는 새 채팅과 수신함, 검색, 라이브러리, 프로젝트, 스킬이 모여 있고,",
+     "at": "hover:새 채팅",
+     "align": 0.05
+    },
+    {
+     "text": "그 아래에는 Gemini Notebook과 Deep Research 같은 에이전트, 그리고 직접 에이전트를 만드는 메뉴가 있습니다.",
+     "at": "hover:에이전트",
+     "align": 0.05
+    },
+    {
+     "text": "맨 아래 Antigravity 살펴보기는, 개발자를 위한 AI 도구로 가는 입구입니다.",
+     "say": "맨 아래 앤티그래비티 살펴보기는, 개발자를 위한 에이아이 도구로 가는 입구입니다.",
+     "at": "hover:Antigravity 살펴보기",
+     "align": 0.15
+    }
+   ],
+   "zoom": [
+    {
+     "from": "hover:새 채팅 -0.8",
+     "to": "hover:Antigravity 살펴보기 -0.6",
+     "box_css": [
+      0,
+      40,
+      470,
+      380
+     ]
+    },
+    {
+     "from": "hover:Antigravity 살펴보기 -0.6",
+     "box_css": [
+      0,
+      600,
+      470,
+      210
+     ],
+     "overscan": true
+    }
+   ],
+   "callouts": [
+    {
+     "at": "hover:Antigravity 살펴보기",
+     "lead": -0.2,
+     "dur": 1.8,
+     "text": "Antigravity 살펴보기",
+     "spotlight": 0.18
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "../../render/out/openings/recs/ge_s_features",
+   "badge": false,
+   "narration": [
+    "오늘 만나게 될 기능을 한 장으로 정리했습니다.",
+    {
+     "text": "채팅과 Google 검색으로 출처가 달린 답을 얻고, 엑셀이나 PDF를 올려 데이터를 분석합니다.",
+     "at": 2.0
+    },
+    "Canvas로 문서와 슬라이드를 만들고, Nano Banana와 Veo로 이미지와 동영상도 만듭니다.",
+    {
+     "text": "Deep Research는 자료를 찾아 읽고 인용이 달린 보고서를 쓰고, Gemini Notebook은 내 자료를 바탕으로 답합니다.",
+     "at": 4.0
+    },
+    "자주 쓰는 지침은 스킬로, 주제별 작업은 프로젝트로 모으고, Workflow Builder로 코딩 없이 에이전트와 워크플로를 만듭니다.",
+    {
+     "text": "모델도 고를 수 있습니다. Auto가 알아서 고르거나, 깊은 분석에는 Gemini 4 Argon, 빠른 답에는 Gemini 3.8 Flash를 씁니다.",
+     "at": 6.0
+    },
+    "관리자가 켰다면 Claude 모델도 쓸 수 있습니다."
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ge1d_firstchat",
+   "from": 0,
+   "to": "click:새 채팅 -0.4",
+   "labels": [
+    {
+     "kicker": "실제 화면 · Lab 1",
+     "text": "모델 고르고 첫 질문하기",
+     "at": 0.6,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "입력창 오른쪽 Auto를 누르면, 방금 본 모델들이 목록으로 나타납니다.",
+     "at": "click:모델 선택",
+     "align": 0.3
+    },
+    {
+     "text": "Lab 1에서는 내 직무와 원하는 결과 형식을 담아 첫 질문을 보내고,",
+     "at": "type_start:첫 질문",
+     "align": 0.1
+    },
+    {
+     "text": "질문 하나로, 바로 시도해 볼 업무 아이디어를 표로 받아 봅니다.",
+     "at": "wait_end",
+     "align": 0.1
+    }
+   ],
+   "zoom": [
+    {
+     "from": "click:모델 선택 -0.8",
+     "to": "click:입력창 -0.4",
+     "box_css": [
+      880,
+      300,
+      560,
+      360
+     ]
+    },
+    {
+     "from": "click:입력창 -0.2",
+     "to": "submit +0.6",
+     "box_css": [
+      470,
+      280,
+      790,
+      170
+     ]
+    }
+   ],
+   "callouts": [
+    {
+     "at": "click:모델 선택",
+     "lead": -0.7,
+     "dur": 1.2,
+     "text": "모델 선택",
+     "spotlight": 0.2
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "../../render/out/openings/recs/ge_s_prompt",
+   "badge": false,
+   "narration": [
+    "좋은 답을 얻는 비결은 프롬프트에 있습니다.",
+    "1인 가구 트렌드 알려줘, 처럼 짧게 물으면, 누구를 위해 어디에 쓸 답인지 알 수 없어서, 일반적인 설명에 그칩니다.",
+    {
+     "text": "그래서 네 가지를 담습니다. 첫째, 누구의 입장에서 답할지 정하는 역할.",
+     "at": 2.0
+    },
+    {
+     "text": "둘째, 무엇을 해 달라는 작업.",
+     "at": 4.0
+    },
+    {
+     "text": "셋째, 왜, 어디에 쓸지 알려 주는 맥락.",
+     "at": 6.0
+    },
+    {
+     "text": "넷째, 표나 목록처럼 어떤 모양으로 받을지 정하는 형식입니다.",
+     "at": 8.0
+    },
+    "역할, 작업, 맥락, 형식. Lab 2에서 직접 비교해 보겠습니다."
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ge2b_good",
+   "from": 4.8,
+   "to": "rec_stop",
+   "max_speed": 16,
+   "labels": [
+    {
+     "kicker": "실제 화면 · Lab 2",
+     "text": "4요소 프롬프트 + Google 검색",
+     "at": 0.6,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "Lab 2의 한 장면입니다. 역할과 작업, 맥락, 형식을 담은 프롬프트를 보내면,",
+     "at": "type_start:4요소 프롬프트",
+     "align": 0.1
+    },
+    {
+     "text": "Gemini가 웹을 검색하고 내용을 정리합니다. 기다리는 동안은 빨리 감겠습니다.",
+     "at": "submit",
+     "align": 0.15
+    },
+    {
+     "text": "회의에 바로 쓸 수 있는 표가, 출처와 함께 완성되었습니다.",
+     "at": "wait_end",
+     "align": 0.1
+    }
+   ],
+   "zoom": [
+    {
+     "from": "click:입력창 -0.4",
+     "to": "submit +0.8",
+     "box_css": [
+      470,
+      260,
+      790,
+      210
+     ]
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ge3a_upload",
+   "from": 3.5,
+   "to": 18.6,
+   "labels": [
+    {
+     "kicker": "실제 화면 · Lab 3",
+     "text": "데이터 분석 + Canvas",
+     "at": 0.6,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "Lab 3에서는 가상의 영업 실적 엑셀 파일을 올리고,",
+     "at": 6.0,
+     "align": 0.2
+    },
+    {
+     "text": "이 데이터로 어떤 분석을 할 수 있는지부터 물어봅니다.",
+     "at": "submit",
+     "align": 0.7
+    }
+   ],
+   "zoom": [
+    {
+     "from": 5.3,
+     "to": "submit +0.4",
+     "box_css": [
+      470,
+      250,
+      790,
+      260
+     ]
+    }
+   ],
+   "callouts": [
+    {
+     "at": 6.0,
+     "lead": -0.6,
+     "dur": 1.2,
+     "box_css": [
+      484,
+      422,
+      62,
+      24
+     ],
+     "text": "파일 추가",
+     "spotlight": 0.18,
+     "pad": 3
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ge3c_chart",
+   "from": 0.8,
+   "to": 31.0,
+   "transition": 0.4,
+   "max_speed": 12,
+   "narration": [
+    {
+     "text": "월별 매출에서 온라인 비중이 어떻게 변했는지, 꺾은선 차트로 그려 달라고 하면,",
+     "at": "type_start",
+     "align": 0.1
+    },
+    {
+     "text": "Gemini가 데이터를 계산해서, 차트를 바로 그려 줍니다.",
+     "at": 24.5,
+     "align": 0.15
+    }
+   ],
+   "zoom": [
+    {
+     "from": 23.8,
+     "box_css": [
+      200,
+      110,
+      620,
+      300
+     ]
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ge3d_canvas",
+   "from": 0.8,
+   "to": "rec_stop",
+   "max_speed": 16,
+   "transition": 0.4,
+   "narration": [
+    {
+     "text": "이번에는 도구에서 Canvas를 고르고, 보고용 슬라이드를 만들어 달라고 요청합니다.",
+     "at": "click:Canvas",
+     "align": 0.3
+    },
+    {
+     "text": "잠시 뒤, 다섯 장짜리 발표 자료가 만들어집니다.",
+     "at": "wait_end",
+     "align": 0.1
+    },
+    {
+     "text": "슬라이드를 넘겨 보며 확인하고,",
+     "at": "click:슬라이드 2",
+     "align": 0.2
+    },
+    {
+     "text": "내보내기 메뉴로 파일로 받아 이어서 다듬을 수 있습니다.",
+     "at": "click:내보내기",
+     "align": 0.3
+    }
+   ],
+   "zoom": [
+    {
+     "from": "click:도구 선택 -0.6",
+     "to": "click:Canvas +1.0",
+     "box_css": [
+      470,
+      450,
+      560,
+      300
+     ]
+    },
+    {
+     "from": "click:내보내기 -0.6",
+     "box_css": [
+      1000,
+      60,
+      440,
+      260
+     ]
+    }
+   ],
+   "callouts": [
+    {
+     "at": "click:Canvas",
+     "lead": -0.7,
+     "dur": 1.3,
+     "text": "Canvas",
+     "spotlight": 0.18
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "../../render/out/openings/recs/ge_s_safety",
+   "badge": false,
+   "narration": [
+    "편하게 쓰는 만큼, 꼭 기억할 것도 있습니다.",
+    {
+     "text": "첫째, Gemini Enterprise는 회사 데이터를 모델 학습에 사용하지 않습니다.",
+     "at": 2.0
+    },
+    {
+     "text": "둘째, 원래의 접근 권한이 그대로 적용되어, 내가 볼 수 있는 자료만 답변에 쓰입니다.",
+     "at": 4.0
+    },
+    {
+     "text": "셋째, AI의 답은 초안입니다. 숫자와 사실은 출처 원문과 대조하고, 최종 판단은 사람이 합니다.",
+     "at": 6.0
+    },
+    {
+     "text": "넷째, 공유 링크의 범위를 확인하고, 민감한 정보는 회사 정책을 따라 주세요.",
+     "at": 8.0
+    },
+    {
+     "text": "그리고 오늘 실습의 회사 Cymbal과 모든 파일은 가상의 데이터이니, 마음껏 시도해 보셔도 됩니다.",
+     "say": "그리고 오늘 실습의 회사 심벌과 모든 파일은 가상의 데이터이니, 마음껏 시도해 보셔도 됩니다."
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "ge2e_sources",
+   "from": 0,
+   "to": "rec_stop",
+   "labels": [
+    {
+     "kicker": "실제 화면 · Lab 2",
+     "text": "출처와 추론 과정 확인",
+     "at": 0.6,
+     "dur": 3.4
+    }
+   ],
+   "narration": [
+    {
+     "text": "답변 위의 추론 과정 표시를 열면, Gemini가 어떤 순서로 찾아봤는지 보이고,",
+     "at": "click:추론 과정 표시",
+     "align": 0.2
+    },
+    {
+     "text": "문장 끝의 출처 칩에 마우스를 올리면, 참고한 자료가 카드로 나타납니다.",
+     "at": "hover:출처 칩 1",
+     "align": 0.15
+    },
+    {
+     "text": "보고서에 넣을 숫자는, 꼭 원문과 대조하세요.",
+     "at": "hover:출처 칩 2",
+     "align": 0.1
+    }
+   ],
+   "zoom": [
+    {
+     "from": "click:추론 과정 표시 -0.6",
+     "to": "hover:출처 칩 1 -0.6",
+     "box_css": [
+      440,
+      200,
+      620,
+      320
+     ]
+    },
+    {
+     "from": "hover:출처 칩 1 -0.4",
+     "to": "rec_stop -0.3",
+     "box_css": [
+      440,
+      260,
+      620,
+      330
+     ]
+    }
+   ],
+   "callouts": [
+    {
+     "at": "click:추론 과정 표시",
+     "lead": -0.7,
+     "dur": 1.3,
+     "text": "추론 과정 표시",
+     "spotlight": 0.2,
+     "pad": 2
+    },
+    {
+     "at": "hover:출처 칩 1",
+     "lead": -0.3,
+     "dur": 1.4,
+     "text": "출처 칩",
+     "spotlight": 0.2,
+     "pad": 3
+    }
+   ]
+  },
+  {
+   "type": "screen",
+   "rec": "../../render/out/openings/recs/ge_s_labs",
+   "badge": false,
+   "narration": [
+    "이제 오늘의 실습 지도입니다.",
+    {
+     "text": "입문 단계인 Lab 1과 2에서는 화면 구성과 기본 설정, 그리고 4요소 프롬프트와 출처 확인, 공유를 익힙니다.",
+     "at": 2.0
+    },
+    {
+     "text": "Lab 3부터 6까지는 데이터 분석과 Canvas, 이미지와 동영상, Deep Research와 Gemini Notebook, 그리고 스킬과 프로젝트 같은 생산성 기능을 다룹니다.",
+     "at": 4.0
+    },
+    {
+     "text": "심화 과정인 Lab 7과 8에서는 코딩 없이 사내 지원 데스크 채팅 에이전트와, 고객 문의 워크플로를 만듭니다.",
+     "at": 6.0
+    },
+    "마지막 Lab 9에서는 만든 에이전트를 팀과 공유하고 관리하는 방법을 알아봅니다."
+   ]
+  },
+  {
+   "type": "card",
+   "kicker": "실습 포털 사용법",
+   "title": "이렇게 진행합니다",
+   "bullets": [
+    "Lab마다 단계별 가이드 · 실제 화면 영상 · 실습 파일",
+    "가이드의 STEP 버튼으로 영상의 해당 장면으로 이동",
+    "AI의 답은 매번 조금씩 달라요 — 달라도 괜찮습니다"
+   ],
+   "narration": [
+    "실습 포털에는 Lab마다 단계별 가이드와, 실제 화면을 녹화한 영상, 그리고 실습 파일이 준비되어 있습니다.",
+    "가이드의 단계 버튼을 누르면, 영상에서 그 장면으로 바로 이동합니다.",
+    "AI의 답은 매번 조금씩 다를 수 있으니, 화면과 결과가 달라도 걱정하지 마세요."
+   ]
+  },
+  {
+   "type": "outro",
+   "kicker": "LET'S START",
+   "title": "이제 직접 해 볼까요?",
+   "subtitle": "Lab 1 · 시작하기부터 함께합니다",
+   "duration": 4.5,
+   "narration": [
+    "설명은 여기까지입니다.",
+    "그럼 Lab 1, 시작하기부터 함께 해 보겠습니다."
+   ]
+  }
+ ]
+}

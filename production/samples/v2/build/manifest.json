@@ -1,0 +1,82 @@
+[
+  {
+    "file": "Cymbal_제품별_지역별_월별매출_2026_가상.xlsx",
+    "title": "제품별·지역별 월별 매출 2026 (가상)",
+    "description": "2026년 1~9월 5개 제품 × 5개 지역 월별 판매수량·매출·매출총이익과 월간 목표 — 데이터 분석·차트·Canvas 실습용 엑셀",
+    "usedIn": "Lab 3",
+    "sizeBytes": 19832,
+    "preview": "previews/Cymbal_제품별_지역별_월별매출_2026_가상.png"
+  },
+  {
+    "file": "Cymbal_고객문의_로그_2026-10_가상.xlsx",
+    "title": "고객 문의 로그 2026-10 (가상)",
+    "description": "10월 고객 문의 60건(채널·제품·문의내용) — 분류·긴급도 판단과 답변 초안을 만드는 워크플로 실습용 엑셀",
+    "usedIn": "Lab 8",
+    "sizeBytes": 13260,
+    "preview": "previews/Cymbal_고객문의_로그_2026-10_가상.png"
+  },
+  {
+    "file": "Cymbal_출장비_및_경비처리_규정_가상.pdf",
+    "title": "출장비 및 경비처리 규정 (가상)",
+    "description": "직급·지역별 일비·숙박 한도, 법인카드, 7영업일 정산·지연 조치, 영수증·접대비 규정 7쪽 PDF — 사내 지원 데스크 에이전트 지식",
+    "usedIn": "Lab 7",
+    "sizeBytes": 791106,
+    "preview": "previews/Cymbal_출장비_및_경비처리_규정_가상.png"
+  },
+  {
+    "file": "Cymbal_휴가_및_근무제도_규정_가상.pdf",
+    "title": "휴가 및 근무제도 규정 (가상)",
+    "description": "연차 발생·이월, 반차·반반차, 경조사 휴가표, 재택근무 주 2일, 코어타임 6쪽 PDF — 사내 지원 데스크 에이전트 지식",
+    "usedIn": "Lab 7",
+    "sizeBytes": 583782,
+    "preview": "previews/Cymbal_휴가_및_근무제도_규정_가상.png"
+  },
+  {
+    "file": "Cymbal_IT보안_및_계정관리_가이드_가상.pdf",
+    "title": "IT보안 및 계정관리 가이드 (가상)",
+    "description": "비밀번호·계정 잠금 해제·장비·소프트웨어 승인·보안 사고 신고·헬프데스크 티켓 6쪽 PDF — 사내 지원 데스크 에이전트 지식",
+    "usedIn": "Lab 7",
+    "sizeBytes": 665996,
+    "preview": "previews/Cymbal_IT보안_및_계정관리_가이드_가상.png"
+  },
+  {
+    "file": "Cymbal_신제품_브리프_에어폴_프로_가상.pdf",
+    "title": "신제품 브리프 — AirPole Pro (가상)",
+    "description": "기둥형 스마트 공기청정기 런칭 브리프(타깃·기능·카피·톤앤매너·티저 스토리보드) 3쪽 PDF — 이미지·동영상 프롬프트 소스",
+    "usedIn": "Lab 4",
+    "sizeBytes": 404483,
+    "preview": "previews/Cymbal_신제품_브리프_에어폴_프로_가상.png"
+  },
+  {
+    "file": "Cymbal_브랜드_가이드_가상.pdf",
+    "title": "브랜드 가이드 (가상)",
+    "description": "브랜드 컬러·워드마크·톤 오브 보이스·금지 표현·고객 응대 원칙 2쪽 PDF — 스킬·톤앤매너 기준",
+    "usedIn": "Lab 4 · 6",
+    "sizeBytes": 371184,
+    "preview": "previews/Cymbal_브랜드_가이드_가상.png"
+  },
+  {
+    "file": "Cymbal_보고서스타일_스킬.zip",
+    "title": "보고서 스타일 스킬 (ZIP)",
+    "description": "결론 먼저·3줄 요약·표·다음 단계·금지 표현을 적용하는 cymbal-report-style 스킬 — 스킬 업로드에 그대로 올리는 ZIP",
+    "usedIn": "Lab 6",
+    "sizeBytes": 2760,
+    "preview": "previews/cymbal-report-style.png"
+  },
+  {
+    "file": "skills/cymbal-report-style/SKILL.md",
+    "title": "보고서 스타일 스킬 원본 (SKILL.md)",
+    "description": "cymbal-report-style 스킬 원본 마크다운 — 내용 확인용",
+    "usedIn": "Lab 6",
+    "sizeBytes": 5368,
+    "preview": "previews/cymbal-report-style.png"
+  },
+  {
+    "file": "Cymbal_실습파일_전체.zip",
+    "title": "실습 파일 전체 다운로드 (ZIP)",
+    "description": "실습 파일 8종(엑셀 2, PDF 5, 스킬)과 안내문을 한 번에 내려받는 압축 파일",
+    "usedIn": "전체 실습",
+    "sizeBytes": 2598443,
+    "preview": "previews/Cymbal_실습파일_전체.png"
+  }
+]
